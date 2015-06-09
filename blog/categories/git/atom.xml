@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Git | Roger Almeida]]></title>
+  <link href="http://rogeralmeida.github.io/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://rogeralmeida.github.io/"/>
+  <updated>2015-06-09T16:52:21-03:00</updated>
+  <id>http://rogeralmeida.github.io/</id>
+  <author>
+    <name><![CDATA[Roger Almeida]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Most Usefull Git Site So Far]]></title>
+    <link href="http://rogeralmeida.github.io/blog/2011/11/01/most-usefull-git-site-so-far/"/>
+    <updated>2011-11-01T00:00:00-02:00</updated>
+    <id>http://rogeralmeida.github.io/blog/2011/11/01/most-usefull-git-site-so-far</id>
+    <content type="html"><![CDATA[<div class='post'>
+Two teams in my current company decide to give git a try. So in the last weeks I have expend sometime talking about DVCS. One item that I have seen that is difficult to understand about git is that it has many "areas".<br />To explain the movement of changes between the areas normally I draw a picture in a paper with many arrows, showing the movement of changes for each git command...<br />Gladly I found the site that taught me this: <a href="http://www.ndpsoftware.com/git-cheatsheet.html">http://www.ndpsoftware.com/git-cheatsheet.html</a><br />If you have to explain any git command to someone, definitely I recommend you to use this site.<br /><br /><br />cheers...</div>
+
+]]></content>
+  </entry>
+  
+</feed>

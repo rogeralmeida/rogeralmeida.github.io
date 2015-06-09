@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Baby Steps | Roger Almeida]]></title>
+  <link href="http://rogeralmeida.github.io/blog/categories/baby-steps/atom.xml" rel="self"/>
+  <link href="http://rogeralmeida.github.io/"/>
+  <updated>2015-06-09T16:52:21-03:00</updated>
+  <id>http://rogeralmeida.github.io/</id>
+  <author>
+    <name><![CDATA[Roger Almeida]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Historias De Melhoria De Performance]]></title>
+    <link href="http://rogeralmeida.github.io/blog/2014/05/21/historias-de-melhoria-de-performance/"/>
+    <updated>2014-05-21T15:08:06-03:00</updated>
+    <id>http://rogeralmeida.github.io/blog/2014/05/21/historias-de-melhoria-de-performance</id>
+    <content type="html"><![CDATA[<h2>Introdução</h2>
+
+<p>Histórias de usuário que estejam relacionadas a melhoria de performance podem ser perigosas de serem jogadas.</p>
+
+<h2>Arapucas</h2>
+
+<p>Existem algumas &ldquo;arapucas&rdquo; comuns como: Melhora Infinita, Otimização Prematura, Desejo Ardante de mexer em tudo, Mudar algo que nao melhore a performance. É muito fácil cair em uma delas e prejudicar o trabalho a ser realizado. Uma boa forma de evitar essas arapucas é conhecer um pouco a definição delas.</p>
+
+<h3>Melhora infinita</h3>
+
+<p>Imagine que você tenha de trabalhar em uma história que seja definida da seguinte maneira:</p>
+
+<blockquote><p>Como assistente financeiro,
+Eu quero que o processo de faturamento rode mais rápido
+Sendo assim o processo de faturamento deixe de ser lento.</p></blockquote>
+
+<p>Essa história é infinita.
+Não há nenhuma indicação de quando a performance será a aceitável. Com isso você pode ficar fazendo pequenas melhorias infinitas na performance, se tiver sorte uma hora o cliente dessa história pode ser dar por [satisfeito|cansado] e a história é concluída, ou&hellip; você pode evoluir até descobrir que a performance desejada na verdade requer uma mudança drástica de arquitetura ou algo mais <em>caro</em>.</p>
+
+<h3>Otimização prematura</h3>
+
+<p>Você trabalha em um módulo específico já há algum tempo, e sabe daquele mapeamento que está marcado como Lazy Load e assim que chega uma história de perfomance você pensa: &ldquo;Aha&hellip; essa é minha chance, a primeira coisa que eu vou fazer é mudar esse mapeamento para EAGER!!!&rdquo;. Você não mediu nada ainda. Não definiu seu problema, por tanto, não pode ter uma solução. Por mais que você saiba que algo pode ser melhorado e existam partes do código que devem ser refatoradas, primeiro é preciso definir um problema e então achar a causa desse problema. Se o mapeamento que você identificou a muito tempo for parte da causa do problema, vá em frente, mudeo e veja se ele resolve seu problema, se não&hellip; guarde essa refatoração para um momento de refatoração.</p>
+
+<h3>Desejo ardante de mexer em tudo</h3>
+
+<p>Eu sei, o código é um lixo e você tem certeza de que se recriar do zero o design interno do código você iria melhorar a performance. Respire e não faça isso. Principalmente se seu módulo estiver rodando em produção. Não que eu ache que você não é capaz de produzir algo melhor do que esse código existente mas você deve levar em consideração que isso está funcionando, e hoje você sabe como esse código se comporta e quais seus problemas, recriando do zero você pode ter novos problemas. Anote as dívidas técnicas do código e as ataque de forma planejada e controlada.</p>
+
+<h3>Mudar algo que não melhore a perfomance</h3>
+
+<p>Você recebe a história e ela até que está bem definida, algo do tipo:</p>
+
+<blockquote><p>O tempo de resposta do web-service tem de ser menor do que 10 segundos no ambiente de desenvolvimento.</p></blockquote>
+
+<p>Mas ao pegar essa história para tocar alguém da equipe diz: &ndash; &ldquo;Muda os parâmetros do método xyz de String para Tiny Tipes. Isso vai evitar que tenhamos de fazer um if para ver se as Strings estão no formato correto.&rdquo;
+Nessa hora, principalmente se você não conhecer o código, pare e não faça o que te foi dito para fazer. Não há provas ainda de que a degradação de performance passe por esse método. Não mude nada no código se você não tiver certeza que estará atacando o lugar correto.</p>
+
+<h2>Recomendações</h2>
+
+<p>Mas com certeza é possível trabalhar bem em histórias que involvem melhora de performance. Seguem algumas pontos que considero importante:</p>
+
+<h3>Escopo &ndash; Critérios de Aceite</h3>
+
+<p>Uma história de melhora de performance deve ser tratada como uma história normal, tendo escopo definido e critérios de aceite.
+Ou seja, &ldquo;mais rápido&rdquo; não serve como definição de escopo. Se algo precisa ser mais rápido isso precisa ser definido. Algo do tipo:</p>
+
+<blockquote><p>O web-service deve responder em X segundos.
+ou
+A página que hoje demora X ms deve ser renderizada em Y ms.</p></blockquote>
+
+<p>Os critérios de aceite devem ser bem definidos, limitando todos os cenários de melhoria que a história deve melhorar.</p>
+
+<h3>Encontre o problema</h3>
+
+<p>Identifque o que está degradando a performance. Muitas das vezes pode ser que nem sejam necessárias alterações de código. Um exemplo disso é a falta de índices no banco de dados por exemplo. Por isso é importante encontrar o problema.
+Uma forma de fazer isso é fazer medições pontuais para identificar o(s) gargálo(s). Darei um exemplo prático disso mais a frente.
+Pode acontecer que apenas com medições você não consiga identificar o problema, mas com a medição você poderá pelo menos identificar o local onde o problema ocorre, o que já limita em muito suas investigações.</p>
+
+<h3>Hipóteses de Solução</h3>
+
+<p>A partir do momento que você identificar o problema, defina uma hipótese de solução. Isso pode parecer algo básico mas ainda não são todos os desenvolvedores que conseguem enxergar esse conceito de problema, hipótese e solução.
+Suponha por exemplo que você identificou que o seu problema é uma consulta na tabela de clientes. Uma hipótese de solução é criar um índice pelos campos que são usados na cláusula <em>where</em> da consulta. Outra hipótese pode ser passar <em>hints</em> na consulta. Outra hipótese pode ser nem executar a consulta e mover essa busca para outro lugar (por exemplo uma <em>Stored Procedure</em>).
+O importante aqui é definir as hipótese de solução.
+Cada hipótese deve ter também uma definição de sucesso, ou seja, o que define que aquela hipótese é válida ou não.
+Em um web-service de consulta de clientes voce pode definir que o sucesso é a resposta do web-service ser construída em X segundos.</p>
+
+<h3>Testes</h3>
+
+<p>Monte uma lista com suas hipóteses e teste cada uma delas até que uma satisfaça sua história.
+O melhor cenário é quando você consegue automatizar seus testes.</p>
+
+<h2>Exemplo</h2>
+
+<h2>Conclusão</h2>
+]]></content>
+  </entry>
+  
+</feed>
