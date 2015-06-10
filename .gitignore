@@ -1,2 +1,4 @@
 _deploy/
 public/
+.pygments-cache/
+.sass-cache/
