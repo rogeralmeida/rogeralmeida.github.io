@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://rogeralmeida.github.io/sitemap.xml 

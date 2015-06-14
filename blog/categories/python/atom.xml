@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: python | Roger Almeida's Opinion]]></title>
+  <link href="http://rogeralmeida.github.io/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://rogeralmeida.github.io/"/>
+  <updated>2015-06-14T19:39:31+10:00</updated>
+  <id>http://rogeralmeida.github.io/</id>
+  <author>
+    <name><![CDATA[Roger Almeida]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Euler's Journey Problem 1]]></title>
+    <link href="http://rogeralmeida.github.io/blog/2014/12/30/eulers-journey-problem-1/"/>
+    <updated>2014-12-30T06:38:43+11:00</updated>
+    <id>http://rogeralmeida.github.io/blog/2014/12/30/eulers-journey-problem-1</id>
+    <content type="html"><![CDATA[<p>So I decided to start a project where I gonna implement the same problem in many languages. I always wanted to compare how different programming languages face some coding challenges. I don&rsquo;t want to prove that any language is better than other, althought I know that this kind of flame will happen.
+To have a organized list of problems I gonna use the <a href="http://projecteuler.net/">Project Euler</a> problems.</p>
+
+<!--more-->
+
+
+<h1>First Problem: Multiples of 3 and 5</h1>
+
+<p>So the first step of this jorney is the <a href="https://projecteuler.net/problem=1">Multiples of 3 and 5</a>.</p>
+
+<blockquote><p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+Find the sum of all the multiples of 3 or 5 below 1000.</p></blockquote>
+
+<p>And here are the may implementations:</p>
+
+<h2>Java 1.8</h2>
+
+<pre><code class="Java SumMutiplesOf3And5 https://github.com/rogeralmeida/eulersjourney/blob/master/problems/1/java1.8/src/main/java/com/github/rogeralmeida/eulersjourney/SumMultiplesOf3And5.java">package com.github.rogeralmeida.eulersjourney;
+/**
+* Created by ralmeid on 12/25/14.
+*/
+public class SumMultiplesOf3And5 {
+    public static void main(String... args){
+        Integer sum = 0;
+        for(int number=1; number &lt; 1000; number++){
+            if (number % 3 == 0 || number % 5 == 0){
+                sum += number;
+            }
+        }
+        System.out.printf("The sum of multiples of 3 and 5 below 1000 is %d", sum);
+    }
+}
+</code></pre>
+
+<p>Not much to say about the Java version. It is a little verbose, but still very easy to teach to programming students, as there&rsquo;s no hidden concept here. Everything is very explicit.</p>
+
+<h2>Scala</h2>
+
+<pre><code class="Scala Multiples https://github.com/rogeralmeida/eulersjourney/blob/master/problems/1/scala/src/Multiples.scala">object Multiples {
+    def main (args: Array[String]) {
+        var number = 0;
+        var sum = 0;
+        for(number &lt;- 1 to 999 if number % 3 == 0 || number % 5 == 0){
+            sum += number;
+        }
+        printf("The sum of multiples of 3 and 5 bellow 1000 is %d", sum);
+    }
+}
+</code></pre>
+
+<p>I do not code in Scala, but have decided to add it to my toolbet in 2015. So I will make an effort to implement every problem in Scala as well.
+I hope there&rsquo;s a less verbose way to do it in Scala, because I&rsquo;m not happy with this code.
+One point that I would like to highlight here is the way to create a <a href="http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.Range">Range</a> <code>1 to 999</code>. Also you can filter the for&rsquo;s enumerables without executing the for body.</p>
+
+<hr />
+
+<p>Yes, I&rsquo;ve found a better way of doing it in Scala. Check this out:</p>
+
+<pre><code class="Scala Multiples https://github.com/rogeralmeida/eulersjourney/blob/master/problems/1/scala/src/Multiples.scala">object Multiples {
+  def main (args: Array[String]) {
+    val total = (1 to 999).toList.filter(number =&gt; number % 3 == 0 || number % 5 == 0).
+      reduce[Int]((accumulator, number) =&gt; accumulator+number)
+    printf("The sum of multiples of 3 and 5 bellow 1000 is %d", total);
+  }
+
+}
+</code></pre>
+
+<p>First create a Range from 1 to 999.
+Then coarse it to a List.
+Then filter the list to get just the multiples of 3 or 5.
+Then reduce the list using a accumulator.
+I do liked this version, very concise, but the syntax is not that clear yet.</p>
+
+<h2>Javascript</h2>
+
+<pre><code class="Javascript multiples.js https://github.com/rogeralmeida/eulersjourney/blob/master/problems/1/javascript/multiples.js">var sum = 0;
+for(number = 1; number &lt; 1000; number++){
+    if(number % 3 == 0 || number % 5 == 0){
+        sum += number;
+    }
+}
+console.log("The sum of multiples of 3 and 5 bellow 1000 is "+sum);
+</code></pre>
+
+<p>Not much to say here, very straightforward.</p>
+
+<h2>Python 2</h2>
+
+<pre><code class="Python multiples.py https://github.com/rogeralmeida/eulersjourney/blob/master/problems/1/python2/multiples.py">multiples = sum([number for number in range(1, 1000) if (number % 3 == 0) or (number % 5 == 0)])
+print "The sum of multiples of 3 and 5 bellow 1000 is {}".format(multiples)
+</code></pre>
+
+<p>The more I touch Python, more I like it.
+It uses the <a href="https://docs.python.org/2/library/functions.html">range</a> function to generate the list of number from 1 to 999.
+It uses <a href="https://docs.python.org/2/tutorial/datastructures.html">List Comprehension</a> to generate a list with only the multiples <code>[number for number in range(1, 1000) if (number % 3 == 0) or (number % 5 == 0)]</code> then it uses the <code>sum()</code> function to sum up the multiples.</p>
+
+<h2>Ruby</h2>
+
+<pre><code class="Ruby mutiples.rb https://github.com/rogeralmeida/eulersjourney/blob/master/problems/1/ruby/multiples.rb">sum = (1..999).select{|number| number % 3 == 0 or number % 5 == 0}.reduce(:+)
+puts "The sum of multiples of 3 and 5 is #{sum}"
+</code></pre>
+
+<p>My favorite version so far.
+First I like the way to create the range <code>(1..999)</code>. Like the Scala way it stills a little bit magical but this is it, or you have a Global function like Python or you have some sintax to recognize that you are creating a range.
+The <code>select</code> method is very useful to filter a collection. The <code>reduce</code> method receives a symbol with the method that should be called to reduce the list, and it understand that it has to accumulate the value.</p>
+]]></content>
+  </entry>
+  
+</feed>
