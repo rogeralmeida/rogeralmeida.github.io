@@ -33,4 +33,4 @@ From today on I'll keep my Vacation Responder On in my professional e-mail. This
 I wanted to try it for a long time, but never had the balls to actually turn it on. I'll use it for some time, and depending on the feedback I will keep it or not. Who knows, maybe it can became a new post.
 
 ##Credits
-This is not my idea, I read about it in Vida Organizada (pt-br only).
+This is not my idea, I read about it at [Vida Organizada](http://vidaorganizada.com/comece/dicas/2-dicas-incriveis-de-produtividade-que-mudaram-minha-vida/) (pt_br only).
