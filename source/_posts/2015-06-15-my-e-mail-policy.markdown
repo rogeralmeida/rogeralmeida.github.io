@@ -18,13 +18,13 @@ I don't keep my email inbox open during the working hours. I open it just when I
 I check my email twice a day, at 10:00 am and 04:00 pm. I have reminders in my calendar . That helps me organize my day and prevents me from being fooled by my weak memory.
 
 ##Time box email time
-As an adopter of the [Pomodoro Technique](http://pomodorotechnique.com/) I keep track of the time I spend with email. What I noticed is that I need almost two pomodoros  to read/respond/forward/archive my emails. That means that I need almost two hours during my day only to deal with my email inbox.  That was so true when I was working for [ThoughtWorks](http://www.thoughtworks.com/). Now that I'm working for [DiUS](http://dius.com.au/) I'm trying not to sign in to so much email's lists. I aim to keep my email time in one pomodoro.
+As an adopter of the [Pomodoro Technique](http://pomodorotechnique.com/) I keep track of the time I spend with email. What I noticed is that I need almost two pomodoros  to read/respond/forward/archive my emails. That means that I need almost two hours during my day only to deal with my email inbox.  That was so true when I was working for [ThoughtWorks](http://www.thoughtworks.com/). Now that I'm working for [DiUS](http://dius.com.au/) I'm trying not to sign in to so many email lists. My aim is to keep my email time in one pomodoro.
 
 ##So far, so good
-Till here I described what I have been doing for one year. It's working fine and I notice that my productive increased since then. Before I was checking email every time I alternated windows. Now, I can alternate windows without the temptation of checking email. But there is one last step that  I wanna try...
+Up until here I've described what I have been doing for one year. It's working fine and I've noticed that my productive increased since then. Before I was checking email every time I alternated windows. Now, I can alternate windows without the temptation of checking email. But there is one last step that  I wanna try...
 
 ##Vacation Responder On
-From today on I'll keep my Vacation Responder On in my professional email. This is the message that I will send to who send me email:
+From today on I'll keep my Vacation Responder On in my professional email. This is the message that I will send to those who send me email:
 
 >Hi,
 
