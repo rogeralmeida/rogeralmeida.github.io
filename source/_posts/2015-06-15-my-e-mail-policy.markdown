@@ -28,9 +28,15 @@ From today on I'll keep my Vacation Responder On in my professional email. This 
 
 >Hi,
 
->This is a auto-reply to inform you about my email policy. I keep my email inbox closed during the working hours.  I also disabled email notifications in my cellphone. I check email only at 10:00 am and 04:00 pm.  If you need to contact me before my email times, feel free to reach me by phone: XXXX XXX XXX. If you prefer you can use Whatsapp or Viber with this number as well.
+>This is a auto-reply to inform you about my email policy:
 
-I wanted to try it for a long time, but never had the balls to actually turn it on. I'll use it for some time, and depending on the feedback I will keep it or not. Who knows, maybe it can became a new post.
+> * I keep my email inbox closed during the working hours;  
+> * I also disabled email notifications in my cellphone;
+> * I check email only at 10:00 am and 04:00 pm.
+
+> If you need to contact me before my email times, feel free to reach me by phone: XXXX XXX XXX. If you prefer you can use Whatsapp or Viber with this number as well.
+
+I wanted to try it for a long time, but never had courage to actually turn it on. I'll use it for some time, and depending on the feedback I will keep it or not. Who knows, maybe it can became a new post.
 
 ##Credits
 This is not my idea, I read about it at [Vida Organizada](http://vidaorganizada.com/comece/dicas/2-dicas-incriveis-de-produtividade-que-mudaram-minha-vida/) (pt_br only).
