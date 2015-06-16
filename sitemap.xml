@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://rogeralmeida.github.io/blog/2015/06/15/my-e-mail-policy/</loc>
+    <lastmod>2015-06-15T10:11:44+10:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://rogeralmeida.github.io/blog/2015/02/02/how-to-learn-vim/</loc>
     <lastmod>2015-02-02T01:40:04+11:00</lastmod>
     <priority>0.8</priority>
@@ -22,13 +27,13 @@
   </url>
   <url>
     <loc>http://rogeralmeida.github.io/blog/archives/</loc>
-    <lastmod>2015-06-14T19:42:40+10:00</lastmod>
+    <lastmod>2015-06-17T09:51:22+10:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://rogeralmeida.github.io/</loc>
-    <lastmod>2015-06-14T19:42:40+10:00</lastmod>
+    <lastmod>2015-06-17T09:51:22+10:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
