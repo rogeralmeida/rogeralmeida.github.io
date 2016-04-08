@@ -16,7 +16,7 @@ In the last months I have answered the same recurring question:
 This post is a attempt to have a guide to point to describing some components of my journey to Sydney.
 
 ## English
-![alt text](/images/learn_english.jpg "Learn English")
+![](/images/learn_english.jpg "Learn English")
 
 To live abroad you have to at least speak English. So, if you can read this post it is a huge step. I studied English for 18 months and worked with it so I could develop it. Maybe I will create another post share how I learned English.
 
@@ -44,11 +44,11 @@ I believe this is a MUST to everybody who wants to live abroad. You should know 
 
 **Component 3: Create a prioritized list of destinations.**
 
-## Update your Linkedin
+## Update your [Linkedin](http://www.linkedin.com)
 
-I used Linkedin to find a job here at Sydney. Linkedin works, believe me. But there's no free lunch. You have to spend time on your profile. In the late years I started give and ask for recommendations in my network. I also spend time describing my work in each position that I had. I have seen some people who want to find a job abroad but their Linkedin  has no description of the work they did. Would you contract someone who cannot tell you what he did in the past. I don't produce a cv in Microsoft Word for years. I just keep my Linkedin up-to-date and export it to PDF if needed.
+I used [Linkedin](http://www.linkedin.com) to find a job here at Sydney. [Linkedin](http://www.linkedin.com) works, believe me. But there's no free lunch. You have to spend time on your profile. In the late years I started give and ask for recommendations in my network. I also spend time describing my work in each position that I had. I have seen some people who want to find a job abroad but their [Linkedin](http://www.linkedin.com)  has no description of the work they did. Would you contract someone who cannot tell you what he did in the past. I don't produce a cv in Microsoft Word for years. I just keep my [Linkedin](http://www.linkedin.com) up-to-date and export it to PDF if needed.
 
-**Component 4: Give love to your Linkedin**
+**Component 4: Give love to your [Linkedin](http://www.linkedin.com)**
 
 ## Search for positions
 
@@ -56,13 +56,13 @@ Every night, after my kids and wife went to bed I spend between 1 and 2 hours se
 
 My method was:
 * I should cover page 1 and 2 of search result
-* I would only apply for companies that accepted either my Linkedin profile or a PDF. I could not waste time filling forms.
+* I would only apply for companies that accepted either my [Linkedin](http://www.linkedin.com) profile or a PDF. I could not waste time filling forms.
 * I wrote a presentation letter to every single position that I liked. This take some time but is essential.
 I'm pretty sure that I applied more than once for the same position. But I don't believe this is a big issue.
 
 In two weeks doing it I had more interviews than I could handle. So after 2 weeks I stopped the search part and decided to see how the interviews would go.
 
-The most important thing here is: Don't just seat in front of Linkedin and randomly search for things. Develop a method, something that you can improve. For instance, during my first night of search I was filling forms. In the second night I skipped this companies and it improved my capacity of search. Follow a process and improve it.
+The most important thing here is: Don't just seat in front of [Linkedin](http://www.linkedin.com) and randomly search for things. Develop a method, something that you can improve. For instance, during my first night of search I was filling forms. In the second night I skipped this companies and it improved my capacity of search. Follow a process and improve it.
 
 **Component 5: Create a method to search for available positions. Follow it and improve it.**
 
@@ -72,17 +72,17 @@ I had to accommodate the interviews in my day. As I was able to work from home, 
 
 I failed in most of the interviews. I failed for Amazon in Ireland. No company in Canada wanted to offer me sponsor (I believe they expected me to get the visa by myself). For USA the problem is the Visa, you have to apply in a specific time-frame. Pivotal, for instance, liked my resume but we would have to wait till February to apply for a visa. But Germany and Australia were promising.
 
-I went to the final round with eBay in Berlim and DiUS in Sydney.
+I went to the final round with eBay in Berlim and [DiUS](http://www.dius.com.au) in Sydney.
 
 People at eBay liked me, but they decided to pick another person with more mobile experience.
 
-The process with DiUS was working fine, slow, but fine. I was on vacation during the last interviews. I did the big mistake of going to a isolated island in Sao Paulo/Brazil. The internet was not that good and the only lan-house closed at 09:00 pm. But in the end it worked out. On 23/12/2014 I received the job offer.
+The process with [DiUS](http://www.dius.com.au) was working fine, slow, but fine. I was on vacation during the last interviews. I did the big mistake of going to a isolated island in Sao Paulo/Brazil. The internet was not that good and the only lan-house closed at 09:00 pm. But in the end it worked out. On 23/12/2014 I received the job offer.
 
 **Component 6: Organize your time and resource (e.g. internet)  for the interviews.**
 
 ## Iteration
 
-**This is the most important component: Repeat steps 1 through 7.**
+**This is the most important component: Repeat steps 1 through 6.**
 
 One point that I would like to highlight is: I was prepared to start the search for positions again. It was not a single time thing. I decided to live abroad and I was willing to iterate the search step until I find a position suitable to me. So if you fail as I fail in most of the interviews, be prepared to try again. Reflect about what is working well and what you would like to improve and do it. Don't give up easily.
 
