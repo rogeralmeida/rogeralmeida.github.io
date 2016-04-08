@@ -16,6 +16,7 @@ In the last months I have answered the same recurring question:
 This post is a attempt to have a guide to point to describing some components of my journey to Sydney.
 
 ## English
+![alt text](/images/learn_english.jpg "Learn English")
 
 To live abroad you have to at least speak English. So, if you can read this post it is a huge step. I studied English for 18 months and worked with it so I could develop it. Maybe I will create another post share how I learned English.
 
