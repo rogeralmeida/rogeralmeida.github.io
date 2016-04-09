@@ -31,6 +31,8 @@ To live abroad you have to at least speak English. So, if you can read this post
 
 ## Where to go?
 
+<img src="/images/destination-sign.jpg" style="width: 60%; height: 375px; float: right; margin-right: 15px;"alt="Excellence"/>
+
 I made a list of countries that I would like to live in: Canada, Australia, USA, Germany and Ireland. After some reflection, talks to my wife, and research time I put them in priority order:
 
 
