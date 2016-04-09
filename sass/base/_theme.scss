@@ -7,12 +7,14 @@ $link-color-hover: adjust-color($link-color, $lightness: 10, $saturation: 25) !d
 $link-color-visited: adjust-color($link-color, $hue: 80, $lightness: -4) !default;
 $link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
 
+$main-color: #fafafa !default;
+
 // Main Section Colors
-$main-bg: #282e39 !default;
-$page-bg: #282e39 !default;
+$main-bg: $main-color;
+$page-bg: $main-color;
 $article-border: #3b4452 !default;
 
-$header-bg: #282e39 !default;
+$header-bg: $main-color;
 $header-border: lighten($header-bg, 15) !default;
 $title-color: #dd5363 !default;
 $subtitle-color: #8f9ba8 !default;
@@ -22,7 +24,7 @@ $text-color-light: #a8a8a8 !default;
 $type-border: #a8a8a8 !default;
 
 /* Navigation */
-$nav-bg: #282e39 !default;
+$nav-bg: $main-color;
 $nav-bg-front: none;
 $nav-bg-back: none;
 $nav-color: #8f9ba8;
@@ -35,7 +37,7 @@ $nav-border-left: none;
 $nav-border-right: none;
 
 /* Sidebar colors */
-$sidebar-bg: #282e39 !default;
+$sidebar-bg: $main-color;
 $sidebar-link-color: $link-color !default;
 $sidebar-link-color-hover: $link-color-hover !default;
 $sidebar-link-color-active: $link-color-active !default;
