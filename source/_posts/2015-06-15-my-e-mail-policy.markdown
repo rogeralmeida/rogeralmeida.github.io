@@ -11,6 +11,8 @@ When I was working for [Atos](http://www.atos.net), the company's CEO started a 
 Now I believe that he was right.
 This post explains how I deal with my professional email inbox.
 
+<!--more-->
+
 ## Keep email closed
 I don't keep my email inbox open during the working hours. I open it just when I have to. I also disabled the email notification in my cellphone. That prevents me from check email whatever I see that a new email arrived.
 

@@ -14,6 +14,7 @@ In the last months I have answered the same recurring question:
 
 
 This post is a attempt to have a guide to point to describing some components of my journey to Sydney.
+<!--more-->
 
 ## English
 ![](/images/learn_english.jpg "Learn English")
