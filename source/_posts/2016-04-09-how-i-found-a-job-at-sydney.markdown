@@ -18,7 +18,7 @@ This post is a attempt to have a guide to point to describing some components of
 ## English
 ![](/images/learn_english.jpg "Learn English")
 
-To live abroad you have to at least speak English. So, if you can read this post it is a huge step. I studied English for 18 months and worked with it so I could develop it. Maybe I will create another post share how I learned English.
+To live abroad you have to at least speak English. So, if you can read this post it is a huge step. I studied English for 18 months and worked with it so I could develop it. Maybe I will create another post sharing how I learned English.
 
 **Component 1: Learn English**
 
