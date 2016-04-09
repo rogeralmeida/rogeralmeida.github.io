@@ -45,25 +45,27 @@ I believe this is a MUST to everybody who wants to live abroad. You should know 
 
 **Component 3: Create a prioritized list of destinations.**
 
-## Update your [Linkedin](http://www.linkedin.com)
+## Update your [LinkedIn](http://www.linkedin.com)
 
-I used [Linkedin](http://www.linkedin.com) to find a job here at Sydney. [Linkedin](http://www.linkedin.com) works, believe me. But there's no free lunch. You have to spend time on your profile. In the late years I started give and ask for recommendations in my network. I also spend time describing my work in each position that I had. I have seen some people who want to find a job abroad but their [Linkedin](http://www.linkedin.com)  has no description of the work they did. Would you contract someone who cannot tell you what he did in the past. I don't produce a cv in Microsoft Word for years. I just keep my [Linkedin](http://www.linkedin.com) up-to-date and export it to PDF if needed.
+I used [LinkedIn](http://www.linkedin.com) to find a job here at Sydney. [LinkedIn](http://www.linkedin.com) works, believe me. But there's no free lunch. You have to spend time on your profile. In the late years I started give and ask for recommendations in my network. I also spend time describing my work in each position that I had. I have seen some people who want to find a job abroad but their [LinkedIn](http://www.linkedin.com)  has no description of the work they did. Would you contract someone who cannot tell you what he did in the past. I don't produce a cv in Microsoft Word for years. I just keep my [LinkedIn](http://www.linkedin.com) up-to-date and export it to PDF if needed.
 
-**Component 4: Give love to your [Linkedin](http://www.linkedin.com)**
+**Component 4: Give love to your [LinkedIn](http://www.linkedin.com)**
 
 ## Search for positions
 
 Every night, after my kids and wife went to bed I spend between 1 and 2 hours searching for available positions. I followed the prioritized countries's list and used keywords like: Java, Ruby, Developer, etc...
 
 My method was:
+
 * I should cover page 1 and 2 of search result
-* I would only apply for companies that accepted either my [Linkedin](http://www.linkedin.com) profile or a PDF. I could not waste time filling forms.
-* I wrote a presentation letter to every single position that I liked. This take some time but is essential.
+* I would only apply for companies that accepted either my [LinkedIn](http://www.linkedin.com) profile or a PDF. I could not waste time filling forms.
+* I wrote a presentation letter to every single position that I liked. This took some time but it was essential.
+
 I'm pretty sure that I applied more than once for the same position. But I don't believe this is a big issue.
 
 In two weeks doing it I had more interviews than I could handle. So after 2 weeks I stopped the search part and decided to see how the interviews would go.
 
-The most important thing here is: Don't just seat in front of [Linkedin](http://www.linkedin.com) and randomly search for things. Develop a method, something that you can improve. For instance, during my first night of search I was filling forms. In the second night I skipped this companies and it improved my capacity of search. Follow a process and improve it.
+The most important thing here is: Don't just seat in front of [LinkedIn](http://www.linkedin.com) and randomly search for things. Develop a method, something that you can improve. For instance, during my first night of search I was filling forms. In the second night I skipped this companies and it improved my capacity of search. Follow a process and improve it.
 
 **Component 5: Create a method to search for available positions. Follow it and improve it.**
 
