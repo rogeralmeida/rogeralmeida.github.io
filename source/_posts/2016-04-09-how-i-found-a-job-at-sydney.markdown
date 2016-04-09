@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "How I found a job at Sydney"
+title: "How I found a job in Sydney"
 date: 2016-04-09 00:53:31 +1000
 comments: true
-categories: 
+categories: job, interview, Sydney, career
 ---
 
 ### Seven components of my seek for work in Aussieland.
@@ -24,7 +24,7 @@ To live abroad you have to at least speak English. So, if you can read this post
 
 ## Push yourself to the excellence
 
-One thing that I didn't realize before starting this process was: I'll compete with the bests of the world. If you are a good professional and can easilly find a job at your current town. Good for you. That doesn't mean all the companies around the world will want you. Even if you are at Google. The concept of good/excellent professional changes from company to company. So keep pushing yourself to excellence. Be prepare to compete with the bests.
+<img src="/images/excellence.jpg" style="width: 60%; height: 375px; float: left; margin-right: 15px;"alt="Excellence"/> One thing that I didn't realize before starting this process was: I'll compete with the bests of the world. If you are a good professional and can easilly find a job at your current town. Good for you. That doesn't mean all the companies around the world will want you. Even if you are at Google. The concept of good/excellent professional changes from company to company. So keep pushing yourself to excellence. Be prepare to compete with the bests.
 
 **Component 2: Push yourself to the excellence**
 
