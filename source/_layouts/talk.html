@@ -35,10 +35,10 @@
 
         <style>
             .post-it {
-                background:#fefabc; 
-                padding:15px; 
-                font-size:13px; 
-                color: #000; 
+                background:#fefabc;
+                padding:15px;
+                font-size:13px;
+                color: #000;
                 text-align: center;
 
                 -moz-transform: rotate(1deg);
@@ -55,11 +55,11 @@
             }
 
             .post-it-highlight{
-                background:#ff9900; 
-                padding:15px; 
+                background:#ff9900;
+                padding:15px;
                 font-size:13px;
                 font-weight: bold;
-                color: #000; 
+                color: #000;
                 text-align: center;
 
                 -moz-transform: rotate(1deg);
@@ -75,11 +75,11 @@
                 position: relative;
             }
             .post-it-blocked {
-                background:#ff0000; 
-                padding:15px; 
+                background:#ff0000;
+                padding:15px;
                 font-size:13px;
                 font-weight: bold;
-                color: #000; 
+                color: #000;
                 text-align: center;
 
                 -moz-transform: rotate(1deg);
@@ -100,17 +100,17 @@
             }
 
             .board table { border-collapse: initial; }
-            .board tbody tr { 
+            .board tbody tr {
                 border: none;
-                height: 90px; 
+                height: 90px;
             }
             .board tbody tr td {
-                    border-right: solid 1px; 
+                    border-right: solid 1px;
                     border-left: solid 1px;
             }
             .board thead tr { border: none; }
             .board thead tr td {
-                    border-right: solid 1px; 
+                    border-right: solid 1px;
                     border-left: solid 1px;
             }
 
@@ -131,12 +131,12 @@
             }
 
             .spinning {
-              animation: spin ease 3s infinite; 
+              animation: spin ease 3s infinite;
             }
 
             @keyframes spin {
-              from { transform: rotate(0deg);} 
-              to { transform: rotate(360deg); } 
+              from { transform: rotate(0deg);}
+              to { transform: rotate(360deg); }
             }
 
             em {
@@ -157,59 +157,7 @@
 
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
-                <section class="partial-container" data-partial="introduction">
-                  {% include talks/kanban-and-beyond/introduction.html %}
-                </section>
-
-                <section class="partial-container" data-partial="visual">
-                  {% include talks/kanban-and-beyond/visual.html %}
-                </section>
-
-                <section class="partial-container" data-partial="what-is-kanban">
-                  <aside class="notes">
-                    * Kanban in the japanese park
-                    * kanban is a part of The Toyota Way
-                  </aside>
-                  {% include talks/kanban-and-beyond/what-is-kanban.html %}
-                </section>
-
-                <section class="partial-container" data-partial="workflow">
-                  <aside class="notes">
-                    * put the workflow in a wall
-                    * Definition of done
-                    * Follow-up visually
-                  </aside>
-                </section>
-
-                <section class="partial-container" data-partial="people">
-                </section>
-
-                <section class="partial-container" data-partial="queues">
-                  <aside class="notes">
-                    * Explain overproduction
-                    * I have to explain single piece flow before this
-                    * Leadtime is also important
-                    * Limit working in progress
-                  </aside>
-                </section>
-
-                <section class="partial-container" data-partial="concepts">
-                </section>
-
-                <section class="partial-container" data-partial="wip">
-                </section>
-
-                <section class="partial-container" data-partial="flow">
-                </section>
-
-                <section class="partial-container" data-partial="criterias"></section>
-
-                <section class="partial-container" data-partial="blockers"></section>
-                
-                <section class="partial-container" data-partial="classes-of-service"></section>
-
-                <section class="partial-container" data-partial="tracking">
-                </section>
+              {{ content }}
             </div>
         </div>
         <script src="/javascripts/head.min.js"></script>
@@ -240,7 +188,5 @@ Reveal.initialize({
     });
 
     </script>
-    
-
 </body>
 </html>
