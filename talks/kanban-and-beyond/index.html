@@ -1,0 +1,3317 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Boards and Flow</title>
+
+        <meta name="description" content="framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="/stylesheets/reveal.css">
+        <link rel="stylesheet" href="/stylesheets/csshake.min.css">
+        <link rel="stylesheet" href="/stylesheets/theme/black.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="/stylesheets/zenburn.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.2.js"></script>
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? '/stylesheets/print/pdf.css' : '/stylesheets/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+        <style>
+            .post-it {
+                background:#fefabc;
+                padding:15px;
+                font-size:13px;
+                color: #000;
+                text-align: center;
+
+                -moz-transform: rotate(1deg);
+                -webkit-transform: rotate(1deg);
+                -o-transform: rotate(1deg);
+                -ms-transform: rotate(1deg);
+                transform: rotate(1deg);
+
+                box-shadow: 0px 4px 6px #333;
+                -moz-box-shadow: 0px 4px 6px #333;
+                -webkit-box-shadow: 0px 4px 6px #333;
+                width: 97px;
+                position: relative;
+            }
+
+            .post-it-highlight{
+                background:#ff9900;
+                padding:15px;
+                font-size:13px;
+                font-weight: bold;
+                color: #000;
+                text-align: center;
+
+                -moz-transform: rotate(1deg);
+                -webkit-transform: rotate(1deg);
+                -o-transform: rotate(1deg);
+                -ms-transform: rotate(1deg);
+                transform: rotate(1deg);
+
+                box-shadow: 0px 4px 6px #333;
+                -moz-box-shadow: 0px 4px 6px #333;
+                -webkit-box-shadow: 0px 4px 6px #333;
+                width: 97px;
+                position: relative;
+            }
+            .post-it-blocked {
+                background:#ff0000;
+                padding:15px;
+                font-size:13px;
+                font-weight: bold;
+                color: #000;
+                text-align: center;
+
+                -moz-transform: rotate(1deg);
+                -webkit-transform: rotate(1deg);
+                -o-transform: rotate(1deg);
+                -ms-transform: rotate(1deg);
+                transform: rotate(1deg);
+
+                box-shadow: 0px 4px 6px #333;
+                -moz-box-shadow: 0px 4px 6px #333;
+                -webkit-box-shadow: 0px 4px 6px #333;
+                width: 97px;
+                position: relative;
+            }
+
+            .reveal table td {
+                border-bottom: initial;
+            }
+
+            .board table { border-collapse: initial; }
+            .board tbody tr {
+                border: none;
+                height: 90px;
+            }
+            .board tbody tr td {
+                    border-right: solid 1px;
+                    border-left: solid 1px;
+            }
+            .board thead tr { border: none; }
+            .board thead tr td {
+                    border-right: solid 1px;
+                    border-left: solid 1px;
+            }
+
+            .question {
+                color: #990000;
+            }
+
+            .reveal section img.person {
+                background: initial;
+                border: none;
+                box-shadow: none;
+                height: 62px;
+                z-index: 1;
+                top: -20px;
+                position: relative;
+                margin: -13px;
+                margin-left: -5px;
+            }
+
+            .spinning {
+              animation: spin ease 3s infinite;
+            }
+
+            @keyframes spin {
+              from { transform: rotate(0deg);}
+              to { transform: rotate(360deg); }
+            }
+
+            em {
+              text-decoration: underline;
+              text-decoration-style:dashed;
+              background-color: #1f1f2e ;
+            }
+
+        </style>
+
+        <!--[if lt IE 9]>
+            <script src="lib/js/html5shiv.js"></script>
+            <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+              <section class="partial-container" data-partial="introduction">
+  <section>
+<h1>Kanban and Beyond</h1>
+<h3>7 Components of a great <em>K</em>anban System</h3>
+<p>
+<small>Created by <a href="http://rogeralmeida.github.io/">Roger Almeida</a> / <a href="http://twitter.com/roger4almeida">@roger4almeida</a></small>
+</p>
+</section>
+<section>
+  <img src="/images/kanban-and-beyond/starbucks.jpeg" style="width: 95%; height: 95%;"/>
+</section>
+
+<section>
+  <img src="/images/kanban-and-beyond/assemblyLine.jpeg" style="width: 85%; height: 85%;"/>
+</section>
+
+<section>
+  <img src="/images/kanban-and-beyond/boing.jpg" style="width: 95%; height: 95%;"/>
+</section>
+
+</section>
+
+<section class="partial-container" data-partial="visual">
+  	<section>
+		<h2>Visual Workflow</h2>
+		<img src="/images/kanban-and-beyond/boing.jpg" style="width: 75%; height: 75%;"/>
+	</section>
+	<section>
+		<h2>Software Development?</h2>
+	</section>
+	<section>
+		<h2>QA Testing the mobile app?</h2>
+		<img src="/images/kanban-and-beyond/Students-using-smartphones.jpg"/>
+	</section>
+	<section>
+		<h2>Are we releasing the new version in July?</h2>
+		<img src="/images/kanban-and-beyond/10-ways-pair-programming-3.png"/>
+	</section>
+	<section>
+		<h2>Is the feature X in Prod?</h2>
+		<img src="/images/kanban-and-beyond/Coding_Shots_Annual_Plan_high_res-5.jpg"/>
+	</section>
+	<section>
+		<h2>We cannot see the progress naturally</h2>
+		<img src="/images/kanban-and-beyond/office.jpg"/>
+	</section>
+	<section>
+        <img src="/images/kanban-and-beyond/toyotaKanban.jpg"/>
+	</section>
+
+</section>
+
+<section class="partial-container" data-partial="what-is-kanban">
+    <section>
+      <h2>What is kanban?</h2>
+      <ul>
+        <li class="fragment fade-in">Toyota way to signal the upstream department to produce more parts</li>
+        <li class="fragment fade-in">Reduce waste</li>
+      </ul>
+  </section>
+  <section>
+      <img src="/images/kanban-and-beyond/kanbanBook.jpg"/>
+  </section>
+
+  <section>
+      <p>
+      <em>k</em>anban vs <em>K</em>anban?
+      </p>
+      <ul>
+          <li class="fragment fade-in"><em>k</em>anban = card to send a signal</li>
+          <li class="fragment fade-in"><em>K</em>anban = system to reduce waste</li>
+      </ul>
+  </section>
+
+</section>
+
+<section class="partial-container" data-partial="workflow">
+  <section>
+<h2>Component 1:</h2>
+<h1>Show the Workflow</h1>
+</section>
+<section>
+  <div class="board">
+    <table width="">
+      <tbody>
+        <tr>
+          <td>To Do</td>
+          <td>Doing</td>
+          <td>Done</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              12
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              8
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              3
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              22 
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              11 
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              4
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              9
+            </div>
+          </td>
+          <td>
+          </td>
+          <td>
+            <div class="post-it">
+              2
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+            <div class="post-it">
+              1
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section>
+  <div class="board">
+    <table width="">
+      <tbody>
+        <tr>
+          <td>Backlog</td>
+          <td>Dev</td>
+          <td>Test</td>
+          <td>Validated</td>
+          <td>Deployed</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              12
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              8
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              3
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              10
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              16
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              22 
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              11 
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              4
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              15
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              14
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              9
+            </div>
+          </td>
+          <td>
+          </td>
+          <td>
+            <div class="post-it">
+              2
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              18
+            </div> 
+          </td>
+          <td>
+            <div class="post-it">
+              23
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+            <div class="post-it">
+              1
+            </div>
+          </td>
+          <td>
+
+          </td>
+          <td>
+            <div class="post-it">
+              13
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</section>
+
+<section class="partial-container" data-partial="people">
+  <section>
+    <h2>Component 2:</h2>
+    <h1>Show the people</h1>
+</section>
+<section>
+    <div class="board">
+        <table width="">
+            <tbody>
+                <tr>
+                    <td>Backlog</td>
+                    <td>Dev</td>
+                    <td>Test</td>
+                    <td>Validated</td>
+                    <td>Deployed</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="post-it">
+                            12
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            8
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            3
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            10
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            16
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="post-it">
+                            22 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            11 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            4
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            15
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            14
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="post-it">
+                            9
+                        </div>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            2
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            18
+                        </div> 
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            23
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            1
+                        </div>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            13
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<section>
+    <div class="board">
+        <table width="">
+            <tbody>
+                <tr>
+                    <td>Backlog</td>
+                    <td>Dev</td>
+                    <td>Test</td>
+                    <td>Validated</td>
+                    <td>Deployed</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="post-it">
+                            12
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            8
+                        </div>
+                        <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+                        <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            3
+                        </div>
+                        <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            10
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            16
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="post-it">
+                            22 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            11 
+                        </div>
+                        <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+                        <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            4
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            15
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            14
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="post-it">
+                            9
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            2
+                        </div>
+                        <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+                        <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            1
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            23
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            18
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            13
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+</section>
+
+<section class="partial-container" data-partial="queues">
+  <aside class="notes">
+    * Explain overproduction
+    * I have to explain single piece flow before this
+    * Leadtime is also important
+    * Limit working in progress
+  </aside>
+  <section>
+<h2>Component 3:</h2>
+<h1>Queues</h1>
+</section>
+<section>
+  <div class="board">
+    <table width="">
+      <tbody>
+        <tr>
+          <td>Dev</td>
+          <td>Test</td>
+          <td>Deployed</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              12
+            </div>
+            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              3
+            </div>
+            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              16
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              22 
+            </div>
+            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it-highlight shake-constant shake-chunk">
+              4
+            </div>
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              2
+            </div>
+            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it-highlight shake-constant shake-chunk">
+              8
+            </div>
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it-highlight shake-constant shake-chunk">
+              1
+            </div>
+          </td>
+          <td>
+            <div class="post-it-highlight shake-constant shake-chunk">
+              11 
+            </div>
+          </td>
+          <td>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section>
+  <div class="board">
+    <table width="">
+      <tbody>
+        <tr>
+          <td>Backlog</td>
+          <td>Dev</td>
+          <td>Queue</td>
+          <td>Test</td>
+          <td>Queue</td>
+          <td>Deployed</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it-highlight">
+              1
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              12
+            </div>
+            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it-highlight">
+              4
+            </div>
+
+          </td>
+          <td>
+            <div class="post-it">
+              3
+            </div>
+            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it-highlight">
+              11 
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              16
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+
+          </td>
+          <td>
+            <div class="post-it">
+              22 
+            </div>
+            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it-highlight">
+              8
+            </div>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <div class="post-it">
+              2
+            </div>
+            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+          </td>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</section>
+
+<section class="partial-container" data-partial="concepts">
+  	<section>
+		<h1>Some Concepts</h1>
+        <h2>Before moving on</h2>
+        <img src="https://media.giphy.com/media/ZXKZWB13D6gFO/giphy.gif" />
+	</section>
+    <section>
+        <img src="/images/kanban-and-beyond/wip.png"/>
+    </section>
+    <section>
+        <img src="/images/kanban-and-beyond/leadTime.png"/>
+    </section>
+    <section>
+        <img src="/images/kanban-and-beyond/cycleTime.png"/>
+    </section>
+    <section>
+        <img src="/images/kanban-and-beyond/throughput.png"/>
+    </section>
+    <section>
+        <img src="/images/kanban-and-beyond/batchSize.png"/>
+    </section>
+
+</section>
+
+<section class="partial-container" data-partial="wip">
+      <section>
+        <h2>Component 4:</h2>
+        <h1>Limit WIP</h1>
+    </section>
+    <section data-transition="none">
+        <div class="board">
+            <table width="">
+                <tbody>
+                    <tr>
+                        <td>Backlog</td>
+                        <td>Dev</td>
+                        <td>Queue</td>
+                        <td>Test</td>
+                        <td>Queue</td>
+                        <td>Deployed</td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              17
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                12
+                            </div>
+                            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                4
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                3
+                            </div>
+                            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                16
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              20
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                22 
+                            </div>
+                            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                8
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              18
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it-highlight">
+                                2
+                            </div>
+                            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                11 
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              19
+                          </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section data-transition="none">
+        <div class="board">
+            <table width="">
+                <tbody>
+                    <tr>
+                        <td>Backlog</td>
+                        <td>Dev</td>
+                        <td>Queue</td>
+                        <td>Test</td>
+                        <td>Queue</td>
+                        <td>Deployed</td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              17
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                12
+                            </div>
+                            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                4
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                3
+                            </div>
+                            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                16
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              20
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                22 
+                            </div>
+                            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                8
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              18
+                          </div>
+                        </td>
+                        <td>
+                            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                11 
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              19
+                          </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div class="post-it-highlight">
+                                2
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section data-transition="none">
+        <div class="board">
+            <table width="">
+                <tbody>
+                    <tr>
+                        <td>Backlog</td>
+                        <td>Dev</td>
+                        <td>Queue</td>
+                        <td>Test</td>
+                        <td>Queue</td>
+                        <td>Deployed</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                12
+                            </div>
+                            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                4
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                3
+                            </div>
+                            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                16
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              20
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                22 
+                            </div>
+                            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                8
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              18
+                          </div>
+                        </td>
+                        <td>
+                          <div class="post-it-highlight">
+                              17
+                          </div>
+                            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                11 
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              19
+                          </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                2
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section data-transition="none">
+        <div class="board">
+            <table width="">
+                <tbody>
+                    <tr>
+                        <td>Backlog</td>
+                        <td>Dev</td>
+                        <td>Queue</td>
+                        <td>Test</td>
+                        <td>Queue</td>
+                        <td>Deployed</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <div class="post-it-highlight">
+                                12
+                            </div>
+                            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                4
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                3
+                            </div>
+                            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                16
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              20
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                22 
+                            </div>
+                            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                8
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              18
+                          </div>
+                        </td>
+                        <td>
+                          <div class="post-it">
+                              17
+                          </div>
+                            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                11 
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              19
+                          </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                2
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section data-transition="none">
+        <div class="board">
+            <table width="">
+                <tbody>
+                    <tr>
+                        <td>Backlog</td>
+                        <td>Dev</td>
+                        <td>Queue</td>
+                        <td>Test</td>
+                        <td>Queue</td>
+                        <td>Deployed</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                4
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                3
+                            </div>
+                            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                16
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              20
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                22 
+                            </div>
+                            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                8
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              18
+                          </div>
+                        </td>
+                        <td>
+                          <div class="post-it">
+                              17
+                          </div>
+                            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                11 
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              19
+                          </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                2
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="post-it-highlight">
+                                12
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section data-transition="none">
+        <div class="board">
+            <table width="">
+                <tbody>
+                    <tr>
+                        <td>Backlog</td>
+                        <td>Dev</td>
+                        <td>Queue</td>
+                        <td>Test</td>
+                        <td>Queue</td>
+                        <td>Deployed</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                          <div class="post-it-highlight">
+                              20
+                          </div>
+                            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                4
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                3
+                            </div>
+                            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                16
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                22 
+                            </div>
+                            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                8
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              18
+                          </div>
+                        </td>
+                        <td>
+                          <div class="post-it">
+                              17
+                          </div>
+                            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                11 
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              19
+                          </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                2
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="post-it">
+                                12
+                            </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section data-transition="none">
+        <div class="board">
+            <table width="">
+                <tbody>
+                    <tr>
+                        <td>Backlog</td>
+                        <td>Dev</td>
+                        <td>Queue</td>
+                        <td>Test</td>
+                        <td>Queue</td>
+                        <td>Deployed</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                          <div class="post-it">
+                              20
+                          </div>
+                            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                4
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                3
+                            </div>
+                            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                16
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                22 
+                            </div>
+                            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                8
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              18
+                          </div>
+                        </td>
+                        <td>
+                          <div class="post-it">
+                              17
+                          </div>
+                            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                11 
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              19
+                          </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                2
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="post-it-highlight shake-chunk shake-constant">
+                                12
+                            </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section>
+        <h2> Add limits to the system to reduce the Lead Time</h2>
+    </section>
+    <section>
+        <h2>Little&#8217;s Law</h2>
+        <blockquote>“The average number of work items in a stable system is equal to their average completion rate, multiplied by their average time in the system.” John Little, 1961 </blockquote>
+        <h1 class="fragment">
+          WIP = Throughput X Lead Time
+        </h1>
+    </section>
+    <section>
+        <h2>The goal is to Reduce Lead Time</h2>
+        <em> Lead Time = WIP <span class="fragment"> <i class="fa fa-arrow-down" aria-hidden="true"></i></span> / Throughput <span class="fragment"><i class="fa fa-arrow-up" aria-hidden="true"></i></span></em>
+    </section>
+    <section>
+        <iframe width="800" height="600" src="https://www.youtube.com/embed/nl7hARdw18M" frameborder="0" allowfullscreen="true"></iframe>
+    </section>
+    <section data-transition="none">
+        <div class="board">
+            <table width="">
+                <tbody>
+                    <tr>
+                        <td>Backlog</td>
+                        <td>Dev</td>
+                        <td>Queue</td>
+                        <td>Test</td>
+                        <td>Queue</td>
+                        <td>Deployed</td>
+                    </tr>
+                    <tr class="limit-row">
+                      <td></td>
+                      <td><center>3</center></td>
+                      <td><center>4</center></td>
+                      <td><center>1</center></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                          <div class="post-it">
+                              20
+                          </div>
+                            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                4
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                3
+                            </div>
+                            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                16
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                22 
+                            </div>
+                            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                8
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              18
+                          </div>
+                        </td>
+                        <td>
+                          <div class="post-it">
+                              17
+                          </div>
+                            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                11 
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              19
+                          </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                2
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="post-it-highlight shake-chunk shake-constant">
+                                12
+                            </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</section>
+
+<section class="partial-container" data-partial="flow">
+  <section>
+<h2>Component 5:</h2>
+<h1>The flow</h1>
+</section>
+<section data-transition="none">
+  <div class="board">
+    <table width="">
+      <tbody>
+        <tr>
+          <td>Backlog</td>
+          <td>Dev</td>
+          <td>Q 4 Test</td>
+          <td>Test</td>
+          <td>Done</td>
+        </tr>
+        <tr>
+          <td><center>5</center></td>
+          <td><center>3</center></td>
+          <td><center>3</center></td>
+          <td><center>1</center></td>
+          <td><center></center></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              12
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              8
+            </div>
+            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              3
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              10
+            </div>
+            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              16
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              22 
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              11 
+            </div>
+            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              9
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              2
+            </div>
+            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>                
+<section data-transition="none">
+  <div class="board">
+    <table width="">
+      <tbody>
+        <tr>
+          <td>Backlog</td>
+          <td>Dev</td>
+          <td>Q 4 Test</td>
+          <td>Test</td>
+          <td>Done</td>
+        </tr>
+        <tr>
+          <td><center>5</center></td>
+          <td><center>3</center></td>
+          <td><center>3</center></td>
+          <td><center>1</center></td>
+          <td><center></center></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              12
+            </div>
+          </td>
+          <td>
+            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              3
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              10
+            </div>
+            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              16
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              22 
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              11 
+            </div>
+            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it-highlight">
+              8
+            </div>
+          </td>
+          <td>
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              9
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              2
+            </div>
+            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+          </td>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>  
+<section data-transition="none">
+  <div class="board">
+    <table width="">
+      <tbody>
+        <tr>
+          <td>Backlog</td>
+          <td>Dev</td>
+          <td>Q 4 Test</td>
+          <td>Test</td>
+          <td>Done</td>
+        </tr>
+        <tr>
+          <td><center>5</center></td>
+          <td><center>3</center></td>
+          <td><center>3</center></td>
+          <td><center>1</center></td>
+          <td><center></center></td>
+        </tr>
+        <tr>
+          <td>
+
+          </td>
+          <td>
+            <div class="post-it-highlight">
+              12
+            </div>
+            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              3
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              10
+            </div>
+            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              16
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              22 
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              11 
+            </div>
+            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              8
+            </div>
+          </td>
+          <td>
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              9
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              2
+            </div>
+            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+          </td>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>   
+<section data-transition="none">
+  <div class="board">
+    <table width="">
+      <tbody>
+        <tr>
+          <td>Backlog</td>
+          <td>Dev</td>
+          <td>Q 4 Test</td>
+          <td>Test</td>
+          <td>Done</td>
+        </tr>
+        <tr>
+          <td><center>5</center></td>
+          <td><center>3</center></td>
+          <td><center>3</center></td>
+          <td><center>1</center></td>
+          <td><center></center></td>
+        </tr>
+        <tr>
+          <td>
+
+          </td>
+          <td>
+            <div class="post-it">
+              12
+            </div>
+            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              3
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              10
+            </div>
+            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              16
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              22 
+            </div>
+          </td>
+          <td>
+
+            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              8
+            </div>
+          </td>
+          <td>
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              9
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              2
+            </div>
+            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it-highlight">
+              11 
+            </div>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>               
+<section>
+  <h2>Queue is full!!!</h2>
+  <img class="strech" src="/images/kanban-and-beyond/panic.gif"/>
+</section>
+<section data-transition="none">
+  <h3>One developer can pair with the tester</h3>
+  <div class="board">
+    <table width="">
+      <tbody>
+        <tr>
+          <td>Backlog</td>
+          <td>Dev</td>
+          <td>Q 4 Test</td>
+          <td>Test</td>
+          <td>Done</td>
+        </tr>
+        <tr>
+          <td><center>5</center></td>
+          <td><center>3</center></td>
+          <td><center>3</center></td>
+          <td><center>1</center></td>
+          <td><center></center></td>
+        </tr>
+        <tr>
+          <td>
+
+          </td>
+          <td>
+            <div class="post-it">
+              12
+            </div>
+            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              3
+            </div>
+          </td>
+          <td>
+            <div class="post-it-highlight">
+              10
+            </div>
+            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              16
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+
+          </td>
+          <td>
+            <div class="post-it-highlight">
+              22 
+            </div> 
+            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              8
+            </div>
+          </td>
+          <td>
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              9
+            </div>
+          </td>
+          <td>
+            <div class="post-it">
+              2
+            </div>
+            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              11 
+            </div>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section> 
+<section data-transition="none">
+  <h3>Move the focus to test column</h3>
+  <div class="board">
+    <table width="">
+      <tbody>
+        <tr>
+          <td>Backlog</td>
+          <td>Dev</td>
+          <td>Q 4 Test</td>
+          <td>Test</td>
+          <td>Done</td>
+        </tr>
+        <tr>
+          <td><center>5</center></td>
+          <td><center>3</center></td>
+          <td><center>3</center></td>
+          <td><center>1</center></td>
+          <td><center></center></td>
+        </tr>
+        <tr>
+          <td>
+
+          </td>
+          <td>
+            <div class="post-it">
+              12
+            </div>
+            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+          </td>
+          <td>
+          </td>
+          <td>
+            <div class="post-it-highlight">
+              10
+            </div>
+            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              16
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              22 
+            </div> 
+          </td>
+          <td>
+            <div class="post-it">
+              2
+            </div>
+            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+          </td>
+          <td>
+            <div class="post-it">
+              8
+            </div>
+          </td>
+          <td>
+            <div class="post-it-highlight">
+              3
+            </div>
+            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="post-it">
+              9
+            </div>
+          </td>
+          <td>
+          </td>
+          <td>
+            <div class="post-it">
+              11 
+            </div>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section> 
+
+</section>
+
+<section class="partial-container" data-partial="criterias">
+  	<section>
+        <h2>Component 6:</h2>
+    	<h1>Explicit Criterias</h1>
+	</section>
+<section>
+    <div class="board">
+        <table width="">
+            <tbody>
+                <tr>
+                    <td>Backlog</td>
+                    <td>Dev</td>
+                    <td>Test</td>
+                    <td>Validated</td>
+                    <td>Deployed</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="post-it">
+                            12
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            8
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            3
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            10
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            16
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="post-it">
+                            22 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            11 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            4
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            15
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            14
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="post-it">
+                            9
+                        </div>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            2
+                        </div>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            18
+                        </div> 
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            23
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            1
+                        </div>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <div class="post-it">
+                            13
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="/images/kanban-and-beyond/checklist.png" style="width: 50px; height: 50px;"/></td>
+                    <td><img src="/images/kanban-and-beyond/checklist.png" style="width: 50px; height: 50px;"/></td>
+                    <td><img src="/images/kanban-and-beyond/checklist.png" style="width: 50px; height: 50px;"/></td>
+                    <td><img src="/images/kanban-and-beyond/checklist.png" style="width: 50px; height: 50px;"/></td>
+                    <td><img src="/images/kanban-and-beyond/checklist.png" style="width: 50px; height: 50px;"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+</section>
+
+<section class="partial-container" data-partial="blockers">
+    <section>
+      <h2>Component 7:</h2>
+      <h1>Highlight the Blockers</h1>
+  </section>
+    <section data-transition="none">
+        <div class="board">
+            <table width="">
+                <tbody>
+                    <tr>
+                        <td>Backlog</td>
+                        <td>Dev</td>
+                        <td>Queue</td>
+                        <td>Test</td>
+                        <td>Queue</td>
+                        <td>Deployed</td>
+                    </tr>
+                    <tr>
+                        <td><center>5</center></td>
+                        <td><center>3</center></td>
+                        <td><center>3</center></td>
+                        <td><center>2</center></td>
+                        <td><center>5</center></td>
+                        <td><center></center></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              17
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                12
+                            </div>
+                            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                4
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                3
+                            </div>
+                            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                16
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              20
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                22 
+                            </div>
+                            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                8
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              18
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                2
+                            </div>
+                            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                11 
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              19
+                          </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section data-transition="none">
+        <div class="board">
+            <table width="">
+                <tbody>
+                    <tr>
+                        <td>Backlog</td>
+                        <td>Dev</td>
+                        <td>Queue</td>
+                        <td>Test</td>
+                        <td>Queue</td>
+                        <td>Deployed</td>
+                    </tr>
+                    <tr>
+                        <td><center>5</center></td>
+                        <td><center>3</center></td>
+                        <td><center>3</center></td>
+                        <td><center>2</center></td>
+                        <td><center>5</center></td>
+                        <td><center></center></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              17
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it-blocked">
+                                12
+                            </div>
+                            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                4
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                3
+                            </div>
+                            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                16
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              20
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                22 
+                            </div>
+                            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                8
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              18
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                2
+                            </div>
+                            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                11 
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              19
+                          </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section data-transition="none">
+        <div class="board">
+            <table width="">
+                <tbody>
+                    <tr>
+                        <td>Backlog</td>
+                        <td>Dev</td>
+                        <td>Queue</td>
+                        <td>Test</td>
+                        <td>Queue</td>
+                        <td>Deployed</td>
+                    </tr>
+                    <tr>
+                        <td><center>5</center></td>
+                        <td><center>3</center></td>
+                        <td><center>3</center></td>
+                        <td><center>2</center></td>
+                        <td><center>5</center></td>
+                        <td><center></center></td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <div class="post-it-blocked">
+                                12
+                            </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                4
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                3
+                            </div>
+                            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                16
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              20
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                22 
+                            </div>
+                            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                8
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              18
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                2
+                            </div>
+                            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                11 
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              19
+                          </div>
+                        </td>
+                        <td>
+                          <div class="post-it">
+                              17
+                          </div>
+                            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</section>
+
+<section class="partial-container" data-partial="classes-of-service">
+  	<section>
+        <h2>Component 8:</h2>
+		<h1>Classes Of Service</h1>
+	</section>
+    <section>
+        
+      <div class="post-it">
+          U.S.
+      </div>
+      <br/>
+      <div class="post-it-blocked">
+          Bugs
+      </div>
+      <br/>
+      <div class="post-it-highlight">
+          Tech. Debt
+      </div>
+    </section>
+    <section data-transition="none">
+        <div class="board">
+            <table width="">
+                <tbody>
+                    <tr>
+                        <td>Backlog</td>
+                        <td>Dev</td>
+                        <td>Queue</td>
+                        <td>Test</td>
+                        <td>Queue</td>
+                        <td>Deployed</td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              17
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it-blocked">
+                                12
+                            </div>
+                            <img src="/images/kanban-and-beyond/p3.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p4.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it-highlight">
+                                4
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="post-it-blocked">
+                                3
+                            </div>
+                            <img src="/images/kanban-and-beyond/p7.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                16
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it-highlight">
+                              20
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                22 
+                            </div>
+                            <img src="/images/kanban-and-beyond/p5.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p6.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                8
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it">
+                              18
+                          </div>
+                        </td>
+                        <td>
+                            <div class="post-it-highlight">
+                                2
+                            </div>
+                            <img src="/images/kanban-and-beyond/p1.png" class="person"/>
+                            <img src="/images/kanban-and-beyond/p2.png" class="person"/>
+                        </td>
+                        <td>
+                            <div class="post-it">
+                                11 
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="post-it-highlight">
+                              19
+                          </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section>
+        <img src="/images/kanban-and-beyond/classes1.jpg"/>
+    </section>
+
+</section>
+
+<section class="partial-container" data-partial="tracking">
+    <section>
+      <h2>Component 9:</h2>
+      <h1>Tracking The Flow</h1>
+  </section>
+  <section>
+      <h2>Cumulative Flow Diagram (CFD)</h2>
+      <img src="/images/kanban-and-beyond/cfd.png"/>
+  </section>
+  <section>
+      <h2>How to read a CFD</h2>
+      <img src="/images/kanban-and-beyond/cfd2.jpg"/>
+  </section>
+  <section>
+      <img src="/images/kanban-and-beyond/lead_time_board.jpg"/>
+  </section>
+
+</section>
+
+            </div>
+        </div>
+        <script src="/javascripts/head.min.js"></script>
+        <script src="/javascripts/reveal.js"></script>
+        <script>
+
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    width: 1024,
+    height: 780,
+
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+        { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+
+    </script>
+</body>
+</html>
