@@ -4,7 +4,7 @@
   <title><![CDATA[Category: scala | Roger Almeida]]></title>
   <link href="http://rogeralmeida.github.io/blog/categories/scala/atom.xml" rel="self"/>
   <link href="http://rogeralmeida.github.io/"/>
-  <updated>2016-09-28T09:24:43+10:00</updated>
+  <updated>2016-11-25T20:08:36+00:00</updated>
   <id>http://rogeralmeida.github.io/</id>
   <author>
     <name><![CDATA[Roger Almeida]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Euler's Journey Problem 1]]></title>
-    <link href="http://rogeralmeida.github.io/blog/2014/12/30/eulers-journey-problem-1/"/>
-    <updated>2014-12-30T06:38:43+11:00</updated>
-    <id>http://rogeralmeida.github.io/blog/2014/12/30/eulers-journey-problem-1</id>
+    <link href="http://rogeralmeida.github.io/blog/2014/12/29/eulers-journey-problem-1/"/>
+    <updated>2014-12-29T19:38:43+00:00</updated>
+    <id>http://rogeralmeida.github.io/blog/2014/12/29/eulers-journey-problem-1</id>
     <content type="html"><![CDATA[<p>So I decided to start a project where I gonna implement the same problem in many languages. I always wanted to compare how different programming languages face some coding challenges. I don&rsquo;t want to prove that any language is better than other, althought I know that this kind of flame will happen.
 To have a organized list of problems I gonna use the <a href="http://projecteuler.net/">Project Euler</a> problems.</p>
 
