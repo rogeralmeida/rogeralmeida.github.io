@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    RedCloth (4.2.9)
+    RedCloth (4.3.2)
     blankslate (2.1.2.4)
     celluloid (0.16.0)
       timers (~> 4.0.0)
@@ -78,7 +78,7 @@ GEM
     rack (1.6.0)
     rack-protection (1.5.3)
       rack
-    rake (10.4.2)
+    rake (11.3.0)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -109,14 +109,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  RedCloth (~> 4.2.9)
+  RedCloth (~> 4.3.2)
   compass (~> 1.0.1)
   haml (~> 4.0)
   jekyll (~> 2.0)
   jekyll-sitemap
   octopress-date-format (~> 2.0)
   octopress-hooks (~> 2.2)
-  rake (~> 10.0)
+  rake (~> 11.0)
   rb-fsevent (~> 0.9)
   rdiscount (~> 2.0)
   rubypants (~> 0.2.0)
@@ -126,4 +126,4 @@ DEPENDENCIES
   therubyracer (~> 0.12.2)
 
 BUNDLED WITH
-   1.13.2
+   1.13.6
