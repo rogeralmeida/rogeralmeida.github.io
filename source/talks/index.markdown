@@ -8,4 +8,5 @@ footer: true
 ---
 <ul>
   <li><a href="{{ root_url }}/talks/kanban-and-beyond/">Kanban and Beyond</a></li>
+  <li><a href="{{ root_url }}/talks/inception/">Inception</a></li>
 </ul>
