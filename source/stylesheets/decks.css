@@ -3,5 +3,27 @@
 }
 
 .col-3 {
+  float: left;
   width: 25%;
+}
+
+.col-4 {
+  float: left;
+  width: 33.33%;
+  border: 5px solid red; 
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.row::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.panel {
+  border: 5px solid red; 
 }
