@@ -10,12 +10,12 @@
 .col-4 {
   float: left;
   width: 33.33%;
-  border: 5px solid red; 
 }
 
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 100%;
 }
 
 .row::after {
@@ -25,5 +25,19 @@
 }
 
 .panel {
-  border: 5px solid red; 
+  border: 1px solid red; 
+  border-radius: 25px;
 }
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+* .clearfix { display: block; }
