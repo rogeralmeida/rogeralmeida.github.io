@@ -157,7 +157,7 @@
         <div class="reveal">
 
             <!-- Any section element inside of this container is displayed as a slide -->
-            <div class="slides">
+            <div class="slides" style="margin-left: 20px; margin-right: 20px;">
               {{ content }}
             </div>
         </div>
@@ -182,12 +182,12 @@ Reveal.initialize({
 
         // Optional reveal.js plugins
         dependencies: [
-        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: 'plugin/zoom-js/zoom.js', async: true },
-        { src: 'plugin/notes/notes.js', async: true }
+        { src: '/javascripts/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: '/javascripts/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '/javascripts/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '/javascripts/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: '/javascripts/plugin/zoom-js/zoom.js', async: true },
+        { src: '/javascripts/plugin/notes/notes.js', async: true }
         ]
     });
 
