@@ -24,13 +24,12 @@ footer: true
   %section
     %h2 What if...
     %img{src: '/images/inception/whatkillsmostprojects2.png'}
-%section
-  
-  %table
-    %tr
-      %td{style: "width: 30%;"}
-        %h2 Agile Software Inception
-      %td
+%section{data: {background: {image: '/images/inception/inception-workshops.jpg'}}}
+  .row
+    .col-6
+      %h2 Agile Software Inception
+    .col-6
+      .panel
         %ul
           %li Serie of workshop
           %li From high level to detail
@@ -39,37 +38,86 @@ footer: true
           %li Team building
 %section
   %section
-    :markdown
-      # Phases of an Inception
-      * Discovery
-      * Analysis
-      * Planning
+    .row
+      .col-12
+        :markdown
+          # Phases of an Inception
+    .row
+      .col-4
+        :markdown
+          ## Discovery
+      .col-4
+        :markdown
+          ## Analysis
+      .col-4
+        :markdown
+          ## Planning
   %section
-    :markdown
-      # Discovery
-      * Product/Project Vision
-      * Stakeholder's Map
-      * User's Goals
-      * Personas
-      * User Journey
-      * Product BluePrint
-      * Is/Is Not - Does/Does Not
-      * Product in a box
-      * Elevator Pitch
+    .row
+      .col-12
+        %h2 Discovery
+    .row
+      .col-6
+        .panel
+          :markdown
+            * Product/Project Vision
+            * Stakeholder's Map
+            * User's Goals
+            * Personas
+            * User Journey
+            * Product BluePrint
+            * Is/Is Not - Does/Does Not
+            * Product in a box
+            * Elevator Pitch
+      .col-1
+        &nbsp;
+      .col-4
+        .panel
+          :markdown
+            * Why are we here?
+            * Why are we building it?
+            * Why doing it now?
+            * Who will benefit from it?
   %section
-    :markdown
-      # Analysis
-      * Feature Discovery
-      * Tech Certainty vs Business Certainty
-      * Effort vs Business Value
-      * Tech Session
-      * Path to Production
-      * Cross Functional Requirements
+    .row
+      .col-12
+        %h2 Analysis
+    .row
+      .col-6
+        .panel
+          :markdown
+            * Feature Discovery
+            * Tech Certainty vs Business Certainty
+            * Effort vs Business Value
+            * Tech Session
+            * Path to Production
+            * Cross Functional Requirements
+      .col-1
+        &nbsp;
+      .col-5
+        .panel
+          :markdown
+            * What do we have to do?
+            * What are the effects?
+            * How we will build it?
+            * How we gonna put it in production?
   %section
-    :markdown
-      # Planning
-      * Critical Path
-      * Release Waves
+    .row
+      .col-12
+        %h2 Planning
+    .row
+      .col-6
+        .panel
+          :markdown
+            * Critical Path
+            * Release Waves
+      .col-1
+        &nbsp;
+      .col-5
+        .panel
+          :markdown
+            * How we gonna release it
+            * Final considerations
 %section
   %h1 Discovery Phase
 %section
@@ -86,18 +134,36 @@ footer: true
           * What have being done so far
           * What do we know
           * What we are looking for
-      .col-9
+      .col-8
         %img{src: '/images/inception/vision.png'}
 %section
   %section
     .row
-      .col-4
-        :markdown
-          ### Is/Is Not - Does/Does Not
-      .col-8
+      :markdown
+        ## Is/Is Not - Does/Does Not
+    .row
+      .col-6
+        %img{src: "/images/inception/faz-nao-faz.jpg"}
+      .col-6
+        %img{src: '/images/inception/is-is-not-does-does-not.jpg'}
+  %section
+    .row
+      %h2 Variations: Is/Is Not - MVP/Ideal Experience
+    .row
+      %img{src: '/images/inception/mvp-is-not.jpg'}
 %section
   %section
-    elevator pitch
+    .row
+      %h2 elevator pitch
+    .row
+      .col-2
+        &nbsp;
+      .col-8
+        %img{src: '/images/inception/elevator-pitch.jpg', style: 'width: 100%; heigth: 200px;'}
+      .col-2
+  %section
+    %img{src: '/images/inception/elevator-pitch-team.jpg'}
+
 %section
   %section
     Product in a box
