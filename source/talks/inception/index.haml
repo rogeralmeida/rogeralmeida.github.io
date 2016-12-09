@@ -166,10 +166,22 @@ footer: true
 
 %section
   %section
-    Product in a box
+    .row
+      %h2 Product in a box
+    .row
+      .col-6
+        %img{src: '/images/inception/product-in-a-box.jpeg'}
+      .col-4
+        .panel
+          :markdown
+            * Design a product your customer would like to buy
+            * List key features
+            * Think about slogans
+
 %section
-  %section
-    In scope/Out of scope
+  %section{data: {background: {image: '/images/inception/in-out-circle.png'}}}
+    %h2 In scope/Out of scope
+  %section{data: {background: {image: '/images/inception/in-out-questions.png'}}}
 %section
   %section
     Trade Off Sliders
