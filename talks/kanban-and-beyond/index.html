@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Boards and Flow</title>
+        <title>Kanban and Beyond</title>
 
         <meta name="description" content="framework for easily creating beautiful presentations using HTML">
         <meta name="author" content="Hakim El Hattab">
@@ -16,7 +16,8 @@
 
         <link rel="stylesheet" href="/stylesheets/reveal.css">
         <link rel="stylesheet" href="/stylesheets/csshake.min.css">
-        <link rel="stylesheet" href="/stylesheets/theme/black.css" id="theme">
+        <link rel="stylesheet" href="/stylesheets/theme/solarized.css" id="theme">
+        <link rel="stylesheet" href="/stylesheets/decks.css">
 
         <!-- Code syntax highlighting -->
         <link rel="stylesheet" href="/stylesheets/zenburn.css">
@@ -156,7 +157,7 @@
         <div class="reveal">
 
             <!-- Any section element inside of this container is displayed as a slide -->
-            <div class="slides">
+            <div class="slides" style="margin-left: 20px; margin-right: 20px;">
               <section class="partial-container" data-partial="introduction">
   <section>
 <h1>Kanban and Beyond</h1>
@@ -3342,19 +3343,23 @@ Reveal.initialize({
     progress: true,
     history: true,
     center: true,
-    width: 1024,
-    height: 780,
+    width: "100%",
+    height: "100%",
+    margin: 0,
+    minScale: 1,
+    maxScale: 1,
+    slideNumber: 'c/t',
 
-    transition: 'slide', // none/fade/slide/convex/concave/zoom
+    transition: 'fade', //slide/none/fade/slide/convex/concave/zoom
 
         // Optional reveal.js plugins
         dependencies: [
-        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: 'plugin/zoom-js/zoom.js', async: true },
-        { src: 'plugin/notes/notes.js', async: true }
+        { src: '/javascripts/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: '/javascripts/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '/javascripts/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '/javascripts/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: '/javascripts/plugin/zoom-js/zoom.js', async: true },
+        { src: '/javascripts/plugin/notes/notes.js', async: true }
         ]
     });
 
