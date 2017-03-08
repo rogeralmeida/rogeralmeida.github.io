@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Estimation - Agile 1o1</title>
+
+        <meta name="description" content="framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="/stylesheets/reveal.css">
+        <link rel="stylesheet" href="/stylesheets/csshake.min.css">
+        <link rel="stylesheet" href="/stylesheets/theme/black.css" id="theme">
+        <link rel="stylesheet" href="/stylesheets/decks.css">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="/stylesheets/zenburn.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.2.js"></script>
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? '/stylesheets/print/pdf.css' : '/stylesheets/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+        <style>
+            .post-it {
+                background:#fefabc;
+                padding:15px;
+                font-size:13px;
+                color: #000;
+                text-align: center;
+
+                -moz-transform: rotate(1deg);
+                -webkit-transform: rotate(1deg);
+                -o-transform: rotate(1deg);
+                -ms-transform: rotate(1deg);
+                transform: rotate(1deg);
+
+                box-shadow: 0px 4px 6px #333;
+                -moz-box-shadow: 0px 4px 6px #333;
+                -webkit-box-shadow: 0px 4px 6px #333;
+                width: 97px;
+                position: relative;
+            }
+
+            .post-it-highlight{
+                background:#ff9900;
+                padding:15px;
+                font-size:13px;
+                font-weight: bold;
+                color: #000;
+                text-align: center;
+
+                -moz-transform: rotate(1deg);
+                -webkit-transform: rotate(1deg);
+                -o-transform: rotate(1deg);
+                -ms-transform: rotate(1deg);
+                transform: rotate(1deg);
+
+                box-shadow: 0px 4px 6px #333;
+                -moz-box-shadow: 0px 4px 6px #333;
+                -webkit-box-shadow: 0px 4px 6px #333;
+                width: 97px;
+                position: relative;
+            }
+            .post-it-blocked {
+                background:#ff0000;
+                padding:15px;
+                font-size:13px;
+                font-weight: bold;
+                color: #000;
+                text-align: center;
+
+                -moz-transform: rotate(1deg);
+                -webkit-transform: rotate(1deg);
+                -o-transform: rotate(1deg);
+                -ms-transform: rotate(1deg);
+                transform: rotate(1deg);
+
+                box-shadow: 0px 4px 6px #333;
+                -moz-box-shadow: 0px 4px 6px #333;
+                -webkit-box-shadow: 0px 4px 6px #333;
+                width: 97px;
+                position: relative;
+            }
+
+            .reveal table td {
+                border-bottom: initial;
+            }
+
+            .board table { border-collapse: initial; }
+            .board tbody tr {
+                border: none;
+                height: 90px;
+            }
+            .board tbody tr td {
+                    border-right: solid 1px;
+                    border-left: solid 1px;
+            }
+            .board thead tr { border: none; }
+            .board thead tr td {
+                    border-right: solid 1px;
+                    border-left: solid 1px;
+            }
+
+            .question {
+                color: #990000;
+            }
+
+            .reveal section img.person {
+                background: initial;
+                border: none;
+                box-shadow: none;
+                height: 62px;
+                z-index: 1;
+                top: -20px;
+                position: relative;
+                margin: -13px;
+                margin-left: -5px;
+            }
+
+            .spinning {
+              animation: spin ease 3s infinite;
+            }
+
+            @keyframes spin {
+              from { transform: rotate(0deg);}
+              to { transform: rotate(360deg); }
+            }
+
+            em {
+              text-decoration: underline;
+              text-decoration-style:dashed;
+              background-color: #1f1f2e ;
+            }
+
+            tr td center {
+                display: block;
+                height: 60px;
+                width: 60px;
+                line-height: 60px;
+
+                -moz-border-radius: 30px; /* or 50% */
+                border-radius: 30px; /* or 50% */
+
+                background-color: black;
+                color: white;
+                text-align: center;
+                font-size: 2em;
+            }
+
+        </style>
+
+        <!--[if lt IE 9]>
+            <script src="lib/js/html5shiv.js"></script>
+            <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides" style="margin-left: 20px; margin-right: 20px;">
+              <section>
+  <section>
+  <h1>Estimation</h1>
+  <h3>Essay on planning in an agile environment</h3>
+  <p>
+  <small>Created by <a href="http://rogeralmeida.github.io/">Roger Almeida</a> / <a href="http://twitter.com/roger4almeida">@roger4almeida</a></small>
+  </p>
+</section>
+</section>
+<section>
+  <h2>What makes a good agile plan?</h2>
+  <h3>It is better to be roughly right than precisely wrong. -  John Maynard Keynes</h3>
+  <ul>
+    <li>Estimation != Measurement</li>
+  </ul>
+</section>
+<section>
+  <section>
+    <h2>Why do we estimate?</h2>
+  </section>
+  <section>
+    <ul>
+      <li>Track progress (?)</li>
+      <li>Report when the client areas will receive the product of our development (?)</li>
+      <li>Measure our performance (?)</li>
+    </ul>
+  </section>
+</section>
+<section>
+  <section>
+    <h1>How to estimate?</h1>
+  </section>
+  <section>
+    <h2>Story Points</h2>
+    <ul>
+      <li>Relative Size</li>
+      <li>XP (0, ½, 1, 2, 3, 5, 8, 13, 20, 40, 100)</li>
+      <li>Fibonacci</li>
+      <li>Animal Sizes</li>
+    </ul>
+  </section>
+  <section>
+    <h2>T-Shirt Sizes</h2>
+    <ul>
+      <li>XS, S, M, L, XL, XXL</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Ideal Day</h2>
+    <ul>
+      <li>Without interruption, how long would it take to finish this?</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Time</h2>
+    <ul>
+      <li>How long will it take to finish?</li>
+    </ul>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>Concepts</h2>
+  </section>
+  <section>
+    <h2>Size != Time</h2>
+    <img src='/images/estimation/concrete_truck.jpg'>
+  </section>
+  <section>
+    <h2>Velocity</h2>
+    <ul>
+      <li>How many < units > we did in the last iteration?</li>
+      <li>How many < units > we do on average?</li>
+    </ul>
+    <h3>About the past</h3>
+  </section>
+  <section>
+    <h2>Forecasting</h2>
+    <ul>
+      <li>How long will it take to empty the work queue?</li>
+    </ul>
+    <h3>About the future</h3>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>Techniques</h2>
+  </section>
+  <section>
+    <ul>
+      <li>Planning Poker</li>
+      <li>Pick the smallest</li>
+      <li>Compare to a existing one</li>
+      <li>Slice it first</li>
+      <li>Normalizing</li>
+    </ul>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>My preferences</h2>
+  </section>
+  <section>
+    <ul>
+      <li>Avoid time</li>
+      <li>Planning Poker with discussion - (there is value in the journey)</li>
+      <li>Limit the discussion to 2 iterations</li>
+    </ul>
+  </section>
+</section>
+<section>
+  <img src='/images/estimation/thankYou.gif'>
+  <h3>Questions?</h3>
+</section>
+
+            </div>
+        </div>
+        <script src="/javascripts/head.min.js"></script>
+        <script src="/javascripts/reveal.js"></script>
+        <script>
+
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    width: "1024",
+    height: "960",
+    slideNumber: 'c/t',
+
+    transition: 'fade', //slide/none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+        { src: '/javascripts/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: '/javascripts/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '/javascripts/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '/javascripts/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: '/javascripts/plugin/zoom-js/zoom.js', async: true },
+        { src: '/javascripts/plugin/notes/notes.js', async: true }
+        ]
+    });
+
+    </script>
+</body>
+</html>

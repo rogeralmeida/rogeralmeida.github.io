@@ -4,7 +4,7 @@
   <title><![CDATA[Category: business | Roger Almeida]]></title>
   <link href="http://rogeralmeida.github.io/blog/categories/business/atom.xml" rel="self"/>
   <link href="http://rogeralmeida.github.io/"/>
-  <updated>2017-01-02T01:24:27+00:00</updated>
+  <updated>2017-03-08T14:44:10+11:00</updated>
   <id>http://rogeralmeida.github.io/</id>
   <author>
     <name><![CDATA[Roger Almeida]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA["Report to Boss" Stand-Up Anti-Pattern]]></title>
-    <link href="http://rogeralmeida.github.io/blog/2016/11/25/report-to-boss/"/>
-    <updated>2016-11-25T19:28:24+00:00</updated>
-    <id>http://rogeralmeida.github.io/blog/2016/11/25/report-to-boss</id>
+    <link href="http://rogeralmeida.github.io/blog/2016/11/26/report-to-boss/"/>
+    <updated>2016-11-26T06:28:24+11:00</updated>
+    <id>http://rogeralmeida.github.io/blog/2016/11/26/report-to-boss</id>
     <content type="html"><![CDATA[<p><strong>When the stand-up meeting is just a moment to report the work to the boss.</strong></p>
 
 <p>Teams that are moving from a non-agile way of work to an agile way are under risk of bringing bad habits to the new world. One common flaw is the &lsquo;Report to Boss&rsquo; standup.</p>

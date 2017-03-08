@@ -4,7 +4,7 @@
   <title><![CDATA[Roger Almeida]]></title>
   <link href="http://rogeralmeida.github.io/atom.xml" rel="self"/>
   <link href="http://rogeralmeida.github.io/"/>
-  <updated>2017-01-02T01:24:27+00:00</updated>
+  <updated>2017-03-08T14:44:10+11:00</updated>
   <id>http://rogeralmeida.github.io/</id>
   <author>
     <name><![CDATA[Roger Almeida]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Information Radiators vs Refrigerators]]></title>
     <link href="http://rogeralmeida.github.io/blog/2016/12/29/information-radiators-vs-refrigerators/"/>
-    <updated>2016-12-29T11:31:31+00:00</updated>
+    <updated>2016-12-29T22:31:31+11:00</updated>
     <id>http://rogeralmeida.github.io/blog/2016/12/29/information-radiators-vs-refrigerators</id>
     <content type="html"><![CDATA[<p>After giving a <a href="http://rogeralmeida.github.io/talks/">tech talk</a> in our Agile Community of Practice about <a href="http://rogeralmeida.github.io/talks/inception/">Agile Software Inception</a>, I had an inspiring conversation with a colleague. We were talking about information radiators. She pointed me out to this concept of Information Refrigerators vs Information Radiators.</p>
 
@@ -61,9 +61,9 @@ And you, are you using your refrigerator as a radiator? Or are you irradiating t
   
   <entry>
     <title type="html"><![CDATA["Report to Boss" Stand-Up Anti-Pattern]]></title>
-    <link href="http://rogeralmeida.github.io/blog/2016/11/25/report-to-boss/"/>
-    <updated>2016-11-25T19:28:24+00:00</updated>
-    <id>http://rogeralmeida.github.io/blog/2016/11/25/report-to-boss</id>
+    <link href="http://rogeralmeida.github.io/blog/2016/11/26/report-to-boss/"/>
+    <updated>2016-11-26T06:28:24+11:00</updated>
+    <id>http://rogeralmeida.github.io/blog/2016/11/26/report-to-boss</id>
     <content type="html"><![CDATA[<p><strong>When the stand-up meeting is just a moment to report the work to the boss.</strong></p>
 
 <p>Teams that are moving from a non-agile way of work to an agile way are under risk of bringing bad habits to the new world. One common flaw is the &lsquo;Report to Boss&rsquo; standup.</p>
@@ -123,9 +123,9 @@ Some actions that I have seen to mitigate this problem are:</p>
   
   <entry>
     <title type="html"><![CDATA[How I found a job in Sydney]]></title>
-    <link href="http://rogeralmeida.github.io/blog/2016/04/08/how-i-found-a-job-at-sydney/"/>
-    <updated>2016-04-08T14:53:31+00:00</updated>
-    <id>http://rogeralmeida.github.io/blog/2016/04/08/how-i-found-a-job-at-sydney</id>
+    <link href="http://rogeralmeida.github.io/blog/2016/04/09/how-i-found-a-job-at-sydney/"/>
+    <updated>2016-04-09T00:53:31+10:00</updated>
+    <id>http://rogeralmeida.github.io/blog/2016/04/09/how-i-found-a-job-at-sydney</id>
     <content type="html"><![CDATA[<h3>Seven components of my seek for work in Aussieland.</h3>
 
 <p>In the last months I have answered the same recurring question:</p>
@@ -226,7 +226,7 @@ Some actions that I have seen to mitigate this problem are:</p>
   <entry>
     <title type="html"><![CDATA[My email Policy]]></title>
     <link href="http://rogeralmeida.github.io/blog/2015/06/15/my-e-mail-policy/"/>
-    <updated>2015-06-15T00:11:44+00:00</updated>
+    <updated>2015-06-15T10:11:44+10:00</updated>
     <id>http://rogeralmeida.github.io/blog/2015/06/15/my-e-mail-policy</id>
     <content type="html"><![CDATA[<p>When I was working for <a href="http://www.atos.net">Atos</a>, the company&rsquo;s CEO started a <a href="http://atos.net/en-us/home/we-are/zero-email.html">zero email initiative</a>. His aim was for the employees not to use email for internal communications. I remembered what I thought about it: &ldquo;It&rsquo;s impossible&rdquo;.
 Now I believe that he was right.
@@ -278,9 +278,9 @@ This post explains how I deal with my professional email inbox.</p>
   
   <entry>
     <title type="html"><![CDATA[How to learn Vim]]></title>
-    <link href="http://rogeralmeida.github.io/blog/2015/02/01/how-to-learn-vim/"/>
-    <updated>2015-02-01T14:40:04+00:00</updated>
-    <id>http://rogeralmeida.github.io/blog/2015/02/01/how-to-learn-vim</id>
+    <link href="http://rogeralmeida.github.io/blog/2015/02/02/how-to-learn-vim/"/>
+    <updated>2015-02-02T01:40:04+11:00</updated>
+    <id>http://rogeralmeida.github.io/blog/2015/02/02/how-to-learn-vim</id>
     <content type="html"><![CDATA[<p>This is a collection of adivces regards how to learn Vim. I collected this advices part during my learning process, part hearing|reading from my colleagues. I do believe that anyone can learning, or even master, vim though these advices.</p>
 
 <!-- MORE -->
@@ -304,9 +304,9 @@ This post explains how I deal with my professional email inbox.</p>
   
   <entry>
     <title type="html"><![CDATA[Illusion of Competence]]></title>
-    <link href="http://rogeralmeida.github.io/blog/2015/01/12/illusion-of-competence/"/>
-    <updated>2015-01-12T16:15:16+00:00</updated>
-    <id>http://rogeralmeida.github.io/blog/2015/01/12/illusion-of-competence</id>
+    <link href="http://rogeralmeida.github.io/blog/2015/01/13/illusion-of-competence/"/>
+    <updated>2015-01-13T03:15:16+11:00</updated>
+    <id>http://rogeralmeida.github.io/blog/2015/01/13/illusion-of-competence</id>
     <content type="html"><![CDATA[<p>I did the <a href="https://www.coursera.org/">Cousera&rsquo;s</a> course <a href="https://www.coursera.org/course/learning">Learning How to Learn: Powerful mental tools to help you master tough subjects</a>. It was a pleasant course with many useful informations and a lot of useful techniques to speed up my learning ability.
 One point that caught my attention was the Illusion Of Competence and I would like to share with you how I added this knowledge to my day.</p>
 
@@ -361,9 +361,9 @@ By explaining what I just heard is a great opportunity to find gaps or raise poi
   
   <entry>
     <title type="html"><![CDATA[2015: year's resolutions]]></title>
-    <link href="http://rogeralmeida.github.io/blog/2015/01/12/2015-years-resolutions/"/>
-    <updated>2015-01-12T13:49:32+00:00</updated>
-    <id>http://rogeralmeida.github.io/blog/2015/01/12/2015-years-resolutions</id>
+    <link href="http://rogeralmeida.github.io/blog/2015/01/13/2015-years-resolutions/"/>
+    <updated>2015-01-13T00:49:32+11:00</updated>
+    <id>http://rogeralmeida.github.io/blog/2015/01/13/2015-years-resolutions</id>
     <content type="html"><![CDATA[<p>These are my new year&rsquo;s resolutions:</p>
 
 <ul>
@@ -378,9 +378,9 @@ By explaining what I just heard is a great opportunity to find gaps or raise poi
   
   <entry>
     <title type="html"><![CDATA[Euler's Journey Problem 1]]></title>
-    <link href="http://rogeralmeida.github.io/blog/2014/12/29/eulers-journey-problem-1/"/>
-    <updated>2014-12-29T19:38:43+00:00</updated>
-    <id>http://rogeralmeida.github.io/blog/2014/12/29/eulers-journey-problem-1</id>
+    <link href="http://rogeralmeida.github.io/blog/2014/12/30/eulers-journey-problem-1/"/>
+    <updated>2014-12-30T06:38:43+11:00</updated>
+    <id>http://rogeralmeida.github.io/blog/2014/12/30/eulers-journey-problem-1</id>
     <content type="html"><![CDATA[<p>So I decided to start a project where I gonna implement the same problem in many languages. I always wanted to compare how different programming languages face some coding challenges. I don&rsquo;t want to prove that any language is better than other, althought I know that this kind of flame will happen.
 To have a organized list of problems I gonna use the <a href="http://projecteuler.net/">Project Euler</a> problems.</p>
 
