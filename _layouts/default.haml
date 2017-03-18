@@ -6,13 +6,13 @@
   %body
     %div.container
       .row
-        .col-md-4{style: "border: 1px solid red"}
+        .col-md-4
           = "{% haml menu.haml %}"
 
-        .col-md-8{style: "border: 1px solid red"}
+        .col-md-8
           %main.page-content{aria: {label: "Content"}}
             %div.wrapper
               = "{{ content }}"
       .row
-        .col-md-12{style: "border: 1px solid red"}
+        .col-md-12
           = "{% include footer.html %}"
