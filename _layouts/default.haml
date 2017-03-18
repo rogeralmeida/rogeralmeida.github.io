@@ -1,0 +1,18 @@
+!!!
+%html{lang: "{{ page.lang | default: site.lang | default: 'en' }}"}
+
+  = "{% include head.html %}"
+
+  %body
+    %div.container
+      .row
+        .col-md-4{style: "border: 1px solid red"}
+          = "{% haml menu.haml %}"
+
+        .col-md-8{style: "border: 1px solid red"}
+          %main.page-content{aria: {label: "Content"}}
+            %div.wrapper
+              = "{{ content }}"
+      .row
+        .col-md-12{style: "border: 1px solid red"}
+          = "{% include footer.html %}"
