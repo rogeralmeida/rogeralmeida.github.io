@@ -1,7 +1,13 @@
-%h1 Roger Almeida
-%h4 Short tag line
-
+.page-header
+  %a{href: '/'}
+    %h1 Roger Almeida
+  %h4 
+    %em May the code by with you
+%p
+  %img.img-rounded.img-responsive{src: '/images/me.jpg'}
+  I'm a technologist working with software development since 2002. This is my personal blog where I write (less frequent than what I would like) my thoughts about software development.
+%hr
+%h5 Social Networks
 %ul
-  %li item
-  %li item
-  %li item
+  %li= "{% include icon-twitter.html username=site.twitter_username %}"
+  %li= "{% include icon-github.html username=site.github_username %}"
