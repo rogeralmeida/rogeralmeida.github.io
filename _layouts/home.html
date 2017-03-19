@@ -7,14 +7,17 @@ layout: default
   {{ content }}
 
   {% for post in site.posts %}
-    <div class="page-header post-snippet" style="background-image: url('{{ post.main_image }}');">
+    <div class="page-header post-snippet" style="background-image: url('{{ post.banner_image }}');">
       <h1>
         <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
       </h1>
       <p>
         {{ post.excerpt }}
       </p>
-      <a class="post-link" href="{{ post.url | relative_url }}">Read More...</a>
+      <p>
+        <a class="post-link" href="{{ post.url | relative_url }}">Read More...</a>
+        <span class="pull-right">{{ post.date | date_to_string }}</span>
+      </p>
     </div>
   {% endfor %}
 
