@@ -4,6 +4,7 @@ title: "\"Report to Boss\" Stand-Up Anti-Pattern"
 date: 2016-11-25 19:28:24 +0000
 comments: true
 categories: [Agile, Stand-Up, Anti-Pattern, Business]
+banner_image: "/images/Report-2-boss-banner.JPG"
 ---
 __When the stand-up meeting is just a moment to report the work to the boss.__
 
