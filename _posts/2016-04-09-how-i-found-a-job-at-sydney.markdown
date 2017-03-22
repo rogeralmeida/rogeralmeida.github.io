@@ -2,6 +2,7 @@
 layout: post
 title: "How I found a job in Sydney"
 date: 2016-04-09 00:53:31 +1000
+banner_image: "/images/Sydney.JPG"
 comments: true
 categories: job, interview, Sydney, career
 ---
