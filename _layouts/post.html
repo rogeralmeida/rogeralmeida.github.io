@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="page-header" style="background-image: url('{{ page.banner_image }}'); background-size: 100% 100%;">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <a href="/">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        Back
+      </a>
+      <time class="pull-right" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+  <div class="fb-comments" data-href="{{ site.url }}{{ page.url}}" data-numposts="5"></div>
+</article>

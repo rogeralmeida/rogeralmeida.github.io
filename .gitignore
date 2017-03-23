@@ -5,3 +5,4 @@ public/
 *.un~
 .bundle/
 vendor/
+_site/*
