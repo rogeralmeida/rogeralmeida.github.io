@@ -12,6 +12,8 @@ ruby RUBY_VERSION
 gem "jekyll", "3.4.2"
 gem "github-pages", "~> 128"
 gem "bourbon", "~> 4.3.3"
+gem 'rake', '~> 12.0.0'
+gem 'aws-sdk', '~> 2'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
