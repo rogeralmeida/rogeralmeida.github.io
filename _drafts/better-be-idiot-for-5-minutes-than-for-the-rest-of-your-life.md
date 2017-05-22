@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "Better be an idiot for 5 minutes than for the rest of you life"
+title: "Better be idiot for 5 minutes than for a lifetime"
 date: 2017-03-02 11:31:31 +0000
 comments: true
 ---
 Most of us believe that if we ask questions in a meeting people will realise that we don't know everything. But, guess what? We don't have to know everything.
+
 <!-- more -->
+
 It is OK to say: "I didn't understand that" or "I don't know what that means".
 Nobody knows everything, and nobody was born with all the knowledge in the world. Even specialists or subject matter experts had to learn the subject first.
 Get over you fear of what people will think about you and ask the question.
@@ -20,6 +22,6 @@ And, believe me, you will need that knowledge in the future and then someone may
 Accept it, it is your ego that get in your way. It is a bias. It is a fear, a non-sense feeling that is not helping you or your company.
 So take my advice on this:
 
-*It is better to be an idiot for 5 minutes than for the rest of you life.*
+*It is better to be idiot for 5 minutes than for a lifetime.*
 **If you have a question, ask it!**
 
