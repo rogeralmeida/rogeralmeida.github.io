@@ -8,18 +8,16 @@ layout: default
 
   {% for post in site.posts %}
     {% if post.hidden != "true" %}
-      <div class="page-header post-snippet" style="background-image: url('{{ post.banner_image }}'); background-size: 100% 100%;">
-        <h1>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h1>
-        <p>
-          {{ post.excerpt }}
-        </p>
-        <p>
-          <a class="post-link" href="{{ post.url | relative_url }}">Read More...</a>
-          <span class="pull-right">{{ post.date | date_to_string }}</span>
-        </p>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">{{ post.title | escape }}</h4>
+          <p class="card-text">
+            {{ post.excerpt }}
+          </p>
+          <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More</a>
+        </div>
       </div>
+      <br/>
     {% endif %}
   {% endfor %}
 
