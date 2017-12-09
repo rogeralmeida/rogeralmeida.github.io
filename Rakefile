@@ -24,13 +24,17 @@ task :deploy do
     md5.update(body)
     md5_local_file = md5.hexdigest
     logger.info "Local file MD5: #{md5_local_file}"
-
-    remote_file_head = s3.get_object_tagging({
-      bucket: 'roger-almeida.com',
-      key: file
-    })
-    logger.info "Remote tags: #{remote_file_head}"
-    md5_remote_file = remote_file_head.tag_set.empty? ? nil : remote_file_head.tag_set[0].value
+    md5_remote_file  = nil
+    begin
+      remote_file_head = s3.get_object_tagging({
+        bucket: 'roger-almeida.com',
+        key: file
+      })
+      logger.info "Remote tags: #{remote_file_head}"
+      md5_remote_file = remote_file_head.tag_set.empty? ? nil : remote_file_head.tag_set[0].value
+    rescue Aws::S3::Errors::NoSuchKey
+      logger.info "File doesnt exist remotelly"
+    end
     logger.info "Remote file MD5: #{md5_remote_file}"
 
     next if md5_local_file == md5_remote_file
