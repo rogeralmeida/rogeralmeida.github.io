@@ -2,4 +2,6 @@ language: ruby
 rbenv:
   - 2.3.1
 
-script: bundle exec rake deploy
+script:
+  - bundle exec jekyll b
+  - bundle exec rake deploy
