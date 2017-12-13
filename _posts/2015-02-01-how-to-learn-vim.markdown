@@ -2,6 +2,7 @@
 layout: post
 title: "How to learn Vim"
 date: 2015-02-01 12:40:04 -0200
+cover_picture: "/images/caspar-rubin-224229.png"
 comments: true
 categories: 
 ---
