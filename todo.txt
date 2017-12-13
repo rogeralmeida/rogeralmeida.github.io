@@ -1,0 +1,8 @@
+Continue processing the frontendchecklist. I stoped at the HTML part
+Create a jekyll plugin that will process the images before publishing
+Add images to the posts bodies
+remove the unused js and css files. There are many that seem to belong to octopress
+
+[posts]
+  Finsh the learn vim post
+  post in favour of surrogate keys
