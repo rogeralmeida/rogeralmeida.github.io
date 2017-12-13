@@ -2,6 +2,7 @@
 layout: post
 title: "Illusion of Competence"
 date: 2015-01-12 14:15:16 -0200
+cover_picture: "/images/element5-digital-352043.png"
 comments: true
 categories: 
 ---
