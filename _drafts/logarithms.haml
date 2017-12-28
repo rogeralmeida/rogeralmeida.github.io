@@ -1,0 +1,120 @@
+---
+layout: post
+title: "Logarithms"
+cover_picture: "/images/caspar-rubin-224229.png"
+comments: true
+categories:
+---
+
+:markdown
+  ## Logaritms are another way of representing exponentials
+
+:plain
+  For instance, the expression: <br/>
+
+  \(log_a b = c\)
+  Is the same as:
+  \(a^c = b\)
+:markdown
+  ## Properties of logarithms
+
+  ### Product Rule: \\(log_b (M * N) = log_b M + log_b N\\)
+  Assuming: \\(b=2, M=4, N=8\\), then:
+%table
+  %tr
+    %td
+      :plain
+        \[
+          \definecolor{circle}{RGB}{201,201,201}
+          \begin{align}
+          log_2 (4 * 8) & = log_2 2 + log_2 3 \\
+          & = log_2 (2^{2 + 3}) \\
+          & = (2 + 3) . log_2 (2) \\
+          & = (2 + 3) \\
+          & = log_2 4 + log_2 8 \\
+          \end{align}
+        \]
+    %td
+      %center
+        :plain
+          \[
+            \color{circle} 2^2 = 4 \, \text{and} \, 2^3 = 8 \\
+            \color{circle} a^m . a^n = a^{m + n} \\
+            \color{circle} log_A B^C = C . log_A B \\
+            \color{circle} log_2 2 = 1 \\
+            \color{circle} \text{Since} \, log_2 4 = 2 \, \text{and} \, log_2 8 = 3
+          \]
+
+:markdown
+  ### Quotation Rule: \\( Log_b (\frac{M}{N}) = log_b M - log_b N \\)
+  Assuming: \\( M = b^x \\), \\(N = b^y\\). Then \\(log_b M = x\\) and \\(log_b N = y\\)
+.row
+  .col-4
+    :plain
+      \[
+        \begin{align}
+          log_b (\frac{M}{N}) & = log_b (\frac{b^x}{b^y}) \\
+          & = log_b (b^{x-y}) \\
+          & = (x-y) .log_b (b) \\
+          & = x - y \\
+          & = log_b M - log_b N
+        \end{align}
+      \]
+  .col-4
+    :plain
+      \[
+        \color{circle} \text{Substitution} \\
+        \color{circle} \text{Properties of exponents} \\
+        \color{circle} log_A B^C = C . log_A B \\
+        \color{circle} log_A A = B \, \text{is the same as} \, A^B = A \, \text{ so } B = 1 \, \text {and} \, 1 . (x-y) = (x-y)\\
+        \color{circle} \text{Pure substitution again :) }
+      \]
+:markdown
+  ### Power Rule: \\( log_b(M^p) = p . log_b(M) \\)
+Assuming \(M = b^x\) then:
+.row
+  .col-4
+    :plain
+      \[
+        \begin{align}
+          log_b(M^p) & = log_b {(b^x)}^p \\
+          & = log_b b^{x . p} \\
+          & = x . p \\
+          & = log_b (M) . p \\
+          & = p. log_b (M)
+        \end{align}
+      \]
+  .col-4
+    :plain
+      \[
+        \color{circle} \text{Substitution} \\
+        \color{circle} \text{Properties of exponents} \\
+        \color{circle} log_b b^c = c \\
+        \color{circle} \text{Substitution} \\
+        \color{circle} \text{Multiplication is commutative} \\
+      \]
+:markdown
+  ### Change the base rule: \\( log_b a = \frac{log_{10} a}{log_{10} b}\\)
+  Assuming: \\( log_2 (50) = n\\) then \\(2^n = 50\\)
+  So:
+.row
+  .col-4
+    :plain
+      \[
+        \begin{align}
+          2^n & = 50 \\
+          log_x(2^n) & = log_x(50) \\
+          n . log_x(2) & = log_x(50) \\
+          n & =  \frac{log_x(50)}{log_x(2)} \\
+          log_2(50) & = \frac{log_x(50)}{log_x(2)}
+        \end{align}
+      \]
+  .col-4
+    :plain
+      \[
+        \color{circle} \text{Substitution} \\
+        \color{circle} \text{If} \, Y = Z \, \text{then} \, log_x(Y) = log_x(Z) \\
+        \color{circle} \text{Power Rule} \\
+        \color{circle} \text{Divide both side by} \, log_x(2)\\
+        \color{circle} \text{Replace} \, n \text{ with } log_2(50)
+      \]
