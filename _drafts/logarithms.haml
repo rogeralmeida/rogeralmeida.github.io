@@ -1,22 +1,17 @@
 ---
 layout: post
-title: "Logarithms"
-cover_picture: "/images/caspar-rubin-224229.png"
+title: "Notes about Logarithms"
+cover_picture: "/images/antoine-dautry-428780.png"
 comments: true
 categories:
 ---
 
 :markdown
-  ## Logaritms are another way of representing exponentials
+  Logaritms are another way of representing exponentials. For instance, the expression: \\(log_a b = c\\) is the same as: \\(a^c = b\\)
 
-:plain
-  For instance, the expression: <br/>
-
-  \(log_a b = c\)
-  Is the same as:
-  \(a^c = b\)
-:markdown
   ## Properties of logarithms
+  
+  There are some interesting properties and tricks that we can use with logarithms.
 
   ### Product Rule: \\(log_b (M * N) = log_b M + log_b N\\)
   Assuming: \\(b=2, M=4, N=8\\), then:
@@ -118,3 +113,13 @@ Assuming \(M = b^x\) then:
         \color{circle} \text{Divide both side by} \, log_x(2)\\
         \color{circle} \text{Replace} \, n \text{ with } log_2(50)
       \]
+:markdown
+  In most of the calculators we have to use this rule to transform a normal logarithm to some other two logarithms in the base 10 (the default for calculators) and then divide one by the other.
+
+  ## Default modes
+  \\[
+    ln(X) = log_e(X)
+  \\]
+  \\[
+    log(X) = log_{10}(X)
+  \\]
