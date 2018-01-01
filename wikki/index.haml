@@ -1,0 +1,14 @@
+---
+layout: page
+title: "Wikki Home Page"
+cover_picture: "/images/antoine-dautry-428780.png"
+comments: true
+categories:
+---
+= "{% for page in site.pages %}"
+%h2
+  - if "{{ page.url }}".include?('wikki') && '{{ page.title }}'.include?('Home Page') == false
+    %a{href: "{{ page.url }}", target: "_blank"}
+      = "{{ page.title }}"
+
+= "{% endfor %}"
