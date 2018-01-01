@@ -5,10 +5,21 @@ cover_picture: "/images/antoine-dautry-428780.png"
 comments: true
 categories:
 ---
-= "{% for page in site.pages %}"
-%h2
-  - if "{{ page.url }}".include?('wikki') && '{{ page.title }}'.include?('Home Page') == false
-    %a{href: "{{ page.url }}", target: "_blank"}
-      = "{{ page.title }}"
-
-= "{% endfor %}"
+%table.table
+  %thead
+    %tr
+      %th Title
+      %th Tags
+      %th Date
+  %tbody
+    = "{% for page in site.pages %}"
+    - if "{{ page.url }}".include?('wikki') && '{{ page.title }}'.include?('Home Page') == false
+      %tr
+        %td
+          %a{href: "{{ page.url }}", target: "_blank"}
+            = "{{ page.title }}"
+        %td
+          = '{{ page.tags }}'
+        %td
+          = '{{ page.date }}'
+    = "{% endfor %}"
