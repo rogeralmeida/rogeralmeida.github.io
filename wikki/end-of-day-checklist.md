@@ -2,6 +2,7 @@
 layout: wikki
 title: "End of day checklist"
 categories: checklist
+date: 2018-01-02
 tags: checklist
 ---
 
