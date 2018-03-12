@@ -16,8 +16,18 @@ task :deploy do
   Dir.chdir("_site")
 
   Dir["**/*"].each do |file|
-    next if File.directory?(file)
     logger.info "File: #{file}"
+    if File.directory?(file)
+      logger.info "#{file} is a directory"
+      options = {acl: "public-read",
+                 bucket: 'roger-almeida.com',
+                 body: '',
+                 tagging: "content_md5=",
+                 key: "#{file}/"
+      }
+      s3.put_object(options)
+      next
+    end
     body = File.read(file)
 
     md5 = Digest::MD5.new
