@@ -47,6 +47,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
     mercenary (0.3.6)
+    mini_magick (4.8.0)
     pathutil (0.16.0)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.1)
@@ -74,6 +75,7 @@ DEPENDENCIES
   jekyll (= 3.6.2)
   jekyll-feed (~> 0.6)
   jekyll-haml
+  mini_magick
   rake (~> 12.0.0)
   tzinfo-data
 
@@ -81,4 +83,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.16.0
+   1.16.1

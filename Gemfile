@@ -13,6 +13,7 @@ gem "jekyll", "3.6.2"
 gem "bourbon", "~> 4.3.3"
 gem 'rake', '~> 12.0.0'
 gem 'aws-sdk', '~> 2'
+gem "mini_magick"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
