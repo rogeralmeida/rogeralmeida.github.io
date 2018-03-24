@@ -13,7 +13,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
       image = MiniMagick::Image.open(file.path)
       i_sizes.each do |size|
         new_file = "#{Dir.pwd}/_site/images/responsive/#{file_name}-#{size}.png"
-        if image.width > size && !File.file?(new_file)
+        if !File.file?(new_file)
           image.resize "#{size}x"
           logger.info "Saving new image: #{new_file}"
           image.write new_file

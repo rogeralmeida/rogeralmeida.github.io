@@ -33,8 +33,10 @@
       ga('create', 'UA-99688757-1', 'auto');
       ga('send', 'pageview');
     %script{type:"text/javascript", src:"/assets/js/social-share-kit.min.js"}
+    %script{type:"text/javascript", src:"/javascripts/Imager.min.js"}
     :javascript
       SocialShareKit.init({
         url: '{{ site.url }}{{ page.url }}',
         text: ''
       });
+      new Imager({ availableWidths: [1024, 768, 640, 480, 240] });
