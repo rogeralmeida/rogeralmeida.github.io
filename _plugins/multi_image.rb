@@ -12,10 +12,12 @@ Jekyll::Hooks.register :site, :post_write do |site|
       file_name = File.basename file.path, file.extname
       image = MiniMagick::Image.open(file.path)
       i_sizes.each do |size|
-        new_file = "#{Dir.pwd}/_site/images/responsive/#{file_name}-#{size}.png"
+        new_file = "#{Dir.pwd}/_site/images/responsive/#{file_name}-#{size}.webp"
         if !File.file?(new_file)
           image.resize "#{size}x"
-          image.format 'png'
+          image.format 'webp' do |convert|
+            #convert << '-quality 50'
+          end
           logger.info "Saving new image: #{new_file}"
           image.write new_file
           raise IOError, "new image was not saved" unless File.file?(new_file)
