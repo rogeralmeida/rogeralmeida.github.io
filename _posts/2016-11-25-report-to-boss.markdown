@@ -2,10 +2,10 @@
 layout: post
 title: "\"Report to Boss\" Stand-Up Anti-Pattern"
 date: 2016-11-25 19:28:24 +0000
-cover_picture: "/images/paul-bence-395888.png"
+cover_picture: "/images/responsive/paul-bence-395888-{width}.png"
 comments: true
 categories: [Agile, Stand-Up, Anti-Pattern, Business]
-banner_image: "/images/Report-2-boss-banner.JPG"
+banner_image: "/images/responsive/Report-2-boss-banner-{width}.JPG"
 ---
 __When the stand-up meeting is just a moment to report the work to the boss.__
 

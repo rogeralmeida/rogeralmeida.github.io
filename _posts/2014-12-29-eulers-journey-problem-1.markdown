@@ -2,7 +2,7 @@
 layout: post
 title: "Euler's Journey Problem 1"
 date: 2014-12-29 17:38:43 -0200
-cover_picture: "/images/roman-mager-59976.png"
+cover_picture: "/images/responsive/roman-mager-59976-{width}.png"
 comments: true
 categories: ["euler", "java", "javascript", "python", "ruby", "scala"]
 ---

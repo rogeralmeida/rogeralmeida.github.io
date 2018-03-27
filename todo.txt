@@ -1,5 +1,6 @@
 Continue processing the frontendchecklist. I stoped at the HTML part
-Create a jekyll plugin that will process the images before publishing
+[WIP]Create a jekyll plugin that will process the images before publishing
+  In the post about sydney, remove the image that is coming from unplash.com
 remove the unused js and css files. There are many that seem to belong to octopress
 
 [posts]
