@@ -16,7 +16,7 @@ categories:
     - if "{{ page.url }}".include?('wikki') && '{{ page.title }}'.include?('Home Page') == false
       %tr
         %td
-          %a{href: "{{ page.url }}", target: "_blank"}
+          %a{href: "{{ page.url }}", target: "_blank", rel: 'noopener'}
             = "{{ page.title }}"
         %td
           = '{{ page.tags }}'
