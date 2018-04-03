@@ -2,7 +2,7 @@
 layout: post
 title: "2015: year's resolutions"
 date: 2015-01-12 11:49:32 -0200
-cover_picture: "/images/responsive/mohammed-fkriy-4163-{width}.webp"
+cover_picture: "/images/responsive/mohammed-fkriy-4163-{width}.{ext}"
 comments: true
 categories: 
 ---
