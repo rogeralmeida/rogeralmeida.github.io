@@ -9,7 +9,7 @@ layout: default
   {% for post in site.posts %}
     {% if post.hidden != "true" %}
       <div class="card">
-        <div class="delayed-image-load" data-src="{{ post.cover_picture | default: 'images/lukas-blazek-320606.jpg'}}" data-alt="Card image cap" data-class="card-img-top"></div>
+        <div class="delayed-image-load" data-src="{{ post.cover_picture }}" data-alt="Card image cap" data-class="card-img-top"></div>
         <div class="card-body">
           <h4 class="card-title">{{ post.title | escape }}</h4>
           <p class="card-text">
