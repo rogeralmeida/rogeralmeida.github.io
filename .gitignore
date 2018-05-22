@@ -1,0 +1,10 @@
+_deploy/
+public/
+.pygments-cache/
+.sass-cache/
+*.un~
+.bundle/
+vendor/
+_site/
+.DS_Store
+node_modules/

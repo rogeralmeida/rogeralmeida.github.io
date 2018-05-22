@@ -1,0 +1,34 @@
+---
+layout: page
+title: "Wikki Home Page"
+cover_picture: "/images/antoine-dautry-428780.png"
+comments: true
+categories:
+---
+%table.table#wikki-table
+  %thead
+    %tr
+      %th Title
+      %th Tags
+      %th Date
+  %tbody
+    = "{% for page in site.pages %}"
+    - if "{{ page.url }}".include?('wikki') && '{{ page.title }}'.include?('Home Page') == false
+      %tr
+        %td
+          %a{href: "{{ page.url }}", target: "_blank", rel: 'noopener'}
+            = "{{ page.title }}"
+        %td
+          = '{{ page.tags }}'
+        %td
+          = '{{ page.date }}'
+    = "{% endfor %}"
+%link{rel: "stylesheet", type: "text/css", href: "//cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.css"}
+%script{src: 'https://code.jquery.com/jquery-3.2.1.slim.min.js',
+  integrity:"sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=",
+  crossorigin: "anonymous"}
+%script{type: "text/javascript", charset: "utf8", src: "//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"}
+:javascript
+  $(document).ready( function () {
+    $('#wikki-table').DataTable();
+  } );

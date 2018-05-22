@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="page-header" >
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+  </header>
+  <p class="post-meta">
+    <div class="row">
+      <div class="col-2">
+        <a href="/">
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          Back
+        </a>
+      </div>
+      <div class="col-7">
+        {% include share.html %}
+      </div>
+      <div class="col-3">
+        <time class="float-right" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+      </div>
+    </div>
+  </p>
+  <div class="post-content" itemprop="articleBody">
+    <div class="delayed-image-load" data-src="{{ page.cover_picture }}" data-class="img-fluid" data-alt="alternative text"></div>
+    {{ content }}
+  </div>
+  {% include share.html %}
+  <div class="fb-comments" data-href="{{ site.url }}{{ page.url}}" data-numposts="5" data-width="100%"></div>
+</article>

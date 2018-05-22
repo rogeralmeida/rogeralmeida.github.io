@@ -1,0 +1,31 @@
+%a{href: '/'}
+  %h1
+    Roger Almeida
+%em
+  %small
+    May the code be with you
+%hr
+.card
+  .delayed-image-load{data: {src: "/images/responsive/me-{width}.{ext}", alt: "Be idiot for 5 minutes", class: "img-thumbnail"}}
+  .card-body
+    %h4 Hi
+    %p.card-text
+      I'm a technologist working with software development since 2002. This is my personal blog where I write (less frequent than what I would like) my thoughts about software development.
+%hr
+%h5 Social Networks
+%ul
+  %li= "{% include icon-twitter.html username=site.twitter_username %}"
+  %li= "{% include icon-github.html username=site.github_username %}"
+
+%h5 Useful Links
+%ul
+  %li
+    %a{href: '/talks'}Talks
+
+%h5 Recent Posts
+%ul
+  {% for post in site.posts limit:5 %}
+  %li
+    %a.post-link{href:"{{ post.url | relative_url }}"}
+      {{ post.title | escape }}
+  {% endfor %}

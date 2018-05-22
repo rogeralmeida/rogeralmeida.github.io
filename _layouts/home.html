@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="home">
+  
+  {{ content }}
+
+  {% for post in site.posts %}
+    {% if post.hidden != "true" %}
+      <div class="card">
+        <div class="delayed-image-load" data-src="{{ post.cover_picture }}" data-alt="Card image cap" data-class="card-img-top"></div>
+        <div class="card-body">
+          <h4 class="card-title">{{ post.title | escape }}</h4>
+          <p class="card-text">
+            {{ post.excerpt }}
+          </p>
+          <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+      <br/>
+    {% endif %}
+  {% endfor %}
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+</div>
