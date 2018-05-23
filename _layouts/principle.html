@@ -9,11 +9,14 @@ layout: default
 
   <p class="post-meta">
     <div class="row">
-      <div class="col-2">
-        <a href="/principles/">
-          <i class="fa fa-arrow-left" aria-hidden="true"></i>
-          Back
-        </a>
+      <div class="col-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/principles/">Principles</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+          </ol>
+        </nav>
       </div>
       <div class="col-3">
         <time class="float-right" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
