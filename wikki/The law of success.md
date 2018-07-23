@@ -1,9 +1,17 @@
 ---
-layout: page
+layout: wikki 
 title: "The Laws of success"
 comments: true
 tags: book, book review
 ---
+<div class="card pull-left mr-3" style="width: 18rem;">
+<div class="card-body">
+<h5 class="card-title">Table of Content</h5>
+* this will be replaced by toc
+{:toc}
+</div>
+</div>
+
 
 Great book with many useful lessons. The book was writen when Henry Ford was alive and he was the most powerful man on earth.
 The principles presented on the book are time-proof, you can totally apply all the principles in this 2018 time.
