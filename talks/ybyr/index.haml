@@ -1,0 +1,216 @@
+---
+layout: talk
+title: "Lessons from leading an YBYR team"
+date: 2018-10-04 10:47
+comments: true
+sharing: true
+footer: true
+---
+
+%section
+  %section
+    %h1 Lessons from running a YBYR team
+  %section
+    %h2 DevOps
+    %blockquote DevOps (a clipped compound of "development" and "operations") is a software engineering culture and practice that aims at unifying software development (Dev) and software operation (Ops)
+  %section
+    %h2 You build it, You run it
+    %blockquote
+      Giving developers operational responsibilities has greatly
+      %span.fragment.highlight-blue enhanced the quality of the services
+      , both from a customer and a technology point of view. The traditional model is that you take your software to the wall that separates development and operations, and throw it over and then forget about it. Not at Amazon.
+      %span.fragment.highlight-red You build it, you run it.
+      This brings developers into contact with the day-to-day operation of their software. It also brings them into day-to-day
+      %span.fragment.highlight-blue contact with the customer.
+      This customer feedback loop is essential for improving the quality of the service.
+    Reference: https://queue.acm.org/detail.cfm?id=1142065
+  %section
+    %h2 You build it, You run it
+    %blockquote
+      You build it, you run it is the principle that development teams operate their own product.
+
+%section
+  %section
+    %h1 Capacity Plan
+  %section
+    %h2 New skill set
+    %img{src: '/images/ybyr/devopspract.png', style: 'width: 75%'}
+  %section
+    %h2 It takes time
+    %img{src: '/images/ybyr/ci-cd-learning-curve-1.jpg', style: 'width: 75%'}
+  %section
+    %h2 It's an investiment
+    %img{src: '/images/ybyr/roi.png', style: 'width: 75%'}
+
+
+
+%section
+  %section
+    %h1 People want to run services
+  %section
+    %h2 Autonomy and Accountability
+    %img{src: '/images/ybyr/freedom-boundaries.jpg', style: 'width: 75%'}
+  %section
+    %h2 It is easier said than done
+    %img{src: '/images/ybyr/accountability.jpg', style: 'width: 75%'}
+  %section
+    %h2 Autonomy requires aligment
+    %img{src: '/images/ybyr/alignment.png', style: 'width: 75%'}
+  %section
+    %h2 Autonomy is not free
+    %img{src: '/images/ybyr/autonomus.jpg', style: 'width: 75%'}
+
+
+%section
+  %section
+    %h1 Running Services
+  %section
+    %h2 It is easy, I will automate it...
+    %img.fragment{src: '/images/ybyr/you-know-nothing.jpg', style: 'width: 75%'}
+  %section
+    %h2 There is a lot we don't know
+    %img{src: '/images/ybyr/devopspract.png', style: 'width: 75%'}
+  %section
+    %h2 Dev analogy
+    %img{src: '/images/ybyr/gestation.jpg', style: 'width: 75%'}
+  %section
+    %h2 Ops analogy
+    %img{src: '/images/ybyr/woman-evolution.jpg', style: 'width: 75%'}
+  %section
+    %h2 Out of comfort zone
+    %img{src: '/images/ybyr/curve2.png', style: 'width: 45%'}
+  %section
+    %h2 Team Response so far
+    %img{src: '/images/ybyr/dev-ok.png', style: 'width: 45%'}
+
+%section
+  %section
+    %h1 Operational Model
+  %section
+    %h2 Google SRE Book
+    %img{src: '/images/ybyr/sre-book.png', style: 'width: 25%'}
+  %section
+    %h2 Services/Components
+    %img{src: '/images/ybyr/components.png', style: 'width: 25%'}
+    OR
+    %img{src: '/images/ybyr/waiter.jpg', style: 'width: 25%'}
+  %section
+    %h2 Service Level Definitions
+    %ul
+      %li.fragment SLI = Service Level Indicators
+      %li.fragment SLO = Service Level Objectives
+      %li.fragment.fade-in
+        %span.fragment.fade-out SLA = Service Level Agreement
+  %section
+    %h2 Monitoring
+    %ul
+      %li
+        %h3 Whitebox
+        %blockquote
+          Monitoring based on metrics exposed by the internals of the system, including logs, interfaces like the Java Virtual Machine Profiling Interface, or an HTTP handler that emits internal statistics.
+      %li
+        %h3 Blackbox
+        %blockquote
+          Testing externally visible behavior as a user would see it.
+  %section
+    %h2 On-call
+    %img{src: '/images/ybyr/on-call.png', style: 'width: 75%'}
+  %section
+    %h2 Developers on-call
+    %img{src: '/images/ybyr/lider-martelo.jpg', style: 'width: 75%'}
+  %section
+    %h2 Incident Management
+    %img{src: '/images/ybyr/incident-logs.png', style: 'width: 75%'}
+  %section
+    %h2 Service Reliability Tasks
+    %ul
+      %li BCP/Disaster Recovery
+      %li Monitoring
+      %li Alerting
+
+%section
+  %section
+    %h1 Testing
+  %section
+    .mermaid
+      :plain
+        graph LR
+          tester ==> deploy
+          subgraph Engineering
+            dev["Development"] ==> tester["Tester"]
+            tester ==> VTE
+          end
+          subgraph Ops
+            deploy["Deploy"]
+          end
+  %section
+    %h2 In pipeline we trust
+    .mermaid
+      :plain
+        graph LR
+          subgraph Engineering
+            dev["Development"] ==> pl["Pipeline"]
+            pl ==> deploy["Deploy"]
+          end
+  %section
+    %h2 Feature Toggles
+    %img{src: '/images/ybyr/feature-toggles.jpeg', style: 'width: 75%'}
+  %section
+    %h2 Release Strategy
+    %img{src: '/images/ybyr/iterative_rollout2.png', style: 'width: 75%'}
+  %section
+    %h2 Release Monitoring
+    %img{src: '/images/ybyr/monitoring-release.png', style: 'width: 45%'}
+  %section
+    %h2 Done Definition
+    %span.fragment
+      %blockquote
+        Working software in production
+
+%section
+  %section
+    %h1 Cross Functional Team
+  %section
+    %h2 Cross Functional Teams
+    %img{src: '/images/ybyr/functional.png', style: 'width: 45%'}
+  %section
+    %h2 Tuckmans' model
+    %img{src: '/images/ybyr/tuckmans-model.png', style: 'width: 45%'}
+    %h4.fragment Storming is harder
+  %section
+    %h2 T-Shaped People
+    %img{src: '/images/ybyr/t-shaped.png', style: 'width: 45%'}
+  %section
+    %h2 The one required Skill
+    %h1.fragment Coding
+
+
+%section
+  %section
+    %h1 Everything as code Code is everything
+  %section
+    %h2 Pipeline
+    %img{src: '/images/ybyr/pipeline.jpg', style: 'width: 45%'}
+  %section
+    %h2 Multiple Pipelines
+    %img{src: '/images/ybyr/pipelines.jpg', style: 'width: 45%'}
+  %section
+    %h2 I mean MANY Pipelines
+    %img{src: '/images/ybyr/cm-pipelines.png', style: 'width: 25%'}
+  %section
+    %h2 Pipelines Overview
+    %ul
+      %li Application Code
+      %li Database
+      %li Middleware
+      %li Infrastructure
+      %li Configuration
+  %section
+    %h2 Break Glass
+    %img{src: '/images/ybyr/break-glass.jpg', style: 'width: 25%'}
+%section
+  %h1 Thank you
+  %img{src: '/images/ybyr/questions.gif', style: 'width: 45%'}
+  %br
+  %a{href: 'http://www.roger-almeida.com/talks/ybyr/'}www.roger-almeida.com/talks/ybyr/
+
