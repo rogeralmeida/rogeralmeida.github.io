@@ -4,7 +4,7 @@ require 'fileutils'
 
 Jekyll::Hooks.register :site, :post_write do |site|
 
-  if ENV['SKIP_DINAMIC_IMAGES'] != 'true'
+  if ENV['SKIP_DYNAMIC_IMAGES'] != 'true'
     logger = Logger.new(STDOUT)
     logger.level = Logger::INFO
     i_sizes = [1024, 768, 640, 480, 240]
