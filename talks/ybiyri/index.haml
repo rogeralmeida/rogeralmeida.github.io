@@ -29,26 +29,35 @@ footer: true
           %li 
             %i.fas.fa-globe
             %a{href: '#'}www.roger-almeida.com
-  %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
+    %aside.notes
+      Although I have the honour to be presenting here, I will be talking about not the work a person, a team or a department. The stories I will be sharing here today is the result of the effort of many brillant people who had passion and patience to take Tyro through the Journey it went through.
+%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
+  %section
+    %h1 Definitions      
+  %section
     %h2 DevOps
     %blockquote DevOps (a clipped compound of "development" and "operations") is a software engineering culture and practice that aims at unifying software development (Dev) and software operation (Ops)
-  %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-    %h2 You build it, You run it
-    %blockquote
-      Giving developers operational responsibilities has greatly
-      %span.fragment.highlight-blue enhanced the quality of the services
-      , both from a customer and a technology point of view. The traditional model is that you take your software to the wall that separates development and operations, and throw it over and then forget about it. Not at Amazon.
-      %span.fragment.highlight-red You build it, you run it.
-      This brings developers into contact with the day-to-day operation of their software. It also brings them into day-to-day
-      %span.fragment.highlight-blue contact with the customer.
-      This customer feedback loop is essential for improving the quality of the service.
-    %a{href: 'https://queue.acm.org/detail.cfm?id=1142065'}A conversation with Werner Vogels - 30/Jun/2006
-    %aside.notes
-      A Conversation with Werner Vogels in 2006
-  %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
+  %section
+    %h2 Cloud Computing
+    %blockquote The practice of using a network of remote servers hosted on the Internet to store, manage, and process data, rather than a local server or a personal computer.
+  %section
     %h2 You build it, You run it
     %blockquote
       You build it, you run it is the principle that development teams operate their own product.
+  %section
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 4'}
+        %h2 DevOps
+      .none{style: 'grid-column-start: 5; grid-column-end: 8'}
+        %h2 Cloud Computing
+      .none{style: 'grid-column-start: 9; grid-column-end: 12'}
+        %h2 You build it, You run it
+      .none{style: 'grid-column-start: 1; grid-column-end: 4'}
+        %i.far.fa-check-square.fa-7x.fragment
+      .none{style: 'grid-column-start: 5; grid-column-end: 8'}
+        %i.far.fa-check-square.fa-7x.fragment
+      .none{style: 'grid-column-start: 9; grid-column-end: 12'}
+        %i.fas.fa-check-square.fa-7x.fragment
 %section
   %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
     %h1 Tyro Journey
@@ -79,6 +88,10 @@ footer: true
           %li Self Service Deploys
           %li Cloud Adoption (AWS)
           %li Multi-Languages
+    %aside.notes
+      \- Low experience with AWS
+      \- Partnership with CMD to bring in AWS expertise
+      \- Hired a Architect to Champion the project
   %section{data: {background: {image: '/images/ybyr/2018-tyro-journey.svg', size: '90%'}, transition: 'fade'}}
     .grid-container
       .none{style: 'grid-column-start: 4; grid-column-end: 12'}
@@ -90,60 +103,263 @@ footer: true
           %li K8S
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
-    %h1 Benefits
-  %section
-    %h2 DORA DevOps report
-    TODO: Put the benefits from Dora here
-    TODO: Add Tyro's objectives here. The benefits we are seeking
+    %h1 Challenges
+    %ul
+      %li.fragment Lead the first YBIYRI team
+      %li.fragment High regulated environment: APRA, Royal Comission, Payment Industry
+      %li.fragment We started in March 2017
+      %li.fragment Reponsible for all reporting data
+      %li.fragment 24/7 On-call
+%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
+  %h1 Lessons
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
-    %h1 My challenge
-    Lead the first YBIYRI team
-    TODO: Add my service
-%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
+    %h1 Operational Models
   %section
-    %h1 DevOps models
+    %h1 Operational Models
     %ul
       %li Amazon YBIYRI
       %li Google SRE
+  %section
+    %h2 Amazon Two Pizza Teams
+    %ul
+      %li How many people can you feed with 2 big (American Size) pizzas?
+      %li Operational responsibility inside the team
+      %li Customer contact
+  %section
+    %h2 Google SRE
+    %ul
+      %li Site Reliability Engineers
+      %li Embedded into delivery teams
+      %li Veto power on production environments
+  %section
+    %h2 Tyro Way
+    %ul
+      %li.fragment Platform teams (Platform Engineers)
+      %li.fragment Delivery Teams (Software Engineers with operational responsibilities)
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
-    Tyro way
+    %h1 New area of knowledge
+  %section
+    %h2 New area of knowledge
+    %img{src: '/images/ybyr/devopspract.png', style: 'width: 90%;'}
+
+%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
+  %section
+    %h1 Define your boundaries
+  %section
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 12'}
+        %h2
+          Define the
+          %i
+            %u business capability
+          you will support
+        %h3.fragment Ex: Provide data for reporting
+      .none{style: 'grid-column-start: 1; grid-column-end: 6'}
+        %ul
+          %li.fragment You will need involvement from business (PO)
+          %li.fragment We are not talking about software artefacts
+      .none{style: 'grid-column-start: 7; grid-column-end: 13'}
+        %img.fragment{src: '/images/ybyr/etq-components.png', style: 'width: 50%;'}
+%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
+  %section
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 12'}
+        %h1 Define your Service Levels
+        %h2 SLIs, SLOs, SLAs, MAOs, RTOs...
+  %section
+    %h2 
+      SLI - 
+      %i Service Level Indicators
+    %blockquote A carefully defined quantitative measure of some aspect of the level of service that is provided
     %ul
-      %li High regulated environment: APRA, Royal Comission, Payment Industry
-      %li Platform teams
-      %li Delivery Teams
+      %li.fragment
+        Ex:
+        %ul
+          %li.fragment Response Time
+          %li.fragment Data Durability
+          %li.fragment Up Time
+          %li.fragment Availability
+  %section
+    %h2 
+      SLO -
+      %i Service Level Objectives
+    %blockquote A target value or range of values for a service level that is measured by an SLI
+    %ul
+      %li.fragment
+        Examples:
+        %ul
+          %li.fragment Availability: 99.95%
+          %li.fragment
+            Response Time:
+            %ul
+              %li 95 percentile: <= 500ms
+              %li 99 percentile: < 1000ms
+          %li.fragment Data Durability: 5 years
+  %section
+    %h2
+      SLA -
+      %i
+        Service Level Agreements
+    %blockquote An explicit or implicit contract with your users that includes consequences of meeting (or missing) the SLOs they contain
+  %section
+    %h2
+      MAO -
+      %i Maximum Allowed Outage
+    %blockquote 
+      Maximum amount of time a system can be unavailable before its loss will compromise the organization's objectives or survival.
+      %strong AKA: Maxium Tolerable Period of Disruption (MTPOD)
+  %section
+    %h2
+      RTO -
+      %i Recovery Time Objective
+    %blockquote
+      Targeted duration of time and a service level within which a business process must be restored after a disaster (or disruption) in order to avoid unacceptable consequences associated with a break in business continuity
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-  Lessons learned
+  %section
+    %h1 Security
+  %section
+    %h2 Least Privilege
+    %img{src: '/images/ybyr/least-privilege.jpg'}
+  %section
+    %h2 Break Glass
+    %img{src: '/images/ybyr/break-glass.jpg'}
+  %section
+    %h2 Defense in depth
+    %iframe{width: "75%", height: "315", src: "https://www.youtube.com/embed/g0x1Ijy1udA", frameborder: "0", allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: true}
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-  %h1 1) Running services is a whole area of knowledge that developers are normally not exposed to
-  Pregnant woman analogy
+  %section
+    %h1 Monitoring
+  %section
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        %h2 Monitoring
+      .none{style: 'grid-column-start: 1; grid-column-end: 6'}
+        %h3 Closed Box
+      .none{style: 'grid-column-start: 7; grid-column-end: 13'}
+        %h3 Open Box
+      .none{style: 'grid-column-start: 1; grid-column-end: 6'}
+        %i.fas.fa-box.fa-3x
+        %ul
+          %li.fragment How the user sees your service
+      .none{style: 'grid-column-start: 7; grid-column-end: 13'}
+        %i.fas.fa-box-open.fa-3x
+        %ul
+          %li.fragment
+            Knows the internals of the application
+            %ul
+              %li Logs
+              %li JVM
+              %li Health Check Pages
+  %section
+    %h2 Dashboards
+    %img{src: '/images/ybyr/dashboard-sumo.png', style: 'width: 75%;'}
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-  %h1 2) Define the business capability you will support sooner than later
-  You will need involvement from business (PO)
-  We are not talking about software artefacts
+  %section
+    %h1 Alerting
+  %section
+    %h2 Alerting
+    %ul
+      %li Inform a humans about a unexpected behaviour
+      %li Not able to fulfill a SLO
+      %li Some dependency is malfunctioning
+  %section
+    %h2 Alerting Channels vs Severity
+    %table
+      %tr
+        %th Severity
+        %th Channel
+      %tr.fragment
+        %td
+          %span{style: 'color: blue'} Trivial
+        %td Log
+      %tr.fragment
+        %td
+          %span{style: 'color: green'} Low
+        %td Ticket
+      %tr.fragment
+        %td
+          %span{style: 'color: orange;'} Medium
+        %td e-mail
+      %tr.fragment
+        %td
+          %span{style: 'color: red;'} High
+        %td Pager
+  %section
+    %h2 Alerting Lesson
+    %ul
+      %li Too much alerting is the same as no alerting
+    %aside.notes
+      Talk about the day one team member ignored a critical alert because we had to many false positives on that day
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-  %h1 3) Define your Service Levels
-  %ul
-    %li SLI
-    %li SLO
-    %li SLA
-    %li MAO
-    %li RTO
+  %section
+    %h1 Life on-call
+  %section
+    %h2 On-Call
+    %ul
+      %li.fragment 1 person on-call for 1 week
+      %li.fragment Every team member will be on call
+      %li.fragment
+        Scalation policy
+        %ul
+          %li
+            Team Member
+            %ul
+              %li
+                Team Manager
+                %ul
+                  %li
+                    Tribe Manager
+                    %ul
+                      %li
+                        Head of Engineering
+      %li.fragment 15 minutes away from computer/internet
+      %li.fragment
+        Time
+        %i in lieu
+        as a compensation
+  %section
+    %h2 On-call responsibilities
+    %ul
+      %li Monitor the SLOs
+      %li Work on Resilience stories
+      %li Veto power to Deploy and Releases
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-  %h1 4) Monitoring is a constant conversation
+  %section
+    %h1 Post-morten
+  %section
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        %h2 Pre-work
+      .none{style: 'grid-column-start: 1; grid-column-end: 5'}
+        %h3 Capture an incident timeline
+      .none{style: 'grid-column-start: 6; grid-column-end: 13'}
+        %img{src: '/images/ybyr/incident-timeline.png'}
+  %section
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        %h2 Hosting Post-morten session 
+      .none{style: 'grid-column-start: 1; grid-column-end: 5'}
+        %h4 Apply the retrospective prime directive
+      .none{style: 'grid-column-start: 6; grid-column-end: 13'}
+        %blockquote Regardless of what we discover, we understand and truly believe that everyone did the best job they could, given what they knew at the time, their skills and abilities, the resources available, and the situation at hand.
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-  %h1 5) Alerting
-  Too much alerting is the same as no alerting
-  Log, ticket, pager dutty,
-%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-  %h1 6) Post-mortem
-%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-  %h1 7) Capture the why for later reference
-%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-  %h1 8) Been on-call
-%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-  %h1 9) Testing
+  %section
+    %h1 Testing
+  %section
+    %h2 Testing
+    %ul
+      %li Is crucial
+      %li Automated is better than manual
+  %section
+    %h2 Dark Launch
+    .mermaid
+      = 'graph LR'
+      = '  Client --> Current'
+      = '  Client --> New'
+  %section
+    %img{src: '/images/ybyr/canary-release.png'}
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %h1 Conclusion
   We gained a lot of experience
