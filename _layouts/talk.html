@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/stylesheets/theme/black.css" id="theme">
     {% endif %}
     <link rel="stylesheet" href="/stylesheets/decks.css">
+    <link rel="stylesheet" href="/stylesheets/style-albe-timeline.css">
 
     <!-- Code syntax highlighting -->
     <link rel="stylesheet" href="/stylesheets/zenburn.css">
@@ -187,40 +188,68 @@
     <script src="/javascripts/head.min.js"></script>
     <script src="/javascripts/reveal.js"></script>
     <script src="/javascripts/mermaid.min.js"></script>
+    <script src="/javascripts/jquery-albe-timeline.js"></script>
     <script>
 
-        mermaid.initialize({ startOnLoad: true, theme: 'dark' })
+        $(() => {
+            mermaid.initialize({ startOnLoad: true, theme: 'dark' })
 
-        // Full list of configuration options available at:
-        // https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: true,
-            width: "100%",
-            height: "100%",
-            slideNumber: 'c/t',
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                width: "100%",
+                height: "100%",
+                slideNumber: 'c/t',
 
-            //transition: 'fade', //slide/none/fade/slide/convex/concave/zoom
+                //transition: 'fade', //slide/none/fade/slide/convex/concave/zoom
 
-            // Optional reveal.js plugins
-            dependencies: [
-                { src: '/javascripts/lib/js/classList.js', condition: function () { return !document.body.classList; } },
-                { src: '/javascripts/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-                { src: '/javascripts/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-                { src: '/javascripts/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
-                { src: '/javascripts/plugin/zoom-js/zoom.js', async: true },
-                { src: '/javascripts/revealjs-animated.js', async: true },
-                { src: '/javascripts/plugin/notes/notes.js', async: true }
-            ]
-        });
-        Reveal.addEventListener('slidechanged', function(event){
-            event.currentSlide.querySelectorAll('.auto-fire').forEach(element => {
-                Reveal.nextFragment();
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: '/javascripts/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                    { src: '/javascripts/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                    { src: '/javascripts/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                    { src: '/javascripts/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                    { src: '/javascripts/plugin/zoom-js/zoom.js', async: true },
+                    { src: '/javascripts/revealjs-animated.js', async: true },
+                    { src: '/javascripts/plugin/notes/notes.js', async: true }
+                ]
             });
+            Reveal.addEventListener('slidechanged', function (event) {
+                event.currentSlide.querySelectorAll('.auto-fire').forEach(element => {
+                    Reveal.nextFragment();
+                });
+            });
+            var tyroEvents = [{
+                time: '2018-01-15',
+                body: [{
+                    tag: 'p',
+                    content: "Self service Deploys"
+                }, {
+                    tag: 'p',
+                    content: 'K8S'
+                }],
+            
+            },
+            {
+                time: '2017-01-15',
+                body: [{
+                    tag: 'p',
+                    content: "Train Release every week"
+                }],
+            },
+            {
+                time: '2016-01-29',
+                body: [{
+                    tag: 'p',
+                    content: "Train Release every 2 weeks"
+                }]
+            }];
+            $("#tyro-timeline").albeTimeline(tyroEvents, {showMenu: false, formatDate: 'YYYY', sortDesc: false, showGroup: false, effect: 'none'})
         });
     </script>
 </body>
-
 </html>
