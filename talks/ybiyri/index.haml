@@ -66,57 +66,27 @@ footer: true
     %h1 Tyro Journey
   %section
     #tyro-timeline
-  %section{data: {background: {image: '/images/ybyr/2015-tyro-journey.svg', size: '90%'}, transition: 'fade'}}
-    .grid-container
-      .none{style: 'grid-column-start: 4; grid-column-end: 12'}
-        %h1{style: 'margin-top: 1px'} Tyro Journey
-      .none{style: 'grid-column-start: 4; grid-column-end: 12'}
-        %ul
-          %li Train Release every 2 weeks
-          %li 100% Pair Programming
-          %li Java Shop
-  %section{data: {background: {image: '/images/ybyr/2016-tyro-journey.svg', size: '90%'}, transition: 'fade'}}
-    .grid-container
-      .none{style: 'grid-column-start: 4; grid-column-end: 12'}
-        %h1 Tyro Journey
-      .none{style: 'grid-column-start: 4; grid-column-end: 12'}
-        %ul
-          %li Train Release every week
-          %li Virtualization
-          %li Infrastructure as code
-  %section{data: {background: {image: '/images/ybyr/2017-tyro-journey.svg', size: '90%'}, transition: 'fade'}}
-    .grid-container
-      .none{style: 'grid-column-start: 4; grid-column-end: 12'}
-        %h1 Tyro Journey
-      .none{style: 'grid-column-start: 4; grid-column-end: 12'}
-        %ul
-          %li Self Service Deploys
-          %li Cloud Adoption (AWS)
-          %li Multi-Languages
     %aside.notes
       \- Low experience with AWS
       \- Partnership with CMD to bring in AWS expertise
-      \- Hired a Architect to Champion the project
-  %section{data: {background: {image: '/images/ybyr/2018-tyro-journey.svg', size: '90%'}, transition: 'fade'}}
-    .grid-container
-      .none{style: 'grid-column-start: 4; grid-column-end: 12'}
-        %h1 Tyro Journey
-      .none{style: 'grid-column-start: 4; grid-column-end: 12'}
-        %ul
-          %li X% of applications in Self Service Deploy
-          %li Delivery Teams on-call
-          %li K8S
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
     %h1 Challenges
+    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/challenge.jpeg', style: 'position: absolute; top: 250%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '80%', top: '-230%'}}, rotate: {to: '-25deg'}, duration: 500}}}
     %ul
       %li.fragment Lead the first YBIYRI team
       %li.fragment High regulated environment: APRA, Royal Comission, Payment Industry
       %li.fragment We started in March 2017
       %li.fragment Reponsible for all reporting data
       %li.fragment 24/7 On-call
+    %aside.notes
+      \- Hired a Architect to Champion the project
+      \- Many lessons about APRA and bank license that I will not talk about. Come talk to me later
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %h1 Lessons
+  %aside.notes
+    %ul
+      %li What are the things that we learned along the way
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
     %h1 Operational Models
@@ -125,6 +95,11 @@ footer: true
     %ul
       %li Amazon YBIYRI
       %li Google SRE
+    %aside.notes
+      %ul
+        %li How should you organise your team? 
+        %li Should you put all the responsibility on developers?
+        %li What gonna happen with your operations team?
   %section
     %h2 Amazon Two Pizza Teams
     %ul
@@ -139,6 +114,8 @@ footer: true
       %li Veto power on production environments
   %section
     %h2 Tyro Way
+    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/platform-engineer.jpeg', style: 'position: absolute; top: 350%; z-index: -1; opacity: 0.4; width: auto; heigth: 200px;', data: {animated: {move: {to: {left: '20%', top: '-230%'}}, rotate: {to: '-25deg'}, duration: 500}}}
+    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/delivery.jpeg', style: 'position: absolute; top: 350%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '200%', top: '-230%'}}, rotate: {to: '25deg'}, duration: 500}}}
     %ul
       %li.fragment Platform teams (Platform Engineers)
       %li.fragment Delivery Teams (Software Engineers with operational responsibilities)

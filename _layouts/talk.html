@@ -227,10 +227,11 @@
                 time: '2018-01-15',
                 body: [{
                     tag: 'p',
-                    content: "Self service Deploys"
-                }, {
-                    tag: 'p',
-                    content: 'K8S'
+                    content: "<ul>"+
+                                "<li>Self service deploys</li>"+
+                                "<li>Polyglot Environment</li>"+
+                                "<li>K8S on AWS</li>"+
+                              "</ul>"
                 }],
             
             },
@@ -238,14 +239,22 @@
                 time: '2017-01-15',
                 body: [{
                     tag: 'p',
-                    content: "Train Release every week"
+                    content: "<ul>"+
+                                "<li>Train Release every week</li>"+
+                                "<li>Cloud Adoption</li>"+
+                                "<li>Infrastructure as Code</li>"+
+                              "</ul>"
                 }],
             },
             {
                 time: '2016-01-29',
                 body: [{
                     tag: 'p',
-                    content: "Train Release every 2 weeks"
+                    content: "<ul>"+
+                                "<li>Train Release every 2 weeks</li>"+
+                                "<li>Mostly a Java shop</li>"+
+                                "<li>Manual Infrastructure</li>"+
+                              "</ul>"
                 }]
             }];
             $("#tyro-timeline").albeTimeline(tyroEvents, {showMenu: false, formatDate: 'YYYY', sortDesc: false, showGroup: false, effect: 'none'})
