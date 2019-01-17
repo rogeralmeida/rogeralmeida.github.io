@@ -192,7 +192,6 @@
     <script>
 
         $(() => {
-            mermaid.initialize({ startOnLoad: true, theme: 'dark' })
 
             // Full list of configuration options available at:
             // https://github.com/hakimel/reveal.js#configuration
@@ -221,6 +220,11 @@
             Reveal.addEventListener('slidechanged', function (event) {
                 event.currentSlide.querySelectorAll('.auto-fire').forEach(element => {
                     Reveal.nextFragment();
+                });
+
+                event.currentSlide.querySelectorAll('.mermaid').forEach(element => {
+                    console.log('Changed slides and found mermaid diagrams');
+                    mermaid.init({ startOnLoad: false, logLevel: 1, theme: 'dark', flowchart: {useMaxWidth: true, curve: 'basis', width: '100%'} }, element);
                 });
             });
             var tyroEvents = [{

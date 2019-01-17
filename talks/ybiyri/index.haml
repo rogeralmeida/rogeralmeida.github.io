@@ -72,6 +72,8 @@ footer: true
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
     %h1 Challenges
+  %section
+    %h2 Challenges
     %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/challenge.jpeg', style: 'position: absolute; top: 250%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '80%', top: '-230%'}}, rotate: {to: '-25deg'}, duration: 500}}}
     %ul
       %li.fragment Lead the first YBIYRI team
@@ -328,18 +330,30 @@ footer: true
         %blockquote Regardless of what we discover, we understand and truly believe that everyone did the best job they could, given what they knew at the time, their skills and abilities, the resources available, and the situation at hand.
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
-    %h1 Testing
-  %section
-    %h2 Testing
-    %ul
-      %li Is crucial
-      %li Automated is better than manual
+    %h1 Release Strategy
   %section
     %h2 Dark Launch
     .mermaid
       = 'graph LR'
-      = '  Client --> Current'
-      = '  Client --> New'
+      = '  Client ==> Current'
+  %section
+    %h2 Dark Launch
+    .mermaid
+      = 'graph LR'
+      = '  Client ==> Current'
+      = '  New(New)'
+  %section
+    %h2 Dark Launch
+    .mermaid
+      = 'graph LR'
+      = '  Client ==> Current'
+      = '  Client ==> New(New)'
+      = '  Current -. Compare .- New'
+  %section
+    %h2 Dark Launch
+    .mermaid
+      = 'graph LR'
+      = '  Client ==> New'
   %section
     %img{src: '/images/ybyr/canary-release.png'}
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
