@@ -12,7 +12,11 @@ footer: true
   %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
     .grid-container
       .none{style: 'grid-column-start: 1; grid-column-end: 13'}
-        %h1 Lessons from running a YBIYRI team
+        %h2
+          Lessons from running a
+          %i
+            YBIYRI
+          team
       .none{style: 'grid-column-start: 1; grid-column-end: 8'}
         %ul
           %li 
@@ -29,6 +33,8 @@ footer: true
           %li 
             %i.fas.fa-globe
             %a{href: '#'}www.roger-almeida.com
+      .none{style: 'grid-column-start: 9; grid-column-end: 13'}
+        %img{src: '/images/ybyr/team.jpg'}
     %aside.notes
       Although I have the honour to be presenting here, I will be talking about not the work a person, a team or a department. The stories I will be sharing here today is the result of the effort of many brillant people who had passion and patience to take Tyro through the Journey it went through.
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
@@ -37,11 +43,11 @@ footer: true
   %section
     %h2 DevOps
     %blockquote DevOps (a clipped compound of "development" and "operations") is a software engineering culture and practice that aims at unifying software development (Dev) and software operation (Ops)
-    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/devops.png', style: 'position: absolute; top: 200%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '-100%', top: '-130%'}}, rotate: {to: '-30deg'}, duration: 500}}}
+    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/devops.png', style: 'position: absolute; top: 200%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '-50%', top: '-220%'}}, rotate: {to: '-30deg'}, duration: 500}}}
   %section
     %h2 Cloud Computing
     %blockquote The practice of using a network of remote servers hosted on the Internet to store, manage, and process data, rather than a local server or a personal computer.
-    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/cloud-computing.png', style: 'position: absolute; top: 250%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '100%', top: '-180%'}}, rotate: {to: '30deg'}, duration: 500}}}
+    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/cloud-computing.png', style: 'position: absolute; top: 250%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '10%', top: '-180%'}}, rotate: {to: '30deg'}, duration: 500}}}
   %section
     %h2 You build it, You run it
     %blockquote
@@ -61,19 +67,40 @@ footer: true
         %i.far.fa-check-square.fa-7x.fragment
       .none{style: 'grid-column-start: 9; grid-column-end: 12'}
         %i.fas.fa-check-square.fa-7x.fragment
-%section
-  %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
+
+%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
+  %section
     %h1 Tyro Journey
   %section
-    #tyro-timeline
+    %h2 Tyro Journey
+    .grid-container{style: 'border-top-width: 10px; border-top-color: #6FF4BA; border-top-style: dotted;'}
+      .none.fragment{style: 'grid-column-start: 1; grid-column-end: 4'}
+        %h5 2016
+        %ul
+          %li Train release every 2 weeks
+          %li JVM based backend
+          %li Manual Infrastructure
+      .none.fragment{style: 'grid-column-start: 5; grid-column-end: 8'}
+        %h5 2017
+        %ul
+          %li Train release every week
+          %li Cloud adoption
+          %li Infrastructure as code
+      .none.fragment{style: 'grid-column-start: 9; grid-column-end: 12'}
+        %h5 2018
+        %ul
+          %li Self service deploys
+          %li Docker based
+          %li K8S
     %aside.notes
       \- Low experience with AWS
       \- Partnership with CMD to bring in AWS expertise
       \- Hired a Architect to Champion the project
       \- Many lessons about APRA and bank license that I will not talk about. Come talk to me later
+      \- Highligh weekly deploys and the pressure on business and testing
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
-    %h1 Why DevOps
+    %h1 Why DevOps?
   %section
     %h2 Why DevOps
     %img{src: '/images/ybyr/dora.png'}
@@ -94,19 +121,40 @@ footer: true
     %ul
       %li Cycle Time (from commit to production)
       %li Failure Rate
+    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/cycle-time.jpg', style: 'position: absolute; top: 250%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '-50%', top: '-230%'}}, rotate: {to: '-25deg'}, duration: 500}}}
   %section
     %h2 Service Operational Performance
     %ul
       %li Availability
       %li Time to Restore
+    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/availability.jpeg', style: 'position: absolute; top: 250%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '-150%', top: '-230%'}}, rotate: {to: '35deg'}, duration: 500}}}
   %section
     .grid-container
       .none{style: 'grid-column-start: 1; grid-column-end: 5'}
-        %h2 Performance Distribution
+        Performance Distribution
       .none{style: 'grid-column-start: 6; grid-column-end: 13'}
         %img{src: '/images/ybyr/performance-profiles.png', style: 'max-height: 375%;'}
   %section
     %img{src: '/images/ybyr/performance-compare.png', style: 'max-height: 90%'}
+%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
+  %section
+    %h1 Our current status
+  %section
+    %h2 Deployes per week
+    %img{src: '/images/ybyr/chaos-monkeys-deploy.png'}
+    %aside.notes
+      %ul
+        %li Deploys for the last 90 days
+        %li More than 3 deploys per week on avg
+        %li Peaks of 6 deploys per week
+  %section
+    %h2 Release Time (from commit to deploy)
+    %img{src: '/images/ybyr/release-time.png'}
+  %section
+    %h2 Availability
+    Worst 30 days between November/2018 and December/2018:
+    %h3 99.6%
+
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %h1 Lessons
   %aside.notes
@@ -139,11 +187,11 @@ footer: true
       %li Veto power on production environments
   %section
     %h2 Tyro Way
-    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/platform-engineer.jpeg', style: 'position: absolute; top: 350%; z-index: -1; opacity: 0.4; width: auto; heigth: 200px;', data: {animated: {move: {to: {left: '20%', top: '-230%'}}, rotate: {to: '-25deg'}, duration: 500}}}
-    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/delivery.jpeg', style: 'position: absolute; top: 350%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '200%', top: '-230%'}}, rotate: {to: '25deg'}, duration: 500}}}
+    %img.fragment.animated.move-to.rotate.scale-up.auto-fire{src: '/images/ybyr/platform-engineer.jpeg', style: 'position: absolute; top: 350%; z-index: -1; opacity: 0.4; width: auto; heigth: 200px;', data: {animated: {move: {to: {left: '-20%', top: '-330%'}}, rotate: {to: '-25deg'}, duration: 500}}}
+    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/delivery.jpeg', style: 'position: absolute; top: 350%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '50%', top: '-230%'}}, rotate: {to: '25deg'}, duration: 500}}}
     %ul
-      %li.fragment Platform teams (Platform Engineers)
-      %li.fragment Delivery Teams (Software Engineers with operational responsibilities)
+      %li.fragment Platform Teams
+      %li.fragment Delivery Teams
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
     %h1 New area of knowledge
