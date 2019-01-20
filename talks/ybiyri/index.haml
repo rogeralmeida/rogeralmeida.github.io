@@ -203,6 +203,22 @@ footer: true
   %section
     %h1 Define your boundaries
   %section
+    #chart-boundary-1.mermaid-lazy
+      :plain
+        graph LR
+        ma[micro-service A] --> mb[micro-service B]
+        ma[micro-service A] --> mc[micro-service C]
+        mc[micro-service C] --> md[micro-service D]
+  %section
+    #chart-boundary-2.mermaid-lazy
+      :plain
+        graph LR
+        subgraph Business Capability
+        ma[micro-service A] --> mb[micro-service B]
+        ma[micro-service A] --> mc[micro-service C]
+        mc[micro-service C] --> md[micro-service D]
+        end
+  %section
     .grid-container
       .none{style: 'grid-column-start: 1; grid-column-end: 12'}
         %h2
