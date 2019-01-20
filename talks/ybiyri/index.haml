@@ -411,6 +411,7 @@ footer: true
           :plain
             graph LR
             Client ==> Current
+            style Current fill:#f3faff
   %section.stack{data: {transition: 'fade'}}
     .grid-container
       .none{style: 'grid-column-start: 1; grid-column-end: 13'}
@@ -420,18 +421,23 @@ footer: true
           = 'graph LR'
           = '  Client ==> Current'
           = '  New(New)'
+          = '  style New fill:#6FF4BA'
+          = '  style Current fill:#f3faff'
   %section.stack{data: {transition: 'fade'}}
     %h2 Dark Launch
     #chart-3.mermaid-lazy
       = 'graph LR'
       = '  Client ==> Current'
-      = '  Client ==> New(New)'
+      = '  Client -.-> New(New)'
       = '  Current -. Compare .- New'
+      = '  style New fill:#6FF4BA'
+      = '  style Current fill:#f3faff'
   %section.stack{data: {transition: 'fade'}}
     %h2 Dark Launch
     #chart-4.mermaid-lazy
       = 'graph LR'
-      = '  Client ==> New'
+      = '  Client ==> New(New)'
+      = '  style New fill:#6FF4BA'
   %section
     %img{src: '/images/ybyr/canary-release.png'}
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
