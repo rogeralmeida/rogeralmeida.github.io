@@ -238,7 +238,6 @@ footer: true
     .grid-container
       .none{style: 'grid-column-start: 1; grid-column-end: 12'}
         %h1 Define your Service Levels
-        %h2 SLIs, SLOs, SLAs, MAOs, RTOs...
   %section
     %h2 
       SLI - 
@@ -268,6 +267,86 @@ footer: true
               %li 95 percentile: <= 500ms
               %li 99 percentile: < 1000ms
           %li.fragment Data Durability: 5 years
+  %section
+    %small
+      %table
+        %thead
+          %tr
+            %th Availability level
+            %th Allowed unavailability window
+        %tbody
+          %tr
+            %td
+            %td per year
+            %td per quarter
+            %td per month
+            %td per week
+            %td per day
+            %td per hour
+          %tr
+            %td 90%
+            %td 36.5 days
+            %td 9 days
+            %td 3 days
+            %td 16.8 hours
+            %td 2.4 hours
+            %td 6 minutes
+          %tr
+            %td 95%
+            %td 18.25 days
+            %td 4.5 days
+            %td 1.5 days
+            %td 8.4 hours
+            %td 1.2 hours
+            %td 3 minutes
+          %tr
+            %td 99%
+            %td 3.65 days
+            %td 21.6 hours
+            %td 7.2 hours
+            %td 1.68 hours
+            %td 14.4 minutes
+            %td 36 seconds
+          %tr
+            %td 99.5%
+            %td 1.83 days
+            %td 10.8 hours
+            %td 3.6 hours
+            %td 50.4 minutes
+            %td 7.20 minutes
+            %td 18 seconds
+          %tr
+            %td 99.9%
+            %td 8.76 hours
+            %td 2.16 hours
+            %td 43.2 minutes
+            %td 10.1 minutes
+            %td 1.44 minutes
+            %td 3.6 seconds
+          %tr
+            %td 99.95%
+            %td 4.38 hours
+            %td 1.08 hours
+            %td 21.6 minutes
+            %td 5.04 minutes
+            %td 43.2 seconds
+            %td 1.8 seconds
+          %tr
+            %td 99.99%
+            %td 52.6 minutes
+            %td 12.96 minutes
+            %td 4.32 minutes
+            %td 60.5 seconds
+            %td 8.64 seconds
+            %td 0.36 seconds
+          %tr
+            %td 99.999%
+            %td 5.26 minutes
+            %td 1.30 minutes
+            %td 25.9 seconds
+            %td 6.05 seconds
+            %td 0.87 seconds
+            %td 0.04 seconds
   %section
     %h2
       SLA -
