@@ -190,7 +190,17 @@
     <script>
 
         $(() => {
-
+            mermaid.initialize({
+                startOnLoad: false, 
+                logLevel: 1,
+                theme: 'dark',
+                flowchart: {
+                    useMaxWidth: true,
+                    curve: 'basis',
+                    width: '100%',
+                    maxWidth: '100%'
+                }
+            });
             // Full list of configuration options available at:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({

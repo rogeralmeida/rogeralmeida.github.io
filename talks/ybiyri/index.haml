@@ -402,27 +402,34 @@ footer: true
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
     %h1 Release Strategy
-  %section
+  %section.stack{data: {transition: 'fade-out'}}
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        %h2 Dark Launch
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        #chart-1.mermaid-lazy{data: {chart: {definition: 'graph LR Client ==> Current'}}}
+          :plain
+            graph LR
+            Client ==> Current
+  %section.stack{data: {transition: 'fade'}}
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        %h2 Dark Launch
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        #chart-2.mermaid-lazy
+          = 'graph LR'
+          = '  Client ==> Current'
+          = '  New(New)'
+  %section.stack{data: {transition: 'fade'}}
     %h2 Dark Launch
-    .mermaid
-      = 'graph LR'
-      = '  Client ==> Current'
-  %section
-    %h2 Dark Launch
-    .mermaid
-      = 'graph LR'
-      = '  Client ==> Current'
-      = '  New(New)'
-  %section
-    %h2 Dark Launch
-    .mermaid
+    #chart-3.mermaid-lazy
       = 'graph LR'
       = '  Client ==> Current'
       = '  Client ==> New(New)'
       = '  Current -. Compare .- New'
-  %section
+  %section.stack{data: {transition: 'fade'}}
     %h2 Dark Launch
-    .mermaid
+    #chart-4.mermaid-lazy
       = 'graph LR'
       = '  Client ==> New'
   %section
@@ -436,4 +443,3 @@ footer: true
   %img{src: '/images/ybyr/questions.gif', style: 'width: 45%'}
   %br
   %a{href: 'http://www.roger-almeida.com/talks/ybyr/'}www.roger-almeida.com/talks/ybyr/
-
