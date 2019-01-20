@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="/stylesheets/theme/black.css" id="theme">
     {% endif %}
     <link rel="stylesheet" href="/stylesheets/decks.css">
-    <link rel="stylesheet" href="/stylesheets/style-albe-timeline.css">
 
     <!-- Code syntax highlighting -->
     <link rel="stylesheet" href="/stylesheets/zenburn.css">
@@ -188,7 +187,6 @@
     <script src="/javascripts/head.min.js"></script>
     <script src="/javascripts/reveal.js"></script>
     <script src="/javascripts/mermaid.min.js"></script>
-    <script src="/javascripts/jquery-albe-timeline.js"></script>
     <script>
 
         $(() => {
@@ -222,46 +220,20 @@
                     Reveal.nextFragment();
                 });
 
-                event.currentSlide.querySelectorAll('.mermaid').forEach(element => {
+                event.currentSlide.querySelectorAll('.mermaid-lazy').forEach(element => {
                     console.log('Changed slides and found mermaid diagrams');
-                    mermaid.init({ startOnLoad: false, logLevel: 1, theme: 'dark', flowchart: {useMaxWidth: true, curve: 'basis', width: '100%'} }, element);
+                    // let definition = element.getAttribute('data-chart-definition');
+                    let definition = element.textContent;
+                    let id = element.getAttribute('id');
+                    console.log(`About to render chart: '${definition}' on '${id}'`);
+                    mermaid.render(`generated-${id}`, definition, (svgGraph) => {
+                        console.log('Generated svg:');
+                        console.log(svgGraph);
+                        element.innerHTML = svgGraph;
+                        $(element.children[0]).css('max-width', '70%');
+                    });
                 });
             });
-            var tyroEvents = [{
-                time: '2018-01-15',
-                body: [{
-                    tag: 'p',
-                    content: "<ul>"+
-                                "<li>Self service deploys</li>"+
-                                "<li>Polyglot Environment</li>"+
-                                "<li>K8S on AWS</li>"+
-                              "</ul>"
-                }],
-            
-            },
-            {
-                time: '2017-01-15',
-                body: [{
-                    tag: 'p',
-                    content: "<ul>"+
-                                "<li>Train Release every week</li>"+
-                                "<li>Cloud Adoption</li>"+
-                                "<li>Infrastructure as Code</li>"+
-                              "</ul>"
-                }],
-            },
-            {
-                time: '2016-01-29',
-                body: [{
-                    tag: 'p',
-                    content: "<ul>"+
-                                "<li>Train Release every 2 weeks</li>"+
-                                "<li>Mostly a Java shop</li>"+
-                                "<li>Manual Infrastructure</li>"+
-                              "</ul>"
-                }]
-            }];
-            $("#tyro-timeline").albeTimeline(tyroEvents, {showMenu: false, formatDate: 'YYYY', sortDesc: false, showGroup: false, effect: 'none'})
         });
     </script>
 </body>
