@@ -150,12 +150,18 @@ footer: true
       %li How many people can you feed with 2 big (American Size) pizzas?
       %li Operational responsibility inside the team
       %li Customer contact
+    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/bezoz2.jpg', style: 'position: absolute; top: 250%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '-150%', top: '-130%'}}, rotate: {to: '-25deg'}, duration: 500}}}
   %section
-    %h2 Google SRE
-    %ul
-      %li Site Reliability Engineers
-      %li Close collaboration with Delivery Teams
-      %li Veto power on production environments
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        %h2 Google SRE
+      .none{style: 'grid-column-start: 1; grid-column-end: 6'}
+        %ul
+          %li Site Reliability Engineers
+          %li Close collaboration with Delivery Teams
+          %li Veto power on production environments
+      .none{style: 'grid-column-start: 7; grid-column-end: 13'}
+        %img{src: '/images/ybyr/sre.png'}
   %section
     .grid-container
       .none{style: 'grid-column-start: 1; grid-column-end: 13'}
