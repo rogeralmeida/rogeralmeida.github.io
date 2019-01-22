@@ -7,9 +7,8 @@ comments: true
 sharing: true
 footer: true
 ---
-
-%section
-  %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
+%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
+  %section
     .grid-container
       .none{style: 'grid-column-start: 1; grid-column-end: 13'}
         %h2
@@ -37,61 +36,89 @@ footer: true
         %img{src: '/images/ybyr/team.jpg'}
     %aside.notes
       Although I have the honour to be presenting here, I will be talking about not the work a person, a team or a department. The stories I will be sharing here today is the result of the effort of many brillant people who had passion and patience to take Tyro through the Journey it went through.
+  %section
+    %h2 Agenda
+    %ul
+      %li DevOps Benefits
+      %li Our Journey
+      %li Current Status
+      %li
+        Lessons
+        %ul
+          %li Operational Models
+          %li Learning Ops
+          %li Defining Boundaries
+          %li Setting Service Levels
+          %li Security
+          %li Monitoring
+          %li Alerting & Life On-Call
+          %li Release Strategy
+      %li Conclusion
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
-    %h1 Definitions      
+    %h1 Why DevOps?
+    %aside.notes
+      %ul
+        %li Why is everybody talking about DevOps? Did Tyro decided to embark into this journey?
+        %li It is a hard question to answer, but thanksfuly someone decided to research about it and discover the advantages.
   %section
-    %h2 DevOps
-    %blockquote DevOps (a clipped compound of "development" and "operations") is a software engineering culture and practice that aims at unifying software development (Dev) and software operation (Ops)
-    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/devops.png', style: 'position: absolute; top: 200%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '-50%', top: '-220%'}}, rotate: {to: '-30deg'}, duration: 500}}}
+    %h2 Why DevOps
+    %img{src: '/images/ybyr/dora.png'}
+    %aside.notes
+      %ul
+        %li DORA = DevOps Research and Assessment
+        %li The impact that cloud adoption, use of open source software, organizational practices (including outsourcing), and culture all have on software delivery performance. 
+        %li how they are developing, delivering, and operating software systems.  
   %section
-    %h2 Cloud Computing
-    %blockquote The practice of using a network of remote servers hosted on the Internet to store, manage, and process data, rather than a local server or a personal computer.
-    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/cloud-computing.png', style: 'position: absolute; top: 250%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '10%', top: '-180%'}}, rotate: {to: '30deg'}, duration: 500}}}
-  %section
-    %h2 You build it, You run it
+    %h2 Software Delivery Performance
     %blockquote
-      You build it, you run it is the principle that development teams operate their own product.
-    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/monitoring-release.png', style: 'position: absolute; top: 250%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '-100%', top: '-180%'}}, rotate: {to: '30deg'}, duration: 500}}}
+      Those that develop and deliver quickly are better able to experiment with ways to increase customer adoption and satisfaction, pivot when necessary, and keep up with compliance and regulatory demands.
   %section
     .grid-container
-      .none{style: 'grid-column-start: 1; grid-column-end: 4'}
-        %h3 DevOps
-      .none{style: 'grid-column-start: 5; grid-column-end: 8'}
-        %h3 Cloud Computing
-      .none{style: 'grid-column-start: 9; grid-column-end: 12'}
-        %h3 You build it, You run it
-      .none{style: 'grid-column-start: 1; grid-column-end: 4'}
-        %i.far.fa-check-square.fa-7x.fragment
-      .none{style: 'grid-column-start: 5; grid-column-end: 8'}
-        %i.far.fa-check-square.fa-7x.fragment
-      .none{style: 'grid-column-start: 9; grid-column-end: 12'}
-        %i.fas.fa-check-square.fa-7x.fragment
-
-%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        %h2 Software Delivery and Operational Performance
+      .none{style: 'grid-column-start: 1; grid-column-end: 6'}
+        %img{src: '/images/ybyr/throughput.png', style: "max-height: none"}
+      .none{style: 'grid-column-start: 7; grid-column-end: 13'}
+        %img{src: '/images/ybyr/stability.png', style: 'max-height: none'}
   %section
-    %h1 Tyro Journey
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        %h2 Why DevOps
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        %h2.fragment{style: 'background-color: #003ED8; color: #f3faff;'} Organisational Performance
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        %h2.fragment{style: 'background-color: #51566C; color: #f3faff;'} Software Delivery and Operational Performance (SDO)
+      .none{style: 'grid-column-start: 1; grid-column-end: 6'}
+        %h2.fragment{style: 'background-color: #6FF4BA;'} Software Delivery Performance
+      .none{style: 'grid-column-start: 7; grid-column-end: 13'}
+        %h2.fragment{style: 'background-color: #6FF4BA;'} Service Operational Performance
   %section
-    %h2 Tyro Journey
-    .grid-container{style: 'border-top-width: 10px; border-top-color: #6FF4BA; border-top-style: dotted;'}
-      .none.fragment{style: 'grid-column-start: 1; grid-column-end: 4'}
-        %h5 2016
-        %ul
-          %li Train release every 2 weeks
-          %li JVM based backend
-          %li Manual Infrastructure
-      .none.fragment{style: 'grid-column-start: 5; grid-column-end: 8'}
-        %h5 2017
-        %ul
-          %li Train release every week
-          %li Cloud adoption
-          %li Infrastructure as code
-      .none.fragment{style: 'grid-column-start: 9; grid-column-end: 12'}
-        %h5 2018
-        %ul
-          %li Self service deploys
-          %li Docker based
-          %li K8S
+    %h2 Software Delivery Performance
+    %blockquote
+      %ul
+        %li Cycle Time (from commit to production)
+        %li Failure Rate
+    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/cycle-time.jpg', style: 'position: absolute; top: 250%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '-50%', top: '-230%'}}, rotate: {to: '-25deg'}, duration: 500}}}
+    %aside.notes
+      %ul
+        %li key differentiator for organizations
+        %li 
+  %section
+    %h2 Service Operational Performance
+    %blockquote
+      %ul
+        %li Availability
+        %li Time to Restore
+    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/availability.jpeg', style: 'position: absolute; top: 250%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '-150%', top: '-230%'}}, rotate: {to: '35deg'}, duration: 500}}}
+  %section
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 5'}
+        Performance Distribution
+      .none{style: 'grid-column-start: 6; grid-column-end: 13'}
+        %img{src: '/images/ybyr/performance-profiles.png', style: 'max-height: none'}
+  %section
+    %img{src: '/images/ybyr/performance-compare.png', style: 'max-height: 90%'}
     %aside.notes
       \- Low experience with AWS
       \- Partnership with CMD to bring in AWS expertise
@@ -100,73 +127,26 @@ footer: true
       \- Highligh weekly deploys and the pressure on business and testing
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
-    %h1 Why DevOps?
-  %section
-    %h2 Why DevOps
-    %img{src: '/images/ybyr/dora.png'}
-  %section
-    .grid-container
-      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
-        %h2 Why DevOps
-      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
-        %h3.fragment{style: 'background-color: #003ED8;'} Organisational Performance
-      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
-        %h4.fragment{style: 'background-color: #51566C;'} Software Delivery and Operational Performance (SDO)
-      .none{style: 'grid-column-start: 1; grid-column-end: 6'}
-        %h4.fragment{style: 'background-color: #6FF4BA;'} Software Delivery Performance
-      .none{style: 'grid-column-start: 7; grid-column-end: 13'}
-        %h4.fragment{style: 'background-color: #6FF4BA;'} Service Operational Performance
-  %section
-    %h2 Software Delivery Performance
+    %h1 Our Journey
     %ul
-      %li Cycle Time (from commit to production)
-      %li Failure Rate
-    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/cycle-time.jpg', style: 'position: absolute; top: 250%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '-50%', top: '-230%'}}, rotate: {to: '-25deg'}, duration: 500}}}
-  %section
-    %h2 Service Operational Performance
-    %ul
-      %li Availability
-      %li Time to Restore
-    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/availability.jpeg', style: 'position: absolute; top: 250%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '-150%', top: '-230%'}}, rotate: {to: '35deg'}, duration: 500}}}
-  %section
-    .grid-container
-      .none{style: 'grid-column-start: 1; grid-column-end: 5'}
-        Performance Distribution
-      .none{style: 'grid-column-start: 6; grid-column-end: 13'}
-        %img{src: '/images/ybyr/performance-profiles.png', style: 'max-height: 375%;'}
-  %section
-    %img{src: '/images/ybyr/performance-compare.png', style: 'max-height: 90%'}
-%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-  %section
-    %h1 Our current status
-  %section
-    %h2 Deployes per week
-    %img{src: '/images/ybyr/chaos-monkeys-deploy.png'}
-    %aside.notes
-      %ul
-        %li Deploys for the last 90 days
-        %li More than 3 deploys per week on avg
-        %li Peaks of 6 deploys per week
-  %section
-    %h2 Release Time (from commit to deploy)
-    %img{src: '/images/ybyr/release-time.png'}
-  %section
-    %h2 Availability
-    Worst 30 days between November/2018 and December/2018:
-    %h3 99.6%
-
-%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-  %h1 Lessons
-  %aside.notes
-    %ul
-      %li What are the things that we learned along the way
+      %li.fragment First team to adopt cloud (2017)
+      %li.fragment First team to adopt the "You Build It, You Run It" principle
+      %li.fragment Responsible to provide data for reporting
+      %li.fragment
+        %strong Learned by doing, and now sharing...
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
     %h1 Operational Models
   %section
+    %h2 Normal Scrum/XP setup was not enough
+    %ul
+      %li Should we just add a Ops person to the team?
+      %li Are we responsible for every little thing?
+      %li Compliance? Regulations? Pipelines?
+  %section
     %h1 Operational Models
     %ul
-      %li Amazon YBIYRI
+      %li Amazon Two Pizza Teams
       %li Google SRE
     %aside.notes
       %ul
@@ -183,18 +163,31 @@ footer: true
     %h2 Google SRE
     %ul
       %li Site Reliability Engineers
-      %li Embedded into delivery teams
+      %li Close collaboration with Delivery Teams
       %li Veto power on production environments
   %section
-    %h2 Tyro Way
-    %img.fragment.animated.move-to.rotate.scale-up.auto-fire{src: '/images/ybyr/platform-engineer.jpeg', style: 'position: absolute; top: 350%; z-index: -1; opacity: 0.4; width: auto; heigth: 200px;', data: {animated: {move: {to: {left: '-20%', top: '-330%'}}, rotate: {to: '-25deg'}, duration: 500}}}
-    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/delivery.jpeg', style: 'position: absolute; top: 350%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '50%', top: '-230%'}}, rotate: {to: '25deg'}, duration: 500}}}
-    %ul
-      %li.fragment Platform Teams
-      %li.fragment Delivery Teams
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        %h2 Tyro Way
+      .none{style: 'grid-column-start: 1; grid-column-end: 13; '}
+        .fragment{data: {fragment: {index: 4}}, style: 'background-color: #6FF4BA'}
+          %h4 Delivery Teams
+          %ul
+            %li Service Owners
+            %li 
+              %i You Build It, You Run It
+              principle
+      .none{style: 'grid-column-start: 1; grid-column-end: 13;'}
+        .fragment{data: {fragment: {index: 3}}, style: 'background-color: #f3faff;'}
+          %h4 Platform Teams
+          %ul
+            %li Build the rails
+            %li Facilitate Compliance, Security, Regulatory Work...
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
     %h1 New area of knowledge
+  %section
+    %h2 We are developers, we know how to do it...
   %section
     %h2 New area of knowledge
     %img{src: '/images/ybyr/devopspract.png', style: 'width: 90%;'}
@@ -229,15 +222,15 @@ footer: true
         %h3.fragment Ex: Provide data for reporting
       .none{style: 'grid-column-start: 1; grid-column-end: 6'}
         %ul
-          %li.fragment You will need involvement from business (PO)
-          %li.fragment We are not talking about software artefacts
+          %li.fragment We needed deep involvement from Busines
+          %li.fragment We had to stop talking about software and talk about services
       .none{style: 'grid-column-start: 7; grid-column-end: 13'}
         %img.fragment{src: '/images/ybyr/etq-components.png', style: 'width: 50%;'}
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
     .grid-container
-      .none{style: 'grid-column-start: 1; grid-column-end: 12'}
-        %h1 Define your Service Levels
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        %h1 Defining Service Levels
   %section
     %h2 
       SLI - 
@@ -403,6 +396,24 @@ footer: true
               %li JVM
               %li Health Check Pages
   %section
+    %h2 Monitoring Dependency
+    .mermaid-lazy#dependency-1
+      :plain
+        graph LR
+          APP --> tool1(Monitoring Tool)
+  %section
+    %h2 Monitoring Dependency
+    .mermaid-lazy#dependency-2
+      :plain
+        graph LR
+          APP -.-> tool1(Monitoring Tool)
+  %section
+    %h2 Monitoring Dependency
+    .mermaid-lazy#dependency-3
+      :plain
+        graph LR
+          APP -. logs .- tool1(Monitoring Tool)
+  %section
     %h2 Dashboards
     %img{src: '/images/ybyr/dashboard-sumo.png', style: 'width: 75%;'}
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
@@ -411,7 +422,7 @@ footer: true
   %section
     %h2 Alerting
     %ul
-      %li Inform a humans about a unexpected behaviour
+      %li Inform humans about a unexpected behaviour
       %li Not able to fulfill a SLO
       %li Some dependency is malfunctioning
   %section
@@ -442,33 +453,6 @@ footer: true
       %li Too much alerting is the same as no alerting
     %aside.notes
       Talk about the day one team member ignored a critical alert because we had to many false positives on that day
-%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-  %section
-    %h1 Life on-call
-  %section
-    %h2 On-Call
-    %ul
-      %li.fragment 1 person on-call for 1 week
-      %li.fragment Every team member will be on call
-      %li.fragment
-        Scalation policy
-        %ul
-          %li
-            Team Member
-            %ul
-              %li
-                Team Manager
-                %ul
-                  %li
-                    Tribe Manager
-                    %ul
-                      %li
-                        Head of Engineering
-      %li.fragment 15 minutes away from computer/internet
-      %li.fragment
-        Time
-        %i in lieu
-        as a compensation
   %section
     %h2 On-call responsibilities
     %ul
@@ -494,6 +478,15 @@ footer: true
         %h4 Apply the retrospective prime directive
       .none{style: 'grid-column-start: 6; grid-column-end: 13'}
         %blockquote Regardless of what we discover, we understand and truly believe that everyone did the best job they could, given what they knew at the time, their skills and abilities, the resources available, and the situation at hand.
+  %section
+    %h2 Incident Retro
+    %img{src: '/images/ybyr/incident-retro.png'}
+  %section
+    %h2 Post-Morten
+    %ul
+      %li Impacts our backlog
+      %li Improves our architecture
+      %li Improves our application design
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
     %h1 Release Strategy
@@ -536,11 +529,34 @@ footer: true
   %section
     %img{src: '/images/ybyr/canary-release.png'}
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-  %h1 Conclusion
-  We gained a lot of experience
-  There is no way back, this is not the future, it is the present
-%section
-  %h1 Thank you
-  %img{src: '/images/ybyr/questions.gif', style: 'width: 45%'}
-  %br
-  %a{href: 'http://www.roger-almeida.com/talks/ybyr/'}www.roger-almeida.com/talks/ybyr/
+  %section
+    %h1 Our current status
+  %section
+    %h2 Deployes per week
+    %img{src: '/images/ybyr/chaos-monkeys-deploy.png'}
+    %aside.notes
+      %ul
+        %li Deploys for the last 90 days
+        %li More than 3 deploys per week on avg
+        %li Peaks of 6 deploys per week
+  %section
+    %h2 Release Time (from commit to deploy)
+    %img{src: '/images/ybyr/release-time.png'}
+  %section
+    %h2 Availability
+    Worst 30 days between November/2018 and December/2018:
+    %h3 99.6%
+  %section
+    %h2 Conclusion
+    %ul
+      %li.fragment We are happy, there is no turning back
+      %li.fragment Easier than never to introduce changes in production
+      %li.fragment Enhancing reporting experience to our clients
+      %li.fragment Spreading the lessons to other teams
+%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
+  .grid-container
+    .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+      %h1 Thank you
+      %img{src: '/images/ybyr/questions.gif', style: 'max-height: none;'}
+      %br
+      %a{href: 'http://www.roger-almeida.com/talks/ybiyri/'} www.roger-almeida.com/talks/ybiyri/
