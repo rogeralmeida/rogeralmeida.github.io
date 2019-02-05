@@ -18,9 +18,11 @@ Jekyll::Hooks.register :site, :post_write do |site|
           i_extensions.each do |ext|
             image.format "#{ext}"
             new_file = "#{Dir.pwd}/_site/images/responsive/#{file_name}-#{size}.#{ext}"
-            logger.info "Saving new image: #{new_file}"
-            image.write new_file
-            raise IOError, "new image was not saved" unless File.file?(new_file)
+            if (!File.file?(new_file))
+              logger.info "Saving new image: #{new_file}"
+              image.write new_file
+              raise IOError, "new image was not saved" unless File.file?(new_file)
+            end
           end
         end
       end
