@@ -9,9 +9,10 @@ Jekyll::Hooks.register :site, :post_write do |site|
 
     post_list = []
     site.posts.docs.each do |post|
+        logger.info "Data: #{post.data}"
         json_file = {
-            title: post.data[:title],
-            excerpt: post.data[:excerpt],
+            title: post.data["title"],
+            excerpt: post.data["excerpt"],
             url: post.url
         }
         new_file = "#{Dir.pwd}/_site/api#{post.url}.json"
