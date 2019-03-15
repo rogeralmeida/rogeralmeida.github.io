@@ -15,3 +15,4 @@ categories:
   
 ## Post nest
   * Planning fallacy and its effects
+  * [Tracing Bullet](Tracing Bullet)
