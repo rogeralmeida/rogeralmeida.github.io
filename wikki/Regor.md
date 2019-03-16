@@ -20,7 +20,7 @@ Statically typed. The type declaration comes after the variable name
 
 #### Array
 
-```
+```javascript
 
   var myArray []
   myArray[0] = 1
@@ -30,7 +30,7 @@ Statically typed. The type declaration comes after the variable name
   var anotherArray [] = [1, "other"] //shorter form for above code
   var thirdWay = [1, "yet another"]
   var forthWay = Array.new(1, "and now?")
-  
+
 ```
 
 Array must have a reach API:
@@ -46,7 +46,7 @@ Array must have a reach API:
 
 ### Block
 Simple syntax: `() => {//code block}`
-```regor
+```javascript
   [1, 2, 3].each((item) => {
     System.PrintLn("Number: #{item}")
   })
@@ -60,7 +60,7 @@ Methods static
 Constants
 
 ### Class
-```
+```javascript
   class Person {
     weight Decimal //private field, no external access to this field
     @Readable firstName, lastName String // personObject.firstName  and personObject.lastName are available outside this class for reading
@@ -94,7 +94,7 @@ Constants
 ```
 
 ### Modules
-```regor
+```javascript
   module Math {
     PI = 3.14161721 //Immutable
     Sqrt(number Decimal){
@@ -108,7 +108,7 @@ Constants
 ```
 
 ### Optional parentheses
-```
+```javascript
   add 1, 2 //add(1, 2)
   reduce((number, total) => number + total)
   reduce (number, total) => number + total
