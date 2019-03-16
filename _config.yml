@@ -21,12 +21,14 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://roger-almeida.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: roger4almeida
 github_username:  rogeralmeida
+theme: jekyll-theme-architect
 
 # Build settings
 markdown: kramdown
 kramdown:
   input: GFM
   parse_block_html: true
+highlighter: rouge
 plugins:
   - jekyll-feed
 exclude:
