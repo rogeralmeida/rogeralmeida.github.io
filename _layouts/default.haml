@@ -58,14 +58,16 @@
     = "{% seo %}"
     %header
       .inner
-        %a{:href => "{{ '/' | absolute_url }}"}
-          %h1 {{ site.title | default: site.github.repository_name }}
-        %h2 {{ site.description | default: site.github.project_tagline }}
-        {% if site.github.is_project_page %}
+        %a{:href => "/"}
+          %h1
+            = "{{ site.title | default: site.github.repository_name }}"
+        %h2
+          = "{{ site.description }}"
+        = "{% if site.github.is_project_page %}"
         %a.button{:href => "{{ site.github.repository_url }}"}
           %small View project on
           GitHub
-        {% endif %}
+        = "{% endif %}"
         {% if site.github.is_user_page %}
         %a.button{:href => "{{ site.github.owner_url }}"}
           %small Follow me on
