@@ -2,7 +2,7 @@
 layout: post
 title: "How I found a job in Sydney"
 date: 2016-04-09 00:53:31 +1000
-cover_picture: "/images/responsive/dan-freeman-399586-{width}.{ext}"
+cover_picture: "/images/responsive/dan-freeman-399586.png"
 banner_image: "/images/responsive/Sydney-{width}.{ext}"
 comments: true
 categories: job, interview, Sydney, career

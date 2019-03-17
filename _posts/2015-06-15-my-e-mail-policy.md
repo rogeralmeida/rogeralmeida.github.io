@@ -2,7 +2,7 @@
 layout: post
 title: "My email Policy"
 date: 2015-06-15 10:11:44 +1000
-cover_picture: "/images/responsive/mathyas-kurmann-102977-{width}.{ext}"
+cover_picture: "/images/responsive/mathyas-kurmann-102977.png"
 excerpt: "An unconventional way of dealing with e-mail"
 author: Roger Almeida
 ---
