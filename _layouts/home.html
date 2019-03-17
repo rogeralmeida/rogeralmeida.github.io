@@ -11,11 +11,11 @@ layout: default
       <div class="card">
         <div class="delayed-image-load" data-src="{{ post.cover_picture }}" data-alt="Card image cap" data-class="card-img-top"></div>
         <div class="card-body">
-          <h4 class="card-title">{{ post.title | escape }}</h4>
+          <h1 class="card-title">{{ post.title | escape }}</h1>
           <p class="card-text">
             {{ post.excerpt }}
           </p>
-          <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More</a>
+          <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More...</a>
         </div>
       </div>
       <br/>
