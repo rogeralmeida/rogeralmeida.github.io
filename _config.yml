@@ -42,5 +42,3 @@ exclude:
   - .travis.yml
   - .ruby-version
   - .gitignore
-keep_files:
-  - images/responsive/*
