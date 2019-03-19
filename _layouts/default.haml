@@ -92,3 +92,6 @@
       ga('create', '{{ site.google_analytics }}', 'auto');
       ga('send', 'pageview');
     {% endif %}
+    %script{src: "/javascripts/mermaid.min.js"}
+    :javascript
+      mermaid.initialize({startOnLoad:true});
