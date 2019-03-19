@@ -33,11 +33,13 @@ categories:
       queue[Queue]
       dispatch[Dispatcher]
       client-- 1. /post orders -->rest
-      client-- 2. /put order/ID -->rest
-      rest-- 3. dispatch order -->queue
-      dispatch-- 4. fulfill order -->queue
+      client-- 2.0 /put order/ID -->rest
+      rest-- 2.1 dispatch order -->queue
+      dispatch-- 3. fulfill order -->queue
 :markdown
-  This is a simplified version of an ordering system. The first request creates a new order. The second request updates the order to mark as payed and add the Order to a processing queue. The dispatcher component consumes the queue and ensures the order fulfilment. If we want to create a tracing bullet for this system we could:
+  This is a simplified version of an ordering system. The first request creates a new order. The second request updates marks the order as payed and add the Order to a processing queue. The Dispatcher component consumes the queue and ensures the order fulfilment.
+
+  If we want to create a tracing bullet for this system we could:
 
   * Implement a minimal entity with a ID and a STATE representation
   * Make one request to the rest component to create the new entity
