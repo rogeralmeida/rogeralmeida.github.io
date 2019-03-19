@@ -7,27 +7,23 @@ categories:
 ---
 
 :markdown
-  When starting a software project there are many uncertainties that need to be addressed:
-
-  * Business Conditions
-  * Technical Risks
-  * Performance
-  * _etc..._
-
-  One critical component of a software architecture are the integration points between the many components. While your software is moving data in-memory it is operating in a controlled environment. But when you have to move this data between different components that you have a high chance of having problems.
-  The tracing bullet is a delivery pattern that addresses this risk early on in a software delivery project.
+  One critical component of a software architecture are the integration points. While the software is manipulating data in-memory, it is operating in a controlled environment. But when you have to move data between different components then you have a higher chance of having problems. The tracing bullet is a delivery pattern that addresses this risk early on in a software delivery project.
+<!-- MORE -->
+:markdown
   The idea comes from a bad source, from Wikipedia:
 
   > a ammunition built with a small pyrotechnic charge in their base. Ignited by the burning powder, the pyrotechnic composition burns very brightly, making the projectile trajectory visible to the naked eye during daylight, and very bright during nighttime firing. This enables the shooter to make aiming corrections without observing the impact of the rounds fired and without using the sights of the weapon. Tracer fire can also be used to signal to other shooters where to concentrate their fire during battle.
 
-  The software delivery analogy is: "How we can send a message (not a bullet) through our new software so that we can inspect its behavior and correct course if needed."
+  The software delivery analogy is: "How we can send a tracing message (not a bullet) through our new software so that we can inspect its behaviour?"
 
 %img{src: "/images/responsive/tracing-bullet.png"}
+
 :markdown
 
-  ## How to implement
+  ## How to implement it
 
-  This is a simple patern to implement. Instead of implement all the layers in your new project, focus on the integration points. Suppose that you will implement the following design:
+  This is a delivery pattern that is not hard to apply. Instead of building all the layers in your new project, focus on the integration points and observability. Let the business rules and acceptance criteria out.
+  Suppose that you have the following system architecture:
 
 .mermaid
   :plain
@@ -35,29 +31,36 @@ categories:
       client[Client]
       rest[Rest API]
       queue[Queue]
+      dispatch[Dispatcher]
       client-- 1. /post orders -->rest
       client-- 2. /put order/ID -->rest
       rest-- 3. dispatch order -->queue
+      dispatch-- 4. fulfill order -->queue
 :markdown
-  This is a simplified version of a ordering system, where the first request will create a new order that will be persisted. The second request will update the order to mark as payed. This will also add the Order to a processing queue (to dispatch the order to the client)
-  To create a tracing bullet for this system the minimal steps can be:
+  This is a simplified version of an ordering system. The first request creates a new order. The second request updates the order to mark as payed and add the Order to a processing queue. The dispatcher component consumes the queue and ensures the order fulfilment. If we want to create a tracing bullet for this system we could:
+
   * Implement a minimal entity with a ID and a STATE representation
-  * Make one request to the service to create the new entity
-  * Make a second request to the service to update the entity
+  * Make one request to the rest component to create the new entity
+  * Make a second request to the rest component to update the entity
   * Observe if the new entity was sent to the processing queue
+  * Observe if the new entity was processed by the dispatcher component
 
-  There is no logic to check stock, or prevent duplication, or dead letter, or price validation. the artefact can be as small as having only a single controller.
-  The whole point of the Tracing Bullet is to be able to Observe the flow of the message.
-  Ideally the tracing bullet should be fired in production environment. Although there is value in running the tracing bullet in UAT or pre-prod, the real value comes from know that it works where it should work (production environment)
+  There is no code to check stock, or prevent duplication, or dead letter, or price validation. The entity representation is not completed as well. It has only one ID and a state field. For now we are not worrying about data integrity.
+  The implementation can be as small as having only a single fat controller in the rest component. The whole point of the Tracing Bullet is to be able to Observe the flow. Ideally, the tracing bullet should be fired in production environment. Although there is value in running the tracing bullet in UAT or pre-prod, the real value comes from knowing that the system works where it must work (production environment)!
 
-:markdown
-  ## When to use
-  This pattern is very useful as the first milestone to a new project. It doesn't require a green field project. You can apply this pattern in an existing system.
+  ## Why to start with the integration points?
+
+  In Release It! Design and Deploy Production-Ready Software Michael T. Nyger wrote:
+  “Integration points are the number-one killer of systems. Every single one of those feeds presents a stability risk.”
+  And I have to agree with Michael. When a system is manipulating data in-memory it is operating in a safe environment. The risk comes when this data has to travel to a different location. This can be a database, file, or other address in the network. That is the kind of risk that is better to be adressed early in the project.
+  This is particularly important if you are introducing new integrations points. In a world of cloud adoption and hybrid cloud implementation this is a must.
+  Starting with the integration points gives as the confidence that all the components can talk to each other.
+
+  ## When to use it
+  I recommend the use of this pattern as the first milestone of a new project. Or as a first milestone for a new feature in an existent project.
 
   ## Caveats
-  It is important to protect the production environment from side effects. You might have to implement some feature-toggles to prevent the tracing bullet from reaching areas/components that you don't want to test.
-  The neighborhood might require some work to understand the tracing bullet as well.
+  It is important to protect the production environment from side effects. You might have to use feature-toggles to prevent side effects. The neighbourhood might need some work to understand the tracing bullet as well. A common way to solve this is to replace the real implementation with a log line. In the example above, we could change the component that consumes the queue to identify the item as a tracing bullet and log a message. This would give us the confidence that the integration is working while preventing a fake order to be fulfilled.
 
   ## Conclusion
-  The tracing bullet pattern can help you eliminate last mile problems earlier in your next software development project. It doesn't require much effort to implement it. Actually the hard part of implementing this pattern is to keep in mind that **less is more**.
-  To apply this pattern to an existing software you will have to find ways to prevent the tracing bullet from having side effects.
+  The tracing bullet pattern can help you address the "last mile problems" earlier in your project. It doesn't require much effort to implement it. Actually the hard part of implementing this pattern is to keep in mind that less is more.
