@@ -11,7 +11,9 @@ layout: default
       <div class="card">
         <img src="{{ post.cover_picture}}">
         <div class="card-body">
-          <h1 class="card-title">{{ post.title | escape }}</h1>
+          <a href="{{ post.url | relative_url }}">
+            <h1 class="card-title">{{ post.title | escape }}</h1>
+          </a>
           <p class="card-text">
             {{ post.excerpt }}
           </p>
