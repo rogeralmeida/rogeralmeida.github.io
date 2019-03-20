@@ -9,7 +9,7 @@ layout: default
   {% for post in site.posts %}
     {% if post.hidden != "true" %}
       <div class="card">
-        <img src="{{ post.cover_picture}}">
+        <img class="top-banner-image" src="{{ post.cover_picture}}">
         <div class="card-body">
           <a href="{{ post.url | relative_url }}">
             <h1 class="card-title">{{ post.title | escape }}</h1>
