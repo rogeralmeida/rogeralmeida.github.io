@@ -14,17 +14,17 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-    <link rel="stylesheet" href="/stylesheets/reveal.css">
-    <link rel="stylesheet" href="/stylesheets/csshake.min.css">
+    <link rel="stylesheet" href="/assets/css/reveal.css">
+    <link rel="stylesheet" href="/assets/css/csshake.min.css">
     {% if page.theme %}
-    <link rel="stylesheet" href="/stylesheets/theme/{{ page.theme }}.css" id="theme">
+    <link rel="stylesheet" href="/assets/css/theme/{{ page.theme }}.css" id="theme">
     {% else %}
-    <link rel="stylesheet" href="/stylesheets/theme/black.css" id="theme">
+    <link rel="stylesheet" href="/assets/css/theme/black.css" id="theme">
     {% endif %}
-    <link rel="stylesheet" href="/stylesheets/decks.css">
+    <link rel="stylesheet" href="/assets/css/decks.css">
 
     <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="/stylesheets/zenburn.css">
+    <link rel="stylesheet" href="/assets/css/zenburn.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.2.js"></script>
 
     <!-- Printing and PDF exports -->
@@ -32,7 +32,7 @@
         var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = window.location.search.match(/print-pdf/gi) ? '/stylesheets/print/pdf.css' : '/stylesheets/print/paper.css';
+        link.href = window.location.search.match(/print-pdf/gi) ? '/assets/css/print/pdf.css' : '/assets/css/print/paper.css';
         document.getElementsByTagName('head')[0].appendChild(link);
     </script>
 
@@ -191,7 +191,7 @@
 
         $(() => {
             mermaid.initialize({
-                startOnLoad: false, 
+                startOnLoad: false,
                 logLevel: 1,
                 theme: 'dark',
                 flowchart: {
