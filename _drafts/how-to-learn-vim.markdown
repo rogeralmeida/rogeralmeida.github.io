@@ -1,12 +1,10 @@
 ---
 layout: post
 title: "How to learn Vim"
-cover_picture: "/images/caspar-rubin-224229.png"
+cover_picture: "/images/responsive/caspar-rubin-224229.png"
 comments: true
 categories:
 ---
-
-
 Would you love to learn how to be more effective with vim? Here are the things that worked for me:
 <!-- MORE -->
 
