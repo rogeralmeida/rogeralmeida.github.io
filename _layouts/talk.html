@@ -184,9 +184,9 @@
             {{ content }}
         </div>
     </div>
-    <script src="/javascripts/head.min.js"></script>
-    <script src="/javascripts/reveal.js"></script>
-    <script src="/javascripts/mermaid.min.js"></script>
+    <script src="/assets/js/head.min.js"></script>
+    <script src="/assets/js/reveal.js"></script>
+    <script src="/assets/js/mermaid.min.js"></script>
     <script>
 
         $(() => {
@@ -216,13 +216,13 @@
 
                 // Optional reveal.js plugins
                 dependencies: [
-                    { src: '/javascripts/lib/js/classList.js', condition: function () { return !document.body.classList; } },
-                    { src: '/javascripts/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-                    { src: '/javascripts/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-                    { src: '/javascripts/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
-                    { src: '/javascripts/plugin/zoom-js/zoom.js', async: true },
-                    { src: '/javascripts/revealjs-animated.js', async: true },
-                    { src: '/javascripts/plugin/notes/notes.js', async: true }
+                    { src: '/assets/js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                    { src: '/assets/js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                    { src: '/assets/js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                    { src: '/assets/js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                    { src: '/assets/js/plugin/zoom-js/zoom.js', async: true },
+                    { src: '/assets/js/revealjs-animated.js', async: true },
+                    { src: '/assets/js/plugin/notes/notes.js', async: true }
                 ]
             });
             Reveal.addEventListener('slidechanged', function (event) {
