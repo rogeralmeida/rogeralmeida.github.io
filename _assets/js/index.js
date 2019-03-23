@@ -15,7 +15,7 @@ console.log("importest")
 document.addEventListener("DOMContentLoaded", function(event) {
   console.log("page loaded");
   const selectionShare = highlightShare({
-      selector: '#shareable',
+      selector: '#post-content',
       sharers: [twitterSharer, facebookSharer, emailSharer, linkedInSharer, copySharer]
   });
 
