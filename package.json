@@ -29,6 +29,7 @@
     "webpack-cli": "^3.3.0"
   },
   "dependencies": {
-    "highlight-share": "^0.2.0"
+    "highlight-share": "^0.2.0",
+    "mermaid": "^8.0.0"
   }
 }

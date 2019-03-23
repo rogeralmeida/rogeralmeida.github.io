@@ -8,6 +8,7 @@ import * as emailSharer from 'highlight-share/dist/sharers/email';
 import * as copySharer from 'highlight-share/dist/sharers/copy';
 import * as linkedInSharer from 'highlight-share/dist/sharers/linked-in';
 import * as facebookMessengerSharer from 'highlight-share/dist/sharers/facebook-messenger';
+import * as mermaid from 'mermaid'
 
 
 console.log("importest")
@@ -21,3 +22,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   selectionShare.init();
 });
+
+mermaid.initialize({startOnLoad:true});
