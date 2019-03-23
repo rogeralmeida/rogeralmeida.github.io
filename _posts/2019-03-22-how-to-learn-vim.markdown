@@ -6,8 +6,11 @@ comments: true
 categories:
 ---
 Do you want to learn how to be more effective with vim? Here are the things that worked for me:
+
 <!-- MORE -->
+
 Note, I don't consider myself a Vim Ninja yet. But I know enough to use vim as my main editor since 2011.
+
 # vimtutor
 
 If you don't use Vim yet, or you just got started with Vim then [vimtutor](http://www2.geog.ucl.ac.uk/~plewis/teaching/unix/vimtutor) is your best friend.
