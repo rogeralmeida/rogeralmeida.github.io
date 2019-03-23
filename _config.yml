@@ -34,10 +34,13 @@ highlighter: rouge
 plugins:
   - jekyll-feed
 exclude:
+  - node_modules
+  - _assets
   - Gemfile
   - Gemfile.lock
   - vendor
-  - todo.txt
+  - todo.md
+  - _assets
   - Rakefile
   - .travis.yml
   - .ruby-version
