@@ -29,6 +29,7 @@ group :jekyll_plugins do
   gem 'jemoji'
   gem 'jekyll-compose'
   gem 'liquid_reading_time'
+  gem 'jekyll-tagging-related_posts'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

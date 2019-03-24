@@ -63,6 +63,11 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.6.0)
       jekyll (~> 3.3)
+    jekyll-tagging (1.1.0)
+      nuggets
+    jekyll-tagging-related_posts (1.0.0)
+      jekyll (~> 3.0)
+      jekyll-tagging (~> 1.0)
     jekyll-theme-architect (0.1.1)
       jekyll (~> 3.5)
       jekyll-seo-tag (~> 2.0)
@@ -88,6 +93,7 @@ GEM
     minitest (5.11.3)
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
+    nuggets (1.6.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.3)
@@ -120,6 +126,7 @@ DEPENDENCIES
   jekyll-compose
   jekyll-feed (~> 0.11.0)
   jekyll-haml
+  jekyll-tagging-related_posts
   jekyll-theme-architect (~> 0.1.1)
   jemoji
   liquid_reading_time
