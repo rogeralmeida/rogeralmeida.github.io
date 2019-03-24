@@ -8,4 +8,5 @@ before_script: bundle exec jekyll clean
 script:
   - JEKYLL_ENV=production bundle exec jekyll build
   - npx webpack --mode=production
-deploy: bundle exec rake deploy
+deploy:
+  - bundle exec rake deploy
