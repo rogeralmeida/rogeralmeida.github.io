@@ -1,6 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (5.2.2.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     aws-eventstream (1.0.2)
@@ -24,9 +29,13 @@ GEM
     eventmachine (1.2.7)
     ffi (1.10.0)
     forwardable-extended (2.6.0)
+    gemoji (3.0.0)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
+    html-pipeline (2.10.0)
+      activesupport (>= 2)
+      nokogiri (>= 1.4)
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -59,6 +68,10 @@ GEM
       jekyll-seo-tag (~> 2.0)
     jekyll-watch (2.1.2)
       listen (~> 3.0)
+    jemoji (0.11.0)
+      gemoji (~> 3.0)
+      html-pipeline (~> 2.2)
+      jekyll (>= 3.0, < 5.0)
     jmespath (1.4.0)
     kramdown (1.17.0)
     liquid (4.0.3)
@@ -68,6 +81,10 @@ GEM
       ruby_dep (~> 1.2)
     mercenary (0.3.6)
     mini_magick (4.9.3)
+    mini_portile2 (2.4.0)
+    minitest (5.11.3)
+    nokogiri (1.10.1)
+      mini_portile2 (~> 2.4.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.3)
@@ -85,7 +102,10 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
     temple (0.8.1)
     thor (0.20.3)
+    thread_safe (0.3.6)
     tilt (2.0.9)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
 
 PLATFORMS
   ruby
@@ -98,6 +118,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.11.0)
   jekyll-haml
   jekyll-theme-architect (~> 0.1.1)
+  jemoji
   mini_magick
   rake (~> 12.0.0)
   rouge
