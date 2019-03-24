@@ -4,7 +4,7 @@ title: "Euler's Journey Problem 1"
 date: 2014-12-29 17:38:43 -0200
 cover_picture: "/images/responsive/roman-mager-59976.png"
 comments: true
-categories: ["euler", "java", "javascript", "python", "ruby", "scala"]
+tags: euler, java, javascript, python, ruby, scala
 ---
 
 So I decided to start a project where I gonna implement the same problem in many languages. I always wanted to compare how different programming languages face some coding challenges. I don't want to prove that any language is better than other, althought I know that this kind of flame will happen.
@@ -98,10 +98,12 @@ It uses the [range](https://docs.python.org/2/library/functions.html) function t
 It uses [List Comprehension](https://docs.python.org/2/tutorial/datastructures.html) to generate a list with only the multiples `[number for number in range(1, 1000) if (number % 3 == 0) or (number % 5 == 0)]` then it uses the `sum()` function to sum up the multiples.
 
 ## Ruby
+
 ``` ruby
 sum = (1..999).select{|number| number % 3 == 0 or number % 5 == 0}.reduce(:+)
 puts "The sum of multiples of 3 and 5 is #{sum}"
 ```
+
 My favorite version so far.
 First I like the way to create the range `(1..999)`. Like the Scala way it stills a little bit magical but this is it, or you have a Global function like Python or you have some sintax to recognize that you are creating a range.
 The `select` method is very useful to filter a collection. The `reduce` method receives a symbol with the method that should be called to reduce the list, and it understand that it has to accumulate the value.
