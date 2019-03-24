@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  watch: true,
   entry: {
     main: path.resolve(__dirname, '_assets/js', 'index.js'),
     talk: [
