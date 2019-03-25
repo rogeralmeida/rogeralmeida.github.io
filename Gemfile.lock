@@ -65,6 +65,8 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.6.0)
       jekyll (~> 3.3)
+    jekyll-sitemap (1.3.1)
+      jekyll (>= 3.7, < 5.0)
     jekyll-tagging (1.1.0)
       nuggets
     jekyll-tagging-related_posts (1.0.0)
@@ -129,6 +131,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.11.0)
   jekyll-haml
   jekyll-paginate-v2
+  jekyll-sitemap
   jekyll-tagging-related_posts
   jekyll-theme-architect (~> 0.1.1)
   jemoji

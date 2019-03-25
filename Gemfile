@@ -31,6 +31,7 @@ group :jekyll_plugins do
   gem 'liquid_reading_time'
   gem 'jekyll-tagging-related_posts'
   gem "jekyll-paginate-v2"
+  gem 'jekyll-sitemap'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
