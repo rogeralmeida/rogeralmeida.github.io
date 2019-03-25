@@ -6,7 +6,7 @@ layout: default
 
   {{ content }}
 
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     {% if post.hidden != "true" %}
       <div class="card">
         <img class="top-banner-image" src="{{ post.cover_picture}}">
@@ -24,6 +24,24 @@ layout: default
       <br/>
     {% endif %}
   {% endfor %}
+
+
+  {% if paginator.total_pages > 1 %}
+    <nav role="navigation">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="btn btn-default">
+          <i class="fas fa-arrow-left"></i>
+          Newer
+        </a>
+      {% endif %}
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="btn pull-right btn-default">
+          Older
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      {% endif %}
+    </nav>
+  {% endif %}
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 

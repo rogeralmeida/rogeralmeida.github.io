@@ -59,6 +59,8 @@ GEM
     jekyll-haml (0.1.6)
       haml (>= 3.0.0)
       jekyll (>= 3.3.0)
+    jekyll-paginate-v2 (2.1.0)
+      jekyll (~> 3.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-seo-tag (2.6.0)
@@ -126,6 +128,7 @@ DEPENDENCIES
   jekyll-compose
   jekyll-feed (~> 0.11.0)
   jekyll-haml
+  jekyll-paginate-v2
   jekyll-tagging-related_posts
   jekyll-theme-architect (~> 0.1.1)
   jemoji
