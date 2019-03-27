@@ -131,6 +131,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.11.0)
   jekyll-haml
   jekyll-paginate-v2
+  jekyll-seo-tag
   jekyll-sitemap
   jekyll-tagging-related_posts
   jekyll-theme-architect (~> 0.1.1)

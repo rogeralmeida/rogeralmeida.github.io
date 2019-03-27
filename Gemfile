@@ -31,6 +31,7 @@ group :jekyll_plugins do
   gem 'liquid_reading_time'
   gem 'jekyll-tagging-related_posts'
   gem "jekyll-paginate-v2"
+  gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
 end
 

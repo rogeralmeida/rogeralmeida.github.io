@@ -2,6 +2,7 @@
 layout: post
 title: "How to learn Vim"
 cover_picture: "/images/responsive/caspar-rubin-224229.png"
+image: "/images/responsive/caspar-rubin-224229.png"
 comments: true
 categories:
 ---

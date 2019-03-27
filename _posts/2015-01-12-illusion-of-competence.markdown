@@ -3,11 +3,12 @@ layout: post
 title: "Illusion of Competence"
 date: 2015-01-12 14:15:16 -0200
 cover_picture: "/images/responsive/element5-digital-352043.png"
+image: "/images/responsive/element5-digital-352043.png"
 comments: true
-categories: 
+categories:
 ---
 
-I did the [Cousera's](https://www.coursera.org/) course [Learning How to Learn: Powerful mental tools to help you master tough subjects](https://www.coursera.org/course/learning). It was a pleasant course with many useful informations and a lot of useful techniques to speed up my learning ability.
+I did the [Cousera's](https://www.coursera.org/) course [Learning How to Learn: Powerful mental tools to help you master tough subjects](https://www.coursera.org/course/learning). It was a pleasant course with many useful information and a lot of useful techniques to speed up my learning ability.
 One point that caught my attention was the Illusion Of Competence and I would like to share with you how I added this knowledge to my day.
 <!--more-->
 
@@ -29,15 +30,15 @@ The same way we did at school:
 ### Making Question
 It was easy to do not value a explanation or be hard to focus on a explanation. One way to keep focus in a explanation is to get involved in the explanation, been part of it. Making a question is a good way to tell your brain that you are part of the explanation.
 
-### Explaning to a friend
-When someone explain anything it's common to finish a topic saying: 
+### Explaining to a friend
+When someone explain anything it's common to finish a topic saying:
 
 * Did you get it?
 * Did you understand?
 * OK?
 
 And we are used to answer: "Yes", "Uhum".
-But that is born of the Illusion of Competence. 
+But that is born of the Illusion of Competence.
 To avoid it, now when I receive the question: "Do you understand?" My answer is: "Can I explain to validate that I understood it?"
 By explaining what I just heard is a great opportunity to find gaps or raise points that were not covered by previous explanation.
 

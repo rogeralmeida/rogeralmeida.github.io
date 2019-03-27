@@ -18,10 +18,26 @@ email: roger.eduardo@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Roger Almeida's personal blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://roger-almeida.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: roger4almeida
+url: "https://roger-almeida.com" # the base hostname & protocol for your site, e.g. http://example.com
+author: Roger Almeida
+twitter_username: rogeralmeidacom
 github_username:  rogeralmeida
 theme: jekyll-theme-architect
+
+twitter:
+  username: rogeralmeidacom
+  card: summary
+
+social:
+  name: Roger Almeida
+  links:
+    - https://twitter.com/rogeralmeidacom
+    - https://www.facebook.com/roger.almeida1
+    - https://www.linkedin.com/in/roger-almeida
+    - https://github.com/rogeralmeida
+    - https://keybase.io/rogeralmeida
+
+lang: en_AU
 
 # Build settings
 markdown: kramdown

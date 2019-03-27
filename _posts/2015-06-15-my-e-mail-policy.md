@@ -3,6 +3,7 @@ layout: post
 title: "My email Policy"
 date: 2015-06-15 10:11:44 +1000
 cover_picture: "/images/responsive/mathyas-kurmann-102977.png"
+image: "/images/responsive/mathyas-kurmann-102977.png"
 excerpt: "An unconventional way of dealing with e-mail"
 ---
 
@@ -28,7 +29,7 @@ From today on I'll keep my Vacation Responder On in my professional email. This 
 
 >Hi,
 >This is a auto-reply to inform you about my email policy:
-> * I keep my email inbox closed during the working hours;  
+> * I keep my email inbox closed during the working hours;
 > * I also disabled email notifications in my cellphone;
 > * I check email only at 10:00 am and 04:00 pm.
 > If you need to contact me before my email times, feel free to reach me by phone: XXXX XXX XXX. If you prefer you can use Whatsapp or Viber with this number as well.

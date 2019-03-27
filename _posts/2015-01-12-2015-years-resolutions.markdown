@@ -3,8 +3,9 @@ layout: post
 title: "2015: year's resolutions"
 date: 2015-01-12 11:49:32 -0200
 cover_picture: "/images/responsive/mohammed-fkriy-4163.png"
+image: "/images/responsive/mohammed-fkriy-4163.png"
 comments: true
-categories: 
+categories:
 ---
 
 These are my new year's resolutions:
