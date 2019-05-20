@@ -61,7 +61,7 @@ exclude:
   - .travis.yml
   - .ruby-version
   - .gitignore
-keep_files: [assets/js/main-bundle.js, sassets/js/talk-bundle.js]
+keep_files: [assets/js/main-bundle.js, assets/js/talk-bundle.js]
 
 # Pagination Settings
 pagination:
