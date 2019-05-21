@@ -17,6 +17,6 @@ module.exports = {
     poll: 1000 // Check for changes every second
   },
   plugins: [
-    new filewatcherPlugin({watchFileRegex: ['talks/**/*.haml'], awaitWriteFinish: true})
+    new filewatcherPlugin({watchFileRegex: ['talks/**/*.haml', '_assets/js/**/*.js'], awaitWriteFinish: true})
   ]
 };
