@@ -11,10 +11,9 @@ let ChartFactory = (() => {
             visible: false
         },
         title: {
-            text: 'Timeline of Space Exploration'
+            text: 'Roger Almeida'
         },
         subtitle: {
-            text: 'Info source: <a href="https://en.wikipedia.org/wiki/Timeline_of_space_exploration">www.wikipedia.org</a>'
         },
         colors: [
             '#4185F3',
@@ -26,21 +25,14 @@ let ChartFactory = (() => {
         ],
         series: [{
             data: [{
-                name: 'First dogs',
-                label: '2002: Developer',
-                description: 'Delphi'
+                name: '2002',
+                label: '<b>Developer</b> Delphi, Java, Ruby, Python, Javascript'
             }, {
-                name: 'Sputnik 1',
-                label: '2006: Developer',
-                description: 'Java'
+                name: '2015',
+                label: '<b>Delivery Lead @ Tyro<b> Lead the delivery of Tyro Business Loan'
             }, {
-                name: 'First human spaceflight',
-                label: '2008: eXtreme Programming',
-                description: 'First contact with agile'
-            }, {
-                name: 'First human on the Moon',
-                label: '2010: ',
-                description: 'First human on the Moon, and first space launch from a celestial body other than the Earth. First sample return from the Moon'
+                name: '2017',
+                label: '<b>2017: Delivery Lead @ Tyro</b> Delivery Lead for the firt "You build it, you run it" team inside Tyro®. Cloud adoption journey.'
             }]
         }]
     };
