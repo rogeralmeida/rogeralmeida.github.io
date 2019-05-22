@@ -324,26 +324,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var RevealJsAnimation = window.RevealJsAnimation || function () {
-  if (typeof Reveal !== 'undefined') {
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    style.innerHTML = ".reveal .slides section .fragment.animated {\n                opacity: 1;\n                visibility: visible;\n            }";
-    document.getElementsByTagName('head')[0].appendChild(style); // eslint-disable-next-line no-undef
+  var RevealJsAnimation = window.RevealJsAnimation || function () {
+    if (typeof Reveal !== 'undefined') {
+      var style = document.createElement('style');
+      style.type = 'text/css';
+      style.innerHTML = ".reveal .slides section .fragment.animated {\n                opacity: 1;\n                visibility: visible;\n            }";
+      document.getElementsByTagName('head')[0].appendChild(style); // eslint-disable-next-line no-undef
 
-    Reveal.addEventListener('fragmenthidden', function (event) {
-      var element = event.fragment;
-      _animation_factory__WEBPACK_IMPORTED_MODULE_0__["default"].buildAnimation(element, true);
-    }); // eslint-disable-next-line no-undef
+      Reveal.addEventListener('fragmenthidden', function (event) {
+        var element = event.fragment;
+        _animation_factory__WEBPACK_IMPORTED_MODULE_0__["default"].buildAnimation(element, true);
+      }); // eslint-disable-next-line no-undef
 
-    Reveal.addEventListener('fragmentshown', function (event) {
-      var element = event.fragment;
-      _animation_factory__WEBPACK_IMPORTED_MODULE_0__["default"].buildAnimation(element);
-    });
-  }
-}();
-
+      Reveal.addEventListener('fragmentshown', function (event) {
+        var element = event.fragment;
+        _animation_factory__WEBPACK_IMPORTED_MODULE_0__["default"].buildAnimation(element);
+      });
+    } else {
+      console.log("Could not find Reveal");
+    }
+  }();
 /* harmony default export */ __webpack_exports__["default"] = (RevealJsAnimation);
+
 
 /***/ })
 

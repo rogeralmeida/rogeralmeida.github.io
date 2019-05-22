@@ -1,12 +1,9 @@
 import * as mermaid from 'mermaid'
-import * as Reveal from 'reveal.js'
-import * as head from 'reveal.js/lib/js/head.min.js'
 import * as $ from 'jquery'
 import * as Highcharts from 'highcharts'
 import ChartFactory from './highcharts-config'
 require('highcharts/modules/timeline')(Highcharts);
 
-$(() => {
   // Full list of configuration options available at:
   // https://github.com/hakimel/reveal.js#configuration
   Reveal.initialize({
@@ -23,8 +20,7 @@ $(() => {
       { src: '/assets/js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
       { src: '/assets/js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
       { src: '/assets/js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
-      { src: '/assets/js/plugin/zoom-js/zoom.js', async: true },
-      { src: '/assets/js/revealjs-animated.js', async: true }
+      { src: '/assets/js/plugin/zoom-js/zoom.js', async: true }
     ]
   });
 
@@ -43,13 +39,9 @@ $(() => {
     });
 
     event.currentSlide.querySelectorAll('.highchart').forEach(element => {
-      console.log('Changed slides and found a highchart');
       let id = element.getAttribute('id');
-      console.log(`${id} - ID for the highchart component`);
       let config = ChartFactory.build(id);
       if (config) {
-        console.log(`Config for ${id}:\n`);
-        console.log(config);
         Highcharts.chart(id, config);
       } else {
         console.log('Could not find a config for ' + id);
@@ -68,5 +60,3 @@ $(() => {
       maxWidth: '100%'
     }
   });
-
-});
