@@ -15,7 +15,7 @@ body {
   background-color: #fff; }
 
 .reveal {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: 'Roboto', "Source Sans Pro", Helvetica, sans-serif;
   font-size: 42px;
   font-weight: normal;
   color: #222; }
@@ -46,15 +46,16 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #222;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: 'Roboto', "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: uppercase;
-  text-shadow: none;
+  text-shadow: 4px 4px 4px #aaa;
   word-wrap: break-word; }
 
 .reveal h1 {
+  text-shadow: 4px 4px 4px #aaa;
   font-size: 2.5em; }
 
 .reveal h2 {
@@ -65,9 +66,6 @@ body {
 
 .reveal h4 {
   font-size: 1em; }
-
-.reveal h1 {
-  text-shadow: none; }
 
 /*********************************************
  * OTHER
