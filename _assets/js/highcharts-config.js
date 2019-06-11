@@ -33,7 +33,12 @@ let ChartFactory = (() => {
             }, {
                 name: '2017',
                 label: '<b>2017: Delivery Lead @ Tyro</b> Delivery Lead for the firt "You build it, you run it" team inside Tyro®. Cloud adoption journey.'
-            }]
+            }],
+            dataLabels: {
+                style: {
+                    fontSize: '16px'
+                }
+            }
         }]
     };
 
