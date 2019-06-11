@@ -45,13 +45,28 @@ footer: true
 
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
-    %h1 Chaos Monkeys
-    %ul
-      %li A software development team. 7 People (8 very soon)
-      %li Responsible for capturing and serving data for reporting
-      %li > 1M transactions per day
-      %li Hybrid setup: On-Prem and Cloud (AWS®)
-      %li You build it, you run it! 24/7 Support
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        %h1 Chaos Monkeys
+      .none{style: 'grid-column-start: 1; grid-column-end: 3'}
+        %img{src: '/images/agile-australia-2019/lego-1.png'}
+      .none{style: 'grid-column-start: 3; grid-column-end: 6'}
+        %img{src: '/images/agile-australia-2019/lego-2.png'}
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        %img{src: '/images/agile-australia-2019/lego-3.png'}
+        %img{src: '/images/agile-australia-2019/lego-4.png'}
+        %img{src: '/images/agile-australia-2019/lego-5.png'}
+        %img{src: '/images/agile-australia-2019/lego-6.png'}
+        %img{src: '/images/agile-australia-2019/lego-7.png'}
+  %section
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
+        %ul
+          %li A software development team. 7 People (8 very soon)
+          %li Responsible for capturing and serving data for reporting
+          %li > 1M transactions per day
+          %li Hybrid setup: On-Prem and Cloud (AWS®)
+          %li You build it, you run it! 24/7 Support
     %aside.notes
       :markdown
         * We are doing fine with this DevOps idea
@@ -102,8 +117,15 @@ footer: true
     %h2 History
     %ul
       %li Alternative to the common review process
-      %li Jira and Git
-      %li Auditors
+  %section{data: {transition: 'fade-out'}}
+    %h2 Audit via GIT
+    %img{src: '/images/agile-australia-2019/git-log-long.png'}
+  %section{data: {transition: "fade-in fade-out"}}
+    %h2 Audit via GIT
+    %img{src: '/images/agile-australia-2019/git-log-long-people.png'}
+  %section{data: {transition: "fade-in fade-out"}}
+    %h2 Audit via GIT
+    %img{src: '/images/agile-australia-2019/git-log-long-jira.png'}
     %aside.notes
       :markdown
         * We started to adopt Pair Programming during the early days of the company. It was working well and when we spoke to APRA we explain to then how that was actually better then code review, as it would enforce two minds to work on the same problem. 
