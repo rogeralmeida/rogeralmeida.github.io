@@ -14,6 +14,10 @@ require('highcharts/modules/timeline')(Highcharts);
     width: "100%",
     height: "100%",
     slideNumber: 'c/t',
+    keyboard: {
+      39: 'next',
+      37: 'prev',
+    },
 
     dependencies: [
       { src: '/assets/js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
