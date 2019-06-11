@@ -21,6 +21,8 @@ require('highcharts/modules/timeline')(Highcharts);
 
     dependencies: [
       { src: '/assets/js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+      // Speaker notes
+      { src: '/assets/js/plugin/notes/notes.js', async: true },
       { src: '/assets/js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
       { src: '/assets/js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
       { src: '/assets/js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
