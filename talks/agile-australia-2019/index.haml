@@ -68,6 +68,11 @@ footer: true
         %img.lego-figure{src: '/images/agile-australia-2019/lego-6.png', style: 'box-shadow: none;'}
         %br
         Team Member
+      .none{style: 'grid-column-start: 11; grid-column-end: 13'}
+        .fragment
+          %img.lego-figure{src: '/images/agile-australia-2019/lego-new.png', style: 'box-shadow: none; opacity: 0.5'}
+          %br
+          New Team Member
       .none{style: 'grid-column-start: 4; grid-column-end: 7'}
         %img.lego-figure{src: '/images/agile-australia-2019/lego-7.png', style: 'box-shadow: none;'}
         %br
@@ -77,14 +82,16 @@ footer: true
         %br
         Tech Lead
   %section
-    .grid-container
-      .none{style: 'grid-column-start: 1; grid-column-end: 13'}
-        %ul
-          %li A software development team. 7 People (8 very soon)
-          %li Responsible for capturing and serving data for reporting
-          %li > 1M transactions per day
-          %li Hybrid setup: On-Prem and Cloud (AWS®)
-          %li You build it, you run it! 24/7 Support
+    %h2 Chaos Monkeys
+    %ul
+      %li Responsible for capturing and serving data for reporting
+      %li > 1M transactions per day
+    %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/agile-australia-2019/reports.jpg', style: 'position: absolute; top: 350%; z-index: -1; opacity: 0.4; width: 10em; height: 20em', data: {animated: {move: {to: {left: '-150%', top: '-230%'}}, rotate: {to: '-15deg'}, duration: 500}}}
+  %section
+    %h2 Chaos Monkeys
+    %ul
+      %li Hybrid setup: On-Prem and Cloud (AWS®)
+      %li You build it, you run it! 24/7 Support
     %aside.notes
       :markdown
         * We are doing fine with this DevOps idea
@@ -162,10 +169,36 @@ footer: true
   %section
     %h1 The Platform Pattern
   %section
-    %h2 The Platform Pattern
-    %ul
-      %li A team/tribe focused on automating security/risk/compliance
-      %li 
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 13;'}
+        %h1 The Platform Pattern
+        %hr
+      .panel-light-green.fragment{style: 'grid-column-start: 1; grid-column-end: 13;', data: {fragment: {index: 3}}}
+        %h2 Artefact
+      .panel-light-blue.fragment{style: 'grid-column-start: 1; grid-column-end: 13;', data: {fragment: {index: 2}}}
+        %h2 Platform
+      .panel-light-yellow.fragment{style: 'grid-column-start: 1; grid-column-end: 13;', data: {fragment: {index: 1}}}
+        %h2 Cloud
+  %section
+    .grid-container
+      .none{style: 'grid-column-start: 1; grid-column-end: 13;'}
+        %h1 The Platform Pattern
+        %hr
+      .panel-light-blue.fragment{style: 'grid-column-start: 1; grid-column-end: 5;'}
+        %h2 Platform Team
+      .none.fragment{style: 'grid-column-start: 5; grid-column-end: 13;'}
+        %ul
+          %li Enable the use of Cloud
+          %li Enable compliance fulfillment
+          %li Enable InfoSec controls
+          %li Own user access
+      .panel-light-green.fragment{style: 'grid-column-start: 1; grid-column-end: 5;'}
+        %h2 Delivery Team
+      .none.fragment{style: 'grid-column-start: 5; grid-column-end: 13;'}
+        %ul
+          %li Implement InfoSec controls
+          %li Fulfill compliance requirements
+          %li Service Ownership
 %section
   %section
     %h1
