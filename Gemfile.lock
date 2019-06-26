@@ -59,7 +59,7 @@ GEM
     jekyll-haml (0.1.6)
       haml (>= 3.0.0)
       jekyll (>= 3.3.0)
-    jekyll-paginate-v2 (2.1.0)
+    jekyll-paginate-v2 (2.0.0)
       jekyll (~> 3.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
@@ -130,7 +130,7 @@ DEPENDENCIES
   jekyll-compose
   jekyll-feed (~> 0.11.0)
   jekyll-haml
-  jekyll-paginate-v2
+  jekyll-paginate-v2 (~> 2.0.0)
   jekyll-seo-tag
   jekyll-sitemap
   jekyll-tagging-related_posts
@@ -143,7 +143,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.5.1p57
+   ruby 2.6.3p62
 
 BUNDLED WITH
-   1.16.2
+   1.17.2

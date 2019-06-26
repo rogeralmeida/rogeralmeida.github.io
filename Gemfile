@@ -30,7 +30,7 @@ group :jekyll_plugins do
   gem 'jekyll-compose'
   gem 'liquid_reading_time'
   gem 'jekyll-tagging-related_posts'
-  gem "jekyll-paginate-v2"
+  gem "jekyll-paginate-v2", "~> 2.0.0"
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
 end
