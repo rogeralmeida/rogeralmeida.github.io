@@ -16,3 +16,10 @@ categories:
 ## Post nest
   * Planning fallacy and its effects
   * [Tracing Bullet](Tracing Bullet)
+
+## MyDotFiles
+  * [[Things to Try]]
+
+# Ideas
+  * [[Business Ideas]]
+  * [Test](Test)
