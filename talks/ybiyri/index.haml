@@ -54,7 +54,7 @@ footer: true
         %li It is a hard question to answer, but thanksfuly someone decided to research about it and discover the advantages.
   %section
     %h2 Why DevOps
-    %img{src: '/images/ybyr/dora.png'}
+    %img{src: '/images/ybyr/dora.png', style: 'height: -webkit-fill-available;'}
     %aside.notes
       %ul
         %li DORA = DevOps Research and Assessment
@@ -107,9 +107,9 @@ footer: true
       .none{style: 'grid-column-start: 1; grid-column-end: 5'}
         Performance Distribution
       .none{style: 'grid-column-start: 6; grid-column-end: 13'}
-        %img{src: '/images/ybyr/performance-profiles.png', style: 'max-height: none'}
+        %img{src: '/images/ybyr/performance-profiles.png', style: 'margin-top: -15%; width: 50%; max-height: fit-content;'}
   %section
-    %img{src: '/images/ybyr/performance-compare.png', style: 'max-height: 90%'}
+    %img{src: '/images/ybyr/performance-compare.png', style: 'max-height: 80%; width: 80%;'}
     %aside.notes
       \- Low experience with AWS
       \- Partnership with CMD to bring in AWS expertise
@@ -137,7 +137,7 @@ footer: true
   %section
     %h1 Operational Models
     %ul
-      %li Amazon Two Pizza Teams
+      %li Amazon "you build it, you run it"
       %li Google SRE
     %aside.notes
       %ul
@@ -145,9 +145,9 @@ footer: true
         %li Should you put all the responsibility on developers?
         %li What gonna happen with your operations team?
   %section
-    %h2 Amazon Two Pizza Teams
+    %h2 Amazon You build it, you run it
     %ul
-      %li How many people can you feed with 2 big (American Size) pizzas?
+      %li Two pizzas team
       %li Operational responsibility inside the team
       %li Customer contact
     %img.fragment.animated.move-to.rotate.auto-fire{src: '/images/ybyr/bezoz2.jpg', style: 'position: absolute; top: 250%; z-index: -1; opacity: 0.4;', data: {animated: {move: {to: {left: '-150%', top: '-130%'}}, rotate: {to: '-25deg'}, duration: 500}}}
@@ -188,41 +188,6 @@ footer: true
   %section
     %h2 New area of knowledge
     %img{src: '/images/ybyr/devopspract.png', style: 'width: 90%;'}
-
-%section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
-  %section
-    %h1 Define your boundaries
-  %section
-    #chart-boundary-1.mermaid-lazy
-      :plain
-        graph LR
-        ma[micro-service A] --> mb[micro-service B]
-        ma[micro-service A] --> mc[micro-service C]
-        mc[micro-service C] --> md[micro-service D]
-  %section
-    #chart-boundary-2.mermaid-lazy
-      :plain
-        graph LR
-        subgraph Business Capability
-        ma[micro-service A] --> mb[micro-service B]
-        ma[micro-service A] --> mc[micro-service C]
-        mc[micro-service C] --> md[micro-service D]
-        end
-  %section
-    .grid-container
-      .none{style: 'grid-column-start: 1; grid-column-end: 12'}
-        %h2
-          Define the
-          %i
-            %u business capability
-          you will support
-        %h3.fragment Ex: Provide data for reporting
-      .none{style: 'grid-column-start: 1; grid-column-end: 6'}
-        %ul
-          %li.fragment We needed deep involvement from Busines
-          %li.fragment We had to stop talking about software and talk about services
-      .none{style: 'grid-column-start: 7; grid-column-end: 13'}
-        %img.fragment{src: '/images/ybyr/etq-components.png', style: 'width: 50%;'}
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
     .grid-container
@@ -337,37 +302,18 @@ footer: true
             %td 6.05 seconds
             %td 0.87 seconds
             %td 0.04 seconds
-  %section
-    %h2
-      SLA -
-      %i
-        Service Level Agreements
-    %blockquote An explicit or implicit contract with your users that includes consequences of meeting (or missing) the SLOs they contain
-  %section
-    %h2
-      MAO -
-      %i Maximum Allowed Outage
-    %blockquote 
-      Maximum amount of time a system can be unavailable before its loss will compromise the organization's objectives or survival.
-      %strong AKA: Maxium Tolerable Period of Disruption (MTPOD)
-  %section
-    %h2
-      RTO -
-      %i Recovery Time Objective
-    %blockquote
-      Targeted duration of time and a service level within which a business process must be restored after a disaster (or disruption) in order to avoid unacceptable consequences associated with a break in business continuity
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
     %h1 Security
+  %section
+    %h2 Defense in depth
+    %iframe{width: "75%", height: "315", src: "https://www.youtube.com/embed/g0x1Ijy1udA", frameborder: "0", allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: true}
   %section
     %h2 Least Privilege
     %img{src: '/images/ybyr/least-privilege.jpg'}
   %section
     %h2 Break Glass
     %img{src: '/images/ybyr/break-glass.jpg'}
-  %section
-    %h2 Defense in depth
-    %iframe{width: "75%", height: "315", src: "https://www.youtube.com/embed/g0x1Ijy1udA", frameborder: "0", allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: true}
 %section{data: {background: {image: '/images/ybyr/tyro-background-white.png', size: '90%'}}}
   %section
     %h1 Monitoring
@@ -392,24 +338,6 @@ footer: true
               %li Logs
               %li JVM
               %li Health Check Pages
-  %section
-    %h2 Monitoring Dependency
-    .mermaid-lazy#dependency-1
-      :plain
-        graph LR
-          APP --> tool1(Monitoring Tool)
-  %section
-    %h2 Monitoring Dependency
-    .mermaid-lazy#dependency-2
-      :plain
-        graph LR
-          APP -.-> tool1(Monitoring Tool)
-  %section
-    %h2 Monitoring Dependency
-    .mermaid-lazy#dependency-3
-      :plain
-        graph LR
-          APP -. logs .- tool1(Monitoring Tool)
   %section
     %h2 Dashboards
     %img{src: '/images/ybyr/dashboard-sumo.png', style: 'width: 75%;'}
@@ -530,7 +458,7 @@ footer: true
     %h1 Our current status
   %section
     %h2 Deployes per week
-    %img{src: '/images/ybyr/chaos-monkeys-deploy.png'}
+    %img{src: '/images/ybyr/chaos-monkeys-deploy.png', style: 'width: 80%;'}
     %aside.notes
       %ul
         %li Deploys for the last 90 days
