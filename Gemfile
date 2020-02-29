@@ -11,7 +11,7 @@ ruby RUBY_VERSION
 # Happy Jekylling!
 gem "jekyll", "3.8.5"
 gem "bourbon", "~> 4.3.3"
-gem 'rake', '~> 12.0.0'
+gem 'rake', '~> 12.3.3'
 gem 'aws-sdk', '~> 2'
 gem "mini_magick"
 gem "rouge"
